@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ApheresisSite__c</fullName>
+    <complianceGroup>GxP</complianceGroup>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Apheresis Site recorded on Care Plan.</description>
+    <externalId>false</externalId>
+    <label>Apheresis Site</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Apheresis Site</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Orders (Apheresis Site)</relationshipLabel>
+    <relationshipName>Orders2</relationshipName>
+    <required>false</required>
+	<trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

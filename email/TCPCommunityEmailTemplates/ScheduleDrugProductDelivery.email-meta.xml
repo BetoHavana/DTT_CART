@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ScheduleDrugProductDelivery</name>
+    <style>none</style>
+    <subject>{!$Label.ProductName} - Schedule {!Order__c.PatientID__c} drug product delivery</subject>
+    <textOnly>Hi {!Order__c.Coordinator__c},
+
+Quality Assurance Release has been completed for your patient&apos;s (Patient ID: {!Order__c.PatientID__c}) drug product.  Please login to the portal to schedule their drug product delivery as soon as you can.
+
+If you are facing issues scheduling their delivery, please reach out to us via +1-XXX-XXX-XXXX
+
+Thank You,
+{!$Label.JanssenBiotechAndLegendBiotech}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

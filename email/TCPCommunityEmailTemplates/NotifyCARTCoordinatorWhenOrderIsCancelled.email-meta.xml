@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email template is used to notify CART Coordinator when Order is Cancelled</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Notify CAR-T Coordinator When Order is Cancelled</name>
+    <style>none</style>
+    <subject>{!$Label.ProductName} - Apheresis Pick-Up Date Cancelled for {!Order__c.PatientID__c}</subject>
+    <textOnly>Hi {!Order__c.Coordinator__c}   The Apheresis Pick-Up Date for your patient with Patient ID: {!Order__c.PatientID__c} has been cancelled Please  login  to the portal to access the patient’s record.   If you did not place this request, please reach out to us via +1-XXX-XXX-XXXX.  Thank You,</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LoggedInUser__c</fullName>
+    <description>Return True if &apos;current user = Assigned to&apos;</description>
+    <externalId>false</externalId>
+    <formula>$User.Id =  Owner:User.Id</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Logged in user</label>
+    <type>Checkbox</type>
+</CustomField>

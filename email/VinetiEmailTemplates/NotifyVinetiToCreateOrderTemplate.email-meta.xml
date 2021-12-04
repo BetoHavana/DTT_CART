@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email template is used to Notify Vineti To Create Order on receipt of Aph PO from Atlas</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Notify Vineti To Create Order Template</name>
+    <style>none</style>
+    <subject>New order to be created in Vineti, Aph PO Received</subject>
+    <textOnly>Dear V2V Manager,
+
+The Apheresis PO has been received for the new Order {!Order.Id}. Request you to please set up this order in Vineti.
+
+order
+
+Regards,
+CCM Operations Coordinator</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

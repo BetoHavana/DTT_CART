@@ -1,0 +1,96 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-p-around_small blue-header slds-text-heading_small brand-text">
+            <ul class="slds-list_horizontal button-alignment">
+                <li>
+                    <img class="logo-blue" alt='Jnj Blue Logo' onclick={navigateToLandingPage} src={BlueLogo} />
+                    {labels.LOGIN_TOP_HEADER}
+                </li>
+                <li class="slds-p-left_large profile-section">
+                    <div class="slds-global-actions__item alert-position">
+                        <c-display-notifications></c-display-notifications>
+                    </div>
+                    <lightning-button-menu
+                            label={greeting}
+                            variant="bare"
+                            class="profile-text slds-text-heading_small"
+                            onselect={handleMenuSelect}>
+
+                        <template for:each={items} for:item="action">
+                            <lightning-menu-item class="test"
+                                                 id={action.id}
+                                                 label={action.label}
+                                                 value={action.value}
+                                                 key={action.label}>
+                            </lightning-menu-item>
+                        </template>
+                    </lightning-button-menu>
+                </li>
+            </ul>
+        </div>
+        <header class="slds-col slds-size_1-of-1 menu-section">
+            <div class="slds-global-header slds-grid heading-secondary">
+                <div class="slds-global-header__item">
+                    <ul class="slds-global-actions">
+                        <li class={patientClass}>
+                            <a role="menuitem" tabindex="0" onclick={navigateToLandingPage}>
+                                     <span class="slds-truncate" title={labels.PATIENTS_LABEL}>
+                                        <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
+                                             aria-hidden="true">
+                                          <use xlink:href={patientIcons}></use>
+                                        </svg>
+                                        <span class="menu-text"> {labels.PATIENTS_LABEL}</span>
+                                     </span>
+                            </a>
+                        </li>
+                        <li class={calendarClass}>
+                            <a role="menuitem" tabindex="0" onclick={navigateToCalendar}>
+                                     <span class="slds-truncate" title={labels.CALENDAR_LABEL}>
+                                        <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
+                                             aria-hidden="true">
+                                          <use xlink:href={calendarIcon}></use>
+                                        </svg>
+                                         <span class="menu-text"> {labels.CALENDAR_LABEL}</span>
+                                     </span>
+                            </a>
+                        </li>
+                        <li class={availableCalendarClass}>
+                            <a role="menuitem" tabindex="0"
+                               onclick={navigateToCalendarAvailabilityPage}>
+                                     <span class="slds-truncate" title={labels.AVAILABILITY_CALENDAR_LABEL}>
+                                        <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
+                                             aria-hidden="true">
+                                          <use xlink:href={availableCalendarIcon}></use>
+                                        </svg>
+                                         <span class="menu-text">  {labels.AVAILABILITY_CALENDAR_LABEL}</span>
+                                     </span>
+                            </a>
+                        </li>
+                        <li class={resourcesClass}>
+                            <a role="menuitem" tabindex="0" onclick={navigateToResourcesPage}>
+                                     <span class="slds-truncate" title={labels.RESOURCES_LABEL}>
+                                        <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
+                                             aria-hidden="true">
+                                          <use xlink:href={resourcesIcon}></use>
+                                        </svg>
+                                         <span class="menu-text"> {labels.RESOURCES_LABEL}</span>
+                                     </span>
+                            </a>
+                        </li>
+                        <li class={servicesClass}>
+                            <a role="menuitem" tabindex="0" onclick={navigateToServicesPage}>
+                                     <span class="slds-truncate" title={labels.SERVICES_LABEL}>
+                                        <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
+                                             aria-hidden="true">
+                                          <use xlink:href={servicesIcon}></use>
+                                        </svg>
+                                         <span class="menu-text">{labels.SERVICES_LABEL}</span>
+                                     </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+</template>

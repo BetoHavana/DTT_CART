@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ManufacturingStatus__c</fullName>
+    <complianceGroup>GxP</complianceGroup>
+    <description>Manufacturing Status related to the order.</description>
+    <externalId>false</externalId>
+    <label>Manufacturing Status</label>
+    <required>false</required>
+	<trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Started</fullName>
+                <default>True</default>
+                <label>Not Started</label>
+            </value>
+            <value>
+                <fullName>QC/QA Complete</fullName>
+                <default>false</default>
+                <label>QC/QA Complete</label>
+            </value>
+            <value>
+                <fullName>Manufacturing Started</fullName>
+                <default>false</default>
+                <label>Manufacturing Started</label>
+            </value>
+            <value>
+                <fullName>Manufacturing Complete</fullName>
+                <default>false</default>
+                <label>Manufacturing Complete</label>
+            </value>
+            <value>
+                <fullName>QR Complete</fullName>
+                <default>false</default>
+                <label>QR Complete</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

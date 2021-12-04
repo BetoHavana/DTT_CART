@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission Set Group for Vein to Vein Manager</description>
+    <label>Vein to Vein User Permissions Group</label>
+    <permissionSets>CaseReadOnly</permissionSets>
+    <permissionSets>KnowledgeReadOnly</permissionSets>
+    <permissionSets>PatientReadOnly</permissionSets>
+    <permissionSets>PatientServicesReadOnly</permissionSets>
+    <permissionSets>SiteReadOnly</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

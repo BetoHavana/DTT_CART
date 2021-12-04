@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_large">
+            <div class="slds-p-top_small">
+                <p class="slds-text-align_center slds-text-heading_small primary-header">{labels.PATIENT_GROUP_LABEL}</p>
+            </div>
+            <div class="slds-p-top_x-large">
+                <button class=" slds-col slds-size_1-of-1 slds-button slds-text-heading_small slds-button_neutral commercial-btn slds-p-around_small" onclick={handleSelection}>{labels.COMMERCIAL_LABEL}</button>
+            </div>
+            <div class="slds-p-top_medium">
+                <button class=" slds-col slds-size_1-of-1 slds-button slds-text-heading_small slds-button_neutral clinical-btn slds-p-around_small" disabled>{labels.CLINICAL_LABEL}</button>
+            </div>
+            <div class="slds-p-top_small">
+                <p class="slds-m-top_small slds-m-bottom_medium slds-text-align_center slds-text-heading_small primary-header">{labels.CLINICAL_DESCRIPTION_LABEL}</p>
+            </div>
+        </div>
+    </div>
+</template>

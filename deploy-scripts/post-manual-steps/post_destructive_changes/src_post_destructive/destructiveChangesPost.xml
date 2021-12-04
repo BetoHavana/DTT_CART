@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <!--AGIS-2737 -->
+        <members>AccountsSharingBatchScheduler</members>
+        <members>AccountsSharingBatchSchedulerTest</members>
+        <members>RecordSharingService</members>
+        <!--AGIS-2319 -->
+        <members>CasesDomain</members>
+        <members>CaseConstants</members>
+        <!--AGIS-79 -->
+        <members>OrdersHelper</members>
+        <members>OrdersConstants</members>
+        <members>OrdersHelperTest</members>
+        <members>OrderStatusUpdateSettingsSelector</members>
+        <!--AGIS-7474 -->
+        <members>NotificationsServiceTest</members>
+        <!--AGIS-1389 -->
+        <members>AccountsTestDataFactory</members>
+        <!--AGIS-43 -->
+        <members>SDNotificationServiceTest</members>
+        <members>SDNotificationService</members>
+        <members>SDNotificationServiceHelper</members>
+        <members>SDNotificationServiceMock</members>
+        <!--AGIS-9636 -->
+        <members>GoalsSelector</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <!--AGIS-2317 -->
+        <members>OrderMilestoneTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <!--AGIS-1376 -->
+        <members>Case.General Inquiry</members>
+        <name>AssignmentRule</name>
+    </types>
+    <types>
+        <!--AGIS-7434 -->
+        <members>PatientSupportProgram</members>
+        <name>CustomLabel</name>
+    </types>
+    <types>
+        <!--AGIS-2583 -->
+        <members>Case.ApheresisSite__c</members>
+        <members>Case.CryoSite__c</members>
+        <!--AGIS-5930 -->
+        <members>Account.Account__c</members>
+        <!--AGIS-7143 -->
+        <members>Account.AssociatedOperationsCoordinator__c</members>
+        <!--AGIS-136 -->
+        <members>Product2.ProductCode__c</members>
+        <!--AGIS-150 -->
+        <members>Account.SiteProduct__c</members>
+        <!--AGIS-5790 -->
+        <members>Account.InsuranceStatus__c</members>
+        <members>Case.BenefitsInvestigationConducted__c</members>
+        <!--AGIS-5723 -->
+        <members>Order__c.EarliestProductDeliveryDate__c</members>
+        <members>Order__c.LatestProductDeliveryDate__c</members>
+        <!--AGIS-164 -->
+        <members>Order__c.UnavoidableReasonForWithdrawal__c</members>
+        <members>Order__c.PreDeterminedCriteriaForDestruction__c</members>
+        <!--AGIS-901 -->
+        <members>Order__c.OrderId__c</members>
+        <!--AGIS-907 -->
+        <members>Order__c.SalesOrder__c</members>
+        <!--AGIS-2009 -->
+        <members>Order__c.QRCheck__c</members>
+        <!--AGIS-2867 -->
+        <members>Order__c.ManufacturingSiteDropoffDateAndTime__c</members>
+        <members>Order__c.ManufacturingSitePickupDateAndTime__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <!--AGIS-189 -->
+        <members>PatientServicesMgntDashboard</members>
+        <name>CustomPermission</name>
+    </types>
+    <types>
+        <!--AGIS-7412 -->
+        <members>OrderMilestonesUpdateRules.OrderrescheduledinVineti</members>
+        <members>OrderMilestonesUpdateRules.VinetiCOINumberupdated</members>
+        <members>OrderMilestonesUpdateRules.FinalDPDateupdated</members>
+        <members>OrderMilestonesUpdateRules.QualityReleaseUD</members>
+        <members>OrderMilestonesUpdateRules.QAReleaseAllRegions</members>
+        <members>OrderMilestonesUpdateRules.ManufacturingStartedDay0</members>
+        <members>OrderMilestonesUpdateRules.ManufacturingEndDay10</members>
+        <members>OrderMilestonesUpdateRules.ManufacturingEnd</members>
+        <members>OrderMilestonesUpdateRules.ApheresisReleaseToManufacturing</members>
+        <!--AGIS-7195 -->
+        <members>OrderProcessingRule.OrdPlcmntGoalConfirmPOTaskClosureCen</members>
+        <members>OrderProcessingRule.OrdPlcmntGoalConfirmPOTaskClosureLoc</members>
+        <members>OrderProcessingRule.OrdPlcmntGoalConfirmPOTaskClosureRar</members>
+        <members>OrderProcessingRule.OrderPlcmentGoalStatToInProgressForCen</members>
+        <members>OrderProcessingRule.OrderPlcmentGoalStatToInProgressForRar</members>
+        <members>OrderProcessingRule.OrderPlcmentGoalStatToInProgressForLoc</members>
+        <members>OrderProcessingRule.OrderPlcmentGoalAknSftSltBokCmpltdForCen</members>
+        <members>OrderProcessingRule.OrderPlcmentGoalAknSftSltBokCmpltdForRar</members>
+        <members>OrderProcessingRule.OrderPlcmentGoalAknSftSltBokCmpltdForLoc</members>
+        <members>OrderProcessingRule.OrderPlcmGoalSftSltBokOrdVerCmpltdForLoc</members>
+        <members>OrderProcessingRule.OrderPlcmGoalSftSltBokOrdVerCmpltdForCen</members>
+        <members>OrderProcessingRule.OrderPlcmGoalSftSltBokOrdVerCmpltdForRar</members>
+        <members>OrderProcessingRule.OrdPlcmGoalClosWhenPOStsIsPORecLocOrdSub</members>
+        <members>OrderProcessingRule.OrdPlcmGoalClosWhenPOStsIsPORecCenOrdSub</members>
+        <members>OrderProcessingRule.OrdPlcmGoalClosWhenPOStsIsPORecRarOrdSub</members>
+        <members>OrderProcessingRule.OrdPlcmntGoalClosrWhenPOStsIsPORecLoc</members>
+        <members>OrderProcessingRule.OrdPlcmntGoalClosrWhenPOStsIsPORecCen</members>
+        <members>OrderProcessingRule.OrdPlcmntGoalClosrWhenPOStsIsPORecRar</members>
+        <!--AGIS-8524 -->
+        <members>OrderProcessingRule.SetInfusionGoalTasksToInProgress3rdParty</members>
+        <members>OrderProcessingRule.SetInfusionGoalTasksToInProgressLocal</members>
+        <members>OrderProcessingRule.SetInfusionGoalTasksToInProgressRaritan</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <!--AGIS-896 -->
+        <members>VerifyPatient</members>
+        <name>Dashboard</name>
+    </types>
+    <types>
+        <!--AGIS-7297 -->
+        <members>TCPCommunityEmailTemplates/TCPNewMemberWelcomeEmailTemplate</members>
+        <name>EmailTemplate</name>
+    </types>
+    <types>
+        <!--AGIS-896 -->
+        <members>Home_Page_Default1</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <!--AGIS-1376 -->
+        <members>Case-GeneralInquiryLayout</members>
+        <!--AGIS-2317 -->
+        <members>OrderMilestones__c-OrderMilestonesLayout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <!--AGIS-1376 -->
+        <members>Case.GeneralInquiriesSupportQueueListView</members>
+        <name>ListView</name>
+    </types>
+    <types>
+        <!--AGIS-896 -->
+        <members>PendingPatientVerification</members>
+        <name>Report</name>
+    </types>
+    <types>
+        <!--AGIS-138 -->
+        <members>JanssenOperationCo</members>
+        <name>Role</name>
+    </types>
+    <version>49.0</version>
+</Package>

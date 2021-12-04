@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SubCategory__c</fullName>
+    <complianceGroup>GxP</complianceGroup>
+    <description>Sub-categorization of the general inquiry dependent on the category selected</description>
+    <externalId>false</externalId>
+    <label>Sub-Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>General Education Resources</fullName>
+                <default>false</default>
+                <label>General Education Resources</label>
+            </value>
+            <value>
+                <fullName>Referral Guidance</fullName>
+                <default>false</default>
+                <label>Referral Guidance</label>
+            </value>
+            <value>
+                <fullName>Contract Negotiation</fullName>
+                <default>false</default>
+                <label>Contract Negotiation</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Certification Inquiries and Information</fullName>
+                <default>false</default>
+                <label>Certification Inquiries and Information</label>
+            </value>
+            <value>
+                <fullName>Login and Password Management</fullName>
+                <default>false</default>
+                <label>Login and Password Management</label>
+            </value>
+            <value>
+                <fullName>User Training</fullName>
+                <default>false</default>
+                <label>User Training</label>
+            </value>
+            <value>
+                <fullName>General Coordination</fullName>
+                <default>false</default>
+                <label>General Coordination</label>
+            </value>
+			<value>
+                <fullName>Site Relationship Management</fullName>
+                <default>false</default>
+                <label>Site Relationship Management</label>
+            </value>
+            <value>
+                <fullName>Treatment Inquiries</fullName>
+                <default>false</default>
+                <label>Treatment Inquiries</label>
+            </value>
+            <value>
+                <fullName>New Patient Enrollment / Order Placement</fullName>
+                <default>false</default>
+                <label>New Patient Enrollment / Order Placement</label>
+            </value>
+            <value>
+                <fullName>Order Reschedule Requests</fullName>
+                <default>false</default>
+                <label>Order Reschedule Requests</label>
+            </value>
+            <value>
+                <fullName>Order Cancellation Requests</fullName>
+                <default>false</default>
+                <label>Order Cancellation Requests</label>
+            </value>
+            <value>
+                <fullName>Drug Product Deliveries</fullName>
+                <default>false</default>
+                <label>Drug Product Deliveries</label>
+            </value>
+            <value>
+                <fullName>Other Order Related Inquiries</fullName>
+                <default>false</default>
+                <label>Other Order Related Inquiries</label>
+            </value>
+            <value>
+                <fullName>Patient Services – New Request</fullName>
+                <default>false</default>
+                <label>Patient Services – New Request</label>
+            </value>
+            <value>
+                <fullName>Patient Services – Enrollment Inquiries</fullName>
+                <default>false</default>
+                <label>Patient Services – Enrollment Inquiries</label>
+            </value>
+            <value>
+                <fullName>CTEL Support</fullName>
+                <default>false</default>
+                <label>CTEL Support</label>
+            </value>
+            <value>
+                <fullName>General Questions</fullName>
+                <default>false</default>
+                <label>General Questions</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Patient and Caregiver support</controllingFieldValue>
+            <valueName>General Education Resources</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referral Support</controllingFieldValue>
+            <valueName>Referral Guidance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Certification Management</controllingFieldValue>
+            <valueName>Contract Negotiation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Certification Management</controllingFieldValue>
+            <valueName>Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Certification Management</controllingFieldValue>
+            <valueName>Certification Inquiries and Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IT and Tech Support</controllingFieldValue>
+            <valueName>Login and Password Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Site Management</controllingFieldValue>
+            <valueName>User Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Site Management</controllingFieldValue>
+            <valueName>General Coordination</valueName>
+        </valueSettings>
+		<valueSettings>
+            <controllingFieldValue>Site Management</controllingFieldValue>
+            <valueName>Site Relationship Management</valueName>
+        </valueSettings>
+		<valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>CTEL Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>General Questions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patient Treatment Management</controllingFieldValue>
+            <valueName>Treatment Inquiries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patient Treatment Management</controllingFieldValue>
+            <valueName>New Patient Enrollment / Order Placement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patient Treatment Management</controllingFieldValue>
+            <valueName>Order Reschedule Requests</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patient Treatment Management</controllingFieldValue>
+            <valueName>Order Cancellation Requests</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patient Treatment Management</controllingFieldValue>
+            <valueName>Drug Product Deliveries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patient Treatment Management</controllingFieldValue>
+            <valueName>Other Order Related Inquiries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patient Services</controllingFieldValue>
+            <valueName>Patient Services – New Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patient Services</controllingFieldValue>
+            <valueName>Patient Services – Enrollment Inquiries</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TimeEligibility__c</fullName>
+    <description>Eligibility based on time</description>
+    <defaultValue>&apos;Eligibility check not performed&apos;</defaultValue>
+    <externalId>false</externalId>
+    <label>Time Eligibility</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Eligibility check not performed</fullName>
+                <default>false</default>
+                <label>Eligibility check not performed</label>
+            </value>
+            <value>
+                <fullName>Eligible</fullName>
+                <default>false</default>
+                <label>Eligible</label>
+            </value>
+            <value>
+                <fullName>Not-eligible</fullName>
+                <default>false</default>
+                <label>Not-eligible</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

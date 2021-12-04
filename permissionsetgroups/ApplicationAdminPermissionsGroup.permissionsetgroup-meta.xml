@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission Set Group for Security Analyst</description>
+    <label>Application Admin Permissions Group</label>
+    <permissionSets>ApplicationAdmin</permissionSets>
+    <permissionSets>CareProgramManagement</permissionSets>
+    <permissionSets>CaseManager</permissionSets>
+    <permissionSets>HealthCloudGA__HealthCloudAdmin</permissionSets>
+    <permissionSets>KnowledgeManagement</permissionSets>
+    <permissionSets>MilestoneManagement</permissionSets>
+    <permissionSets>PatientManagement</permissionSets>
+    <permissionSets>ProductManagement</permissionSets>
+    <permissionSets>SiteManagement</permissionSets>
+    <permissionSets>UserManagementPermissionSet</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

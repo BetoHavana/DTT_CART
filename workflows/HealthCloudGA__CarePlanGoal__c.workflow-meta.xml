@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>HealthCloudGA__goal_progress</fullName>
+        <field>HealthCloudGA__Progress__c</field>
+        <formula>0</formula>
+        <name>goal progress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdatePatientEnrollmentGoalStatus</fullName>
+        <field>Status__c</field>
+        <literalValue>In Progress</literalValue>
+        <name>Update Patient Enrollment Goal Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>HealthCloudGA__progress update</fullName>
+        <actions>
+            <name>HealthCloudGA__goal_progress</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>HealthCloudGA__CarePlanGoal__c.HealthCloudGA__Progress__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Patient Enrollment Goal Update Rule</fullName>
+        <actions>
+            <name>UpdatePatientEnrollmentGoalStatus</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Update the Patient Enrollment Goal</description>
+        <formula>Name = &apos;Patient Enrollment&apos;</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>SecurityAnalystAccountSharingRule</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Read only access to security analyst on account records</description>
+        <label>Security Analyst Account Sharing Rule</label>
+        <sharedTo>
+            <role>SecurityAnalyst</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>CCMExecutive</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email template is used to notify CART Coordinator when Community user is Created</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Notify CAR-T Coordinator When Community User is Created</name>
+    <style>none</style>
+    <subject>Welcome to {!Community_Name}</subject>
+    <textOnly>Hi {!Receiving_User.FirstName} {!Receiving_User.LastName},
+
+        Welcome to {!Community_Name}. To start managing your patients’ treatment, please set up your account by accessing the portal  here. Your username is: {!Receiving_User.Username}
+
+        If you’re having issues accessing {!Community_Name}, please reach out to us via +1-XXX-XXX-XXXX.
+
+        Thank You,
+        {!$Label.JanssenBiotechAndLegendBiotech}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

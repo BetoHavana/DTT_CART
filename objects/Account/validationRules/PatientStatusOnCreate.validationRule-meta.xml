@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PatientStatusOnCreate</fullName>
+    <active>false</active>
+    <description>Validation Rule which fires on creation of Account based on certain criteria</description>
+    <errorConditionFormula>AND(ISNEW(),($RecordType.DeveloperName = $Label.PatientRecordtype),
+NOT(TEXT(Status__c) == $Label.PatientStatusPendingVerification))</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>On Creation the Patient Status is defaulted to pending verification and cannot be changed</errorMessage>
+</ValidationRule>

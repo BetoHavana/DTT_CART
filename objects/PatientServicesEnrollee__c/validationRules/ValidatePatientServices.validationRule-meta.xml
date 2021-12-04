@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ValidatePatientServices</fullName>
+    <active>true</active>
+    <description>Should not be able to make the Patient Services Status=&apos;Eligible&apos; when Patient Services field is empty</description>
+    <errorConditionFormula>AND(
+        ISPICKVAL( PatientServicesStatus__c , &apos;Eligible&apos;),
+        AND(
+            OR(NOT(INCLUDES( PatientServices__c , &apos;Travel (Ground and Air transport) Services​&apos;))),
+            OR(NOT(INCLUDES( PatientServices__c , &apos;Accommodation Services​&apos;))), 
+            OR(NOT(INCLUDES( PatientServices__c , &apos;Meals Services&apos;))), 
+            OR(NOT(INCLUDES( PatientServices__c , &apos;Miscellaneous Services&apos;)))
+        )
+    )</errorConditionFormula>
+    <errorMessage>Please select Patient Services to proceed.</errorMessage>
+</ValidationRule>

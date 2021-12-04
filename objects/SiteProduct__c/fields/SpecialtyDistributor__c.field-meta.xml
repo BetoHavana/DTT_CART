@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SpecialtyDistributor__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field lookup to the SD account to be associated with the product</description>
+    <externalId>false</externalId>
+    <label>Specialty Distributor</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Account.RecordType.DeveloperName</field>
+            <operation>equals</operation>
+            <value>SpecialtyDistributor</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Specialty Distributor</relationshipLabel>
+    <relationshipName>Site_Products</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

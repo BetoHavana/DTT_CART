@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>SecurityAnalystLocationSharingRule</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Read only access to security analyst on location records</description>
+        <label>Security Analyst Location Sharing Rule</label>
+        <sharedTo>
+            <role>SecurityAnalyst</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>CCMExecutive</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

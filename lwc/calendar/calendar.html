@@ -1,0 +1,19 @@
+<template>
+    <template if:true={fullCalendarJsInitialised}>
+        <div class="slds-grid slds-p-bottom_medium">
+            <div class="slds-col"></div>
+            <div class="slds-col calendar-header">
+                <lightning-icon onclick={handlePrev} class="display-inline-block display-pointer" icon-name="utility:chevronleft" size="x-small"></lightning-icon>
+                <div class="title-container slds-p-horizontal_small display-flex">
+                    <span class="title primary-title"></span>
+                    <template if:true={isAvailCal}>
+                        <span class="slds-p-left_x-small"><lightning-helptext class="custom-helptext" content={labels.CALENDAR_HELP_TEXT}></lightning-helptext></span>
+                    </template>
+                </div>
+                <lightning-icon onclick={handleNext} class="display-inline-block display-pointer" icon-name="utility:chevronright" size="x-small"></lightning-icon>
+            </div>
+            <div class="slds-col"></div>
+        </div>
+    </template>
+    <div class="fullcalendar" lwc:dom="manual"></div>
+</template>

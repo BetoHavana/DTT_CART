@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OrderConditionsInfo__c</fullName>
+    <description>Please provide Conditions in JSON format .For or conditions provide comma separated list against field name</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Please provide Conditions in JSON format .
+For or conditions provide comma separated list against field name</inlineHelpText>
+    <label>Order Conditions Info</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

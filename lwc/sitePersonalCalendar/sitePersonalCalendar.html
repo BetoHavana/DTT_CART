@@ -1,0 +1,82 @@
+<template>
+    <div class="slds-grid slds-p-around_small">
+        <div class="slds-col slds-size_1-of-1">
+            <div>
+                <h2 class="primary-title slds-p-bottom_large">{labels.CALENDAR_LABEL}</h2>
+            </div>
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_4-of-12 slds-p-bottom_medium">
+                    <lightning-combobox name="calendarMonth"
+                                        placeholder="Select"
+                                        variant="label-hidden"
+                                        onchange={handleCalendarTypeChange}
+                                        value={calendarType}
+                                        options={calendarTypeOptions}>
+                    </lightning-combobox>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters slds-m-vertical_small">
+                <div class="slds-col slds-size_4-of-12">
+                    <p class="slds-p-bottom_x-small label-style">{labels.EVENT_TYPE_LABEL}</p>
+                    <lightning-button label={labels.SHOW_ALL_LABEL} class={statusAllButtonStyle}
+                                      onclick={handleAllEvents}></lightning-button>
+                    <button class={scheduledApheresisButtonStyle} onclick={handleApheresisSelect}>
+                        <span><img src={ApheresisIcon} alt="Apheresis" class="event-button-icons"/></span>
+                        <span class="slds-p-left_x-small">{labels.APHERESIS_PICKUP_LABEL}</span>
+                    </button>
+                    <button class={drugProductButtonStyle} onclick={handleDrugDeliverySelect}>
+                        <span><img src={DeliveryIcon} alt="Delivery" class="event-button-icons"/></span>
+                        <span class="slds-p-left_x-small">{labels.DRUG_PRODUCT_DELIVERY_LABEL}</span>
+                    </button>
+                </div>
+                <div class="slds-col slds-size_4-of-12">
+                    <p class="slds-p-bottom_x-small label-style">{labels.TREATMENT_CENTER_COORDINATOR_LABEL}</p>
+                    <lightning-button label={labels.SHOW_ALL_LABEL} class={coordinatorAllButtonStyle}
+                                      onclick={handleAllCoordinatorActive}></lightning-button>
+
+                    <lightning-combobox
+                            name="coordinator"
+                            class="inline-combobox label-hidden slds-m-top_small"
+                            label=""
+                            value={selectedCartCoordinator}
+                            placeholder={labels.SELECT_COORDINATOR_LABEL}
+                            options={optionsCoordinators}
+                            variant="label-hidden"
+                            onchange={handleCoordinatorChange}>
+                    </lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_4-of-12">
+                    <p class="slds-p-bottom_x-small label-style">{labels.TREATING_PHYSICIAN_LABEL}</p>
+                    <lightning-button label={labels.SHOW_ALL_LABEL} class={physicianAllButtonStyle}
+                                      onclick={handleAllPhysicianActive}></lightning-button>
+                    <lightning-combobox
+                            name="physician"
+                            class="inline-combobox slds-m-top_small"
+                            label=""
+                            value={selectedPhysician}
+                            placeholder={labels.SELECT_PHYSICIAN_LABEL}
+                            options={optionsPhysicians}
+                            variant="label-hidden"
+                            onchange={handlePhysicianChange}>
+                    </lightning-combobox>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slds-grid slds-p-around_small">
+        <div class="slds-col slds-size_1-of-1">
+            <c-calendar show-weekends={showWeekend} events={events} onviewchange={handleViewChange}
+                        page="sitepersonalcal" oneventclick={handleEventClick}></c-calendar>
+        </div>
+    </div>
+    <div class="slds-grid slds-p-around_small slds-grid_align-spread slds-grid_vertical-align-center">
+        <div class="slds-col slds-size_1-of-2">
+            <div class="display-inline-flex">
+                <div class="today-date slds-m-right_small"></div>
+                <span class="text-semibold">{labels.TODAY_DATE_LABEL}</span>
+            </div>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+        </div>
+    </div>
+</template>

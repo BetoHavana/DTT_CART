@@ -1,0 +1,9 @@
+{!$Label.V2VManagerGreeting},<br/><br/>
+
+{!$Label.ApheresisPoReceived}: {!Order__c.CartOrderId__c}<br/><br/>
+
+{!$Label.OrderSetUpRequest}.<br/>
+<a href="{!Order.Link}"> {!$Label.Order} </a><br/><br/>
+
+{!$Label.Regards},<br/>
+{!$Label.CCMOperationsCoordinator}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HoldReason__c</fullName>
+    <complianceGroup>GxP</complianceGroup>
+    <description>Hold Reason of the treatment process.</description>
+    <externalId>false</externalId>
+    <label>Hold Reason</label>
+    <required>false</required>
+	<trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PO not available</fullName>
+                <default>false</default>
+                <label>PO not available</label>
+            </value>
+            <value>
+                <fullName>PO issue</fullName>
+                <default>false</default>
+                <label>PO issue</label>
+            </value>
+            <value>
+                <fullName>Consent forms issue</fullName>
+                <default>false</default>
+                <label>Consent forms issue</label>
+            </value>
+            <value>
+                <fullName>Patient not ready for infusion</fullName>
+                <default>false</default>
+                <label>Patient not ready for infusion</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

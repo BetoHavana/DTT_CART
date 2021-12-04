@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Pickup</fullName>
+        <default>false</default>
+        <label>Pickup</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Drop Off</fullName>
+        <default>false</default>
+        <label>Drop Off</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pickup and Drop Off</fullName>
+        <default>false</default>
+        <label>Pickup and Drop Off</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Patient</fullName>
+        <default>false</default>
+        <label>Patient</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Patient Caregiver</fullName>
+        <default>false</default>
+        <label>Patient Caregiver</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,965 @@
+<template>
+    <div class="patient-journey-wrapper slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-1">
+            <c-generic-card class="card-item">
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_3-of-12 slds-p-bottom_x-small">
+                        <p class="secondary-title"> {patientName}</p>
+                        <template if:false={isCancelRequestedOrder}>
+                            <p class="slds-m-top_xx-small patient-journey-status">{patientJourneyStatus}</p>
+                        </template>
+                        <template if:true={isCancelRequestedOrder}>
+                            <p class="slds-m-top_xx-small patient-journey-status">{orderStatus}</p>
+                        </template>
+                    </div>
+                    <div class="slds-col slds-size_3-of-12 slds-p-bottom_x-small form-section">
+                        <lightning-input type="text"
+                                         label={labels.MRN_LABEL}
+                                         value={patientJourneyMRN}
+                                         readonly></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_3-of-12 slds-p-bottom_x-small form-section">
+                        <lightning-input type="date"
+                                         class="patient-journey-date"
+                                         label={labels.DOB_LABEL}
+                                         value={patientJourneyDOB}
+                                         readonly></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 slds-p-bottom_x-small form-section">
+                        <lightning-input type="text"
+                                         label={labels.PATIENT_ID}
+                                         value={patientJourneyPatientId}
+                                         readonly></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-12 slds-p-bottom_x-small">
+                        <template if:true={toggleFilter}>
+                            <lightning-icon alternative-text="Edit Patient Service Programs Info"
+                                            class="edit-icon" name="editPatientServiceProgramsInfo"
+                                            icon-name="utility:up"
+                                            size="medium" onclick={handleToggleFilter}
+                            ></lightning-icon>
+                        </template>
+                        <template if:false={toggleFilter}>
+                            <lightning-icon alternative-text="Edit Patient Service Programs Info"
+                                            class="edit-icon" name="editPatientServiceProgramsInfo"
+                                            icon-name="utility:down"
+                                            size="medium" onclick={handleToggleFilter}
+                            ></lightning-icon>
+                        </template>
+                    </div>
+                </div>
+                <template if:true={toggleFilter}>
+                    <div class="slds-p-bottom_large slds-border_top">
+                        <div class="slds-grid slds-gutters">
+                            <div class=" slds-col primary-title slds-p-vertical_small">
+                                {labels.PATIENT_INFORMATION_LABEL}
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_4-of-12 form-section">
+                                <lightning-input type="tel" class="slds-p-left_large" name="patientPhone"
+                                                 label={labels.PRIMARY_CONTACT_NUMBER_LABEL}
+                                                 pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                                                 max-length="10" value={patientJourneyPhone}
+                                                 read-only={readonlyChild}></lightning-input>
+                            </div>
+                            <div class="slds-col slds-size_4-of-12 form-section">
+                                <template if:true={readonlyChild}>
+                                    <lightning-input type="text" label={labels.PRIMARY_PHONE_NUMBER_TYPE_LABEL}
+                                                     value={patientPrimaryContactType}
+                                                     read-only></lightning-input>
+                                </template>
+                            </div>
+                            <div class="slds-col slds-size_4-of-12 form-section">
+                                <template if:true={readonlyChild}>
+                                    <div>
+                                        <lightning-input type="text"
+                                                         label={labels.PREFERRED_METHOD_OF_COMMUNICATION_LABEL}
+                                                         value={patientPreferredMethodOfCommunication}
+                                                         read-only></lightning-input>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_4-of-12 form-section">
+                                <lightning-input type="email" name="patientEmail" label={labels.EMAIL_ADDRESS_LABEL}
+                                                 read-only={readonlyChild}
+                                                 class="slds-p-left_large"
+                                                 value={patientJourneyEmail}>
+                                </lightning-input>
+                            </div>
+                        </div>
+                        <template if:true={showCareGiverSection}>
+                            <div class="slds-grid slds-gutters">
+                                <div class=" slds-col primary-title slds-p-vertical_small">
+                                    {labels.CAREGIVERINFORMATION_LABEL}
+                                </div>
+                            </div>
+                            <div class="slds-grid slds-gutters slds-wrap">
+                                <div class="slds-col slds-size_4-of-12">
+                                    <lightning-input type="text" name="careGiverFirstName"
+                                                     label={labels.FIRSTNAME_LABEL}
+                                                     read-only={readonlyChild}
+                                                     class="caregiverName slds-p-left_large"
+                                                     value={patientDetailsWrapper.careGiverName}></lightning-input>
+                                </div>
+                                <div class="slds-col slds-size_4-of-12">
+                                    <template if:true={readonlyChild}>
+                                        <div>
+                                            <lightning-input type="text" label={labels.RELATIONSHIP_TO_PATIENT_LABEL}
+                                                             value={patientDetailsWrapper.careGiverRelationToPatient}
+                                                             read-only></lightning-input>
+                                        </div>
+                                    </template>
+                                </div>
+                                <div class="slds-col slds-size_4-of-12">
+                                    <lightning-input type="tel" class="slds-p-left_large" name="careGiverPhone"
+                                                     label={labels.PRIMARY_CONTACT_NUMBER_LABEL}
+                                                     value={patientDetailsWrapper.careGiverPrimaryNumber}
+                                                     max-length="10" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                                                     read-only={readonlyChild}></lightning-input>
+                                </div>
+                            </div>
+                            <div class="slds-grid slds-gutters slds-wrap">
+                                <div class="slds-col slds-size_4-of-12">
+                                    <template if:true={readonlyChild}>
+                                        <lightning-input type="text" label={labels.PRIMARY_PHONE_NUMBER_TYPE_LABEL}
+                                                         class="slds-p-left_large"
+                                                         value={patientDetailsWrapper.careGiverPrimaryContactType}
+                                                         read-only></lightning-input>
+                                    </template>
+                                </div>
+                                <div class="slds-col slds-size_4-of-12">
+                                    <template if:true={readonlyChild}>
+                                        <div>
+                                            <lightning-input type="text"
+                                                             label={labels.PREFERRED_METHOD_OF_COMMUNICATION_LABEL}
+                                                             value={patientDetailsWrapper.careGiverPreferredMethodOfCommunication}
+                                                             read-only>
+                                            </lightning-input>
+                                        </div>
+                                    </template>
+                                </div>
+                                <div class="slds-col slds-size_4-of-12">
+                                    <lightning-input type="email" name="careGiverEmail"
+                                                     label={labels.EMAIL_ADDRESS_LABEL}
+                                                     value={patientDetailsWrapper.careGiverEmail}
+                                                     read-only={readonlyChild}
+                                                     class="slds-p-left_large"
+                                                     message-when-value-missing={labels.EMAIL_VALIDATION_LABEL}></lightning-input>
+                                </div>
+
+                            </div>
+                        </template>
+                    </div>
+                </template>
+            </c-generic-card>
+        </div>
+    </div>
+    <div class="slds-grid form-section wrapper slds-gutters">
+        <div class="slds-col slds-size_8-of-12">
+            <c-generic-card>
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                        <h2 class="primary-title slds-p-bottom_medium">{labels.TREATMENT_JOURNEY_LABEL}</h2>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <template if:false={isCancelRequestedOrder}>
+                            <template if:true={isApheresisPickUpScheduled}>
+                                <lightning-button variant="brand" class="custom-error-button error-button slds-p-left_medium"
+                                                  label={labels.CANCEL_ORDER_LABEL}
+                                                  onclick={handleCancelOrder}>
+                                </lightning-button>
+                            </template>
+                        </template>
+                        <template if:true={isCancelRequestedOrder}>
+                            <p class="patient-journey-status slds-float_right">{orderStatus}</p>
+                        </template>
+                        <c-generic-modal open={showOrderCancellationModal} size="small">
+                            <div class="slds-float_right">
+                                <lightning-icon icon-name="utility:close"
+                                                alternative-text="close"
+                                                variant="brand"
+                                                onclick={handleCancelOrderClose}
+                                                size="small">
+                                </lightning-icon>
+                            </div>
+                            <template if:true={isApheresisPickUpScheduled}>
+                                <div class="slds-align_absolute-center slds-m-vertical_medium">
+                                    <h2 class="custom-text-size-large">
+                                        {labels.ORDER_CANCELLATION_SUBMIT_REQUEST_LABEL}</h2>
+                                </div>
+                                <template if:true={showOrderCancellationReasonMandatory}>
+                                    <div class="text-nunito slds-text-color--error slds-align_absolute-center">
+                                        {labels.PROVIDE_REASON_FOR_ORDERCANCELLATION_LABEL}
+                                    </div>
+                                </template>
+                                <div class="slds-text-heading_small">
+                                    <lightning-combobox name="orderCancellationReason"
+                                                        onchange={handleOrderCancellationReasonChange}
+                                                        label={labels.REASON_FOR_ORDERCANCELLATION_LABEL}
+                                                        options={cancelReasonOptions}
+                                                        required
+                                    ></lightning-combobox>
+                                </div>
+                                <div class="disclaimer-text slds-p-top_small">
+                                    {orderCancellationRequestDisclaimer}
+                                </div>
+                                <div class="slds-align_absolute-center slds-m-top_large slds-p-top_medium">
+                                    <lightning-button class="primary-button" onclick={handleSubmitCancelOrder}
+                                                      label={labels.SUBMIT_LABEL} variant="brand"></lightning-button>
+                                </div>
+                            </template>
+                        </c-generic-modal>
+                        <c-generic-modal open={showOrderCancellationViaPhoneModal} size="small">
+                            <div class="slds-float_right">
+                                <lightning-icon icon-name="utility:close"
+                                                alternative-text="close"
+                                                variant="brand"
+                                                onclick={closeOrderViaPhoneModal}
+                                                size="small">
+                                </lightning-icon>
+                            </div>
+                            <div class="slds-align_absolute-center slds-m-vertical_medium">
+                                <h2 class="custom-text-size-large">
+                                    {labels.ORDER_CANCELLATION_SUBMIT_REQUEST_LABEL}
+                                </h2>
+                            </div>
+                            <div class="slds-align_absolute-center disclaimer-text">
+                                {labels.ORDER_CANCELLATION_VIA_PHONE_TEXT}
+                            </div>
+                            <div class="slds-align_absolute-center slds-m-top_large slds-p-top_medium">
+                                <lightning-button class="primary-button" onclick={closeOrderViaPhoneModal}
+                                                  label={labels.OK_LABEL} variant="brand">
+                                </lightning-button>
+                            </div>
+                        </c-generic-modal>
+                    </div>
+                </div>
+                <div class="journey-path">
+                    <div class="slds-progress slds-progress_vertical">
+                        <ol class="slds-progress__list">
+                            <li class={getContainerClass}>
+                                <template if:false={isOrderCancelled}>
+                                    <template if:true={isEnrollcompleted}>
+                                    <span class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon slds-progress__marker_icon-success"
+                                          title="Complete">
+                                        <svg class="slds-icon slds-icon_xx-small" aria-hidden="true">
+                                        <use xlink:href={svgSuccessIcon}></use>
+                                        </svg>
+                                    </span>
+                                    </template>
+                                    <template if:false={isEnrollcompleted}>
+                                        <div class="slds-progress__marker">
+                                            <span class="slds-assistive-text">{labels.ACTIVE_LABEL}</span>
+                                        </div>
+                                    </template>
+                                </template>
+                                <template if:true={isOrderCancelled}>
+                                    <div class="slds-progress__marker"></div>
+                                </template>
+                                <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                    <div class="slds-col slds-size_1-of-1 slds-border_bottom ">
+                                        <div class="slds-grid slds-gutters slds-p-bottom_small">
+                                            <div class="slds-col slds-size_3-of-12 secondary-title">
+                                                <img src={EnrollmentIcon} alt="Enrollment" class="journey-icon"/>
+                                                {labels.ENROLLMENT_LABEL}
+                                            </div>
+                                            <div class="slds-col slds-size_4-of-12 patient-journey-status">
+                                                {enrollStatus}
+                                            </div>
+                                        </div>
+                                        <template if:true={readonlyChild}>
+                                            <div class="slds-grid slds-grid slds-grid_vertical slds-gutters">
+                                                <h2 class="slds-p-bottom_x-small secondary-title">{labels.TREATMENT_TEAM_LABEL}</h2>
+                                                <div class="slds-col slds-size_4-of-12 slds-p-bottom_x-small">
+                                                    <lightning-input type="text"
+                                                                     label={labels.TREATING_PHYSICIAN_LABEL}
+                                                                     value={selectedPhysicianTitle}
+                                                                     readonly></lightning-input>
+                                                </div>
+                                                <div class="slds-col slds-size_4-of-12 slds-p-bottom_x-small">
+                                                    <lightning-input type="text"
+                                                                     label={labels.TREATMENT_CENTER_COORDINATOR_LABEL}
+                                                                     value={coordinatoruserName}
+                                                                     readonly></lightning-input>
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class={getContainerClass}>
+                                <template if:false={isOrderCancelled}>
+                                    <template if:true={isApheresisCompleted}>
+                                    <span class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon slds-progress__marker_icon-success"
+                                          title="Complete">
+                                        <svg class="slds-icon slds-icon_xx-small" aria-hidden="true">
+                                        <use xlink:href={svgSuccessIcon}></use>
+                                        </svg>
+                                    </span>
+                                    </template>
+                                    <template if:false={isApheresisCompleted}>
+                                        <div class="slds-progress__marker">
+                                            <span class="slds-assistive-text">{labels.ACTIVE_LABEL}</span>
+                                        </div>
+                                    </template>
+                                </template>
+                                <template if:true={isOrderCancelled}>
+                                    <div class="slds-progress__marker"></div>
+                                </template>
+                                <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                    <div class="slds-col slds-size_1-of-1 slds-border_bottom ">
+                                        <div class="slds-grid slds-p-bottom_small">
+                                            <div class="slds-col slds-size_3-of-12 slds-p-horizontal_none secondary-title">
+                                                <img src={ApheresisIcon} alt="Apheresis" class="journey-icon"/>
+                                                {labels.APHERESIS_PICKUP_LABEL}
+                                            </div>
+                                            <div class="slds-col slds-size_4-of-12 patient-journey-status">
+                                                {apheresisPickupStatus}
+                                            </div>
+                                            <template if:false={isApheresisPickUpScheduled}>
+                                                <div class="slds-col slds-size_5-of-12 text-align-right">
+                                                    <lightning-button variant="brand" class="primary-button"
+                                                                      label={labels.SCHEDULE_APHERESIS_PICKUP_LABEL}
+                                                                      onclick={navigateToCalendarAvailabilityPage}>
+                                                    </lightning-button>
+                                                </div>
+                                            </template>
+                                        </div>
+                                        <template if:true={isCancelRequestedOrder}>
+                                            <p>
+                                                {apheresisPickUpCancellationRequestOn}
+                                                <lightning-formatted-date-time
+                                                        value={orderCancelRequestDate}
+                                                        time-zone="UTC"
+                                                        month="short"
+                                                        day="2-digit"
+                                                        year="numeric">
+                                                </lightning-formatted-date-time>
+                                                .
+                                                {customerCareRepresentativeWillReachOut}
+                                            </p>
+                                        </template>
+                                        <template if:true={isApheresisPickUpScheduled}>
+                                            <div class="slds-grid slds-wrap slds-gutters">
+                                                <div class="slds-col slds-size_1-of-2">
+                                                    <h2 class="slds-p-bottom_x-small secondary-title">
+                                                        {labels.APHERESIS_PICKUP_DETAILS_LABEL}</h2>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 text-align-right">
+                                                    <template if:false={isCancelRequestedOrder}>
+                                                        <template if:true={isAvailableForReschedule}>
+                                                            <lightning-button variant="brand" class="primary-button"
+                                                                              label={labels.RESCHEDULE_APHERESIS_PICKUP}
+                                                                              onclick={navigateToCalendarAvailabilityReschedulePage}>
+                                                            </lightning-button>
+                                                        </template>
+                                                        <template if:false={isAvailableForReschedule}>
+                                                            <lightning-button variant="brand" class="territory-button"
+                                                                              label={labels.RESCHEDULE_APHERESIS_PICKUP}
+                                                                              disabled read-only
+                                                                              onclick={navigateToCalendarAvailabilityReschedulePage}
+                                                            >
+                                                            </lightning-button>
+                                                            &nbsp;&nbsp;
+                                                            <lightning-helptext class="patient-alert-container"
+                                                                                content={labels.AVAILABILITY_CALENDAR_RESCHEDULE_HELP_TEXT}></lightning-helptext>
+                                                        </template>
+                                                    </template>
+                                                </div>
+                                                <div class="slds-col slds-size_4-of-12 slds-p-bottom_x-small">
+                                                    <lightning-input type="text"
+                                                                     label={labels.APHERESIS_PICKUP_SITE_LABEL}
+                                                                     value={apheresisPickupSite}
+                                                                     readonly></lightning-input>
+                                                </div>
+                                                <div class="slds-col slds-size_4-of-12 slds-p-bottom_x-small">
+                                                    <lightning-input type="text"
+                                                                     label={labels.CRYO_TYPE_LABEL}
+                                                                     value={apheresisCryoType}
+                                                                     readonly></lightning-input>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid  slds-wrap slds-gutters">
+                                                <div class="slds-col slds-size_1-of-1">
+                                                    <h2 class="slds-p-bottom_x-small secondary-title">
+                                                        {labels.ORDER_DETAILS_LABEL}</h2>
+                                                </div>
+                                                <div class="slds-col slds-size_4-of-12 slds-p-bottom_x-small">
+                                                    <label class="slds-form-element__label slds-p-bottom_xx-small">
+                                                        {labels.APHERESIS_PICKUP_DATE_LABEL}
+                                                    </label>
+                                                    <div class="slds-m-bottom_small">
+                                                        <lightning-formatted-date-time
+                                                                value={apheresisPickupDate}
+                                                                time-zone="UTC"
+                                                                weekday="short"
+                                                                month="short"
+                                                                day="2-digit"
+                                                                year="numeric"
+                                                                class="formatted-date-inp">
+                                                        </lightning-formatted-date-time>
+                                                    </div>
+                                                </div>
+                                                <div class="slds-col slds-size_4-of-12 slds-p-bottom_x-small">
+                                                    <lightning-input type="text"
+                                                                     label={labels.PO_NUMBER_LABEL}
+                                                                     value={apheresisSitePO}
+                                                                     readonly></lightning-input>
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                            </li>
+                            <template if:false={isApheresisCompleted}>
+                                <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                        <div class="slds-col slds-size_1-of-1 slds-border_bottom ">
+                                            <div class="slds-grid slds-p-bottom_small">
+                                                <div class="slds-col slds-size_3-of-12 slds-p-horizontal_none secondary-title">
+                                                    <img src={ShippingIcon} alt="Shipping" class="journey-icon"/>
+                                                    {labels.SHIPPING_LABEL}
+                                                </div>
+                                                <div class="slds-col slds-size_4-of-12 patient-journey-status">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </template>
+                            <template if:true={isApheresisCompleted}>
+                                <li class={getContainerClass}>
+                                    <template if:false={isOrderCancelled}>
+                                        <template if:true={isShippingCompleted}>
+                                            <span class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon slds-progress__marker_icon-success"
+                                                  title="Complete">
+                                                <svg class="slds-icon slds-icon_xx-small" aria-hidden="true">
+                                                <use xlink:href={svgSuccessIcon}></use>
+                                                </svg>
+                                            </span>
+                                        </template>
+                                        <template if:false={isShippingCompleted}>
+                                            <div class="slds-progress__marker">
+                                                <span class="slds-assistive-text">{labels.ACTIVE_LABEL}</span>
+                                            </div>
+                                        </template>
+                                    </template>
+                                    <template if:true={isOrderCancelled}>
+                                        <div class="slds-progress__marker"></div>
+                                    </template>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                        <div class="slds-col slds-size_1-of-1 slds-border_bottom ">
+                                            <div class="slds-grid slds-p-bottom_small">
+                                                <div class="slds-col slds-size_3-of-12 slds-p-horizontal_none secondary-title">
+                                                    <img src={ShippingIcon} alt="Shipping" class="journey-icon"/>
+                                                    {labels.SHIPPING_LABEL}
+                                                </div>
+                                                <div class="slds-col slds-size_4-of-12 patient-journey-status">
+                                                    {shippingStatus}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </template>
+                            <template if:false={isShippingCompleted}>
+                                <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                        <div class="slds-col slds-size_1-of-1 slds-border_bottom ">
+                                            <div class="slds-grid slds-p-bottom_small">
+                                                <div class="slds-col slds-size_3-of-12 slds-p-horizontal_none secondary-title">
+                                                    <img src={ManufacturingIcon} alt="Manufacturing" class="journey-icon"/>
+                                                    {labels.MANUFACTURING_LABEL}
+                                                </div>
+                                                <div class="slds-col slds-size_4-of-12 patient-journey-status">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </template>
+                            <template if:true={isShippingCompleted}>
+                                <li class={getContainerClass}>
+                                    <template if:false={isOrderCancelled}>
+                                        <template if:true={isManufacturingCompleted}>
+                                            <span class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon slds-progress__marker_icon-success"
+                                                  title="Complete">
+                                                <svg class="slds-icon slds-icon_xx-small" aria-hidden="true">
+                                                <use xlink:href={svgSuccessIcon}></use>
+                                                </svg>
+                                            </span>
+                                        </template>
+                                        <template if:false={isManufacturingCompleted}>
+                                            <div class="slds-progress__marker">
+                                                <span class="slds-assistive-text">{labels.ACTIVE_LABEL}</span>
+                                            </div>
+                                        </template>
+                                    </template>
+                                    <template if:true={isOrderCancelled}>
+                                        <div class="slds-progress__marker"></div>
+                                    </template>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                        <div class="slds-col slds-size_1-of-1 slds-border_bottom ">
+                                            <div class="slds-grid slds-p-bottom_small">
+                                                <div class="slds-col slds-size_3-of-12 slds-p-horizontal_none secondary-title">
+                                                    <img src={ManufacturingIcon} alt="Manufacturing" class="journey-icon"/>
+                                                    {labels.MANUFACTURING_LABEL}
+                                                </div>
+                                                <div class="slds-col slds-size_4-of-12 patient-journey-status">
+                                                    {manufacturingStatus}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </template>
+                            <template if:true={isManufacturingCompleted}>
+                                <li class={getContainerClass}>
+                                    <template if:false={isOrderCancelled}>
+                                        <template if:true={isDeliveryCompleted}>
+                                            <span class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon slds-progress__marker_icon-success"
+                                                  title="Complete">
+                                                <svg class="slds-icon slds-icon_xx-small" aria-hidden="true">
+                                                    <use xlink:href={svgSuccessIcon}></use>
+                                                </svg>
+                                            </span>
+                                        </template>
+                                        <template if:false={isDeliveryCompleted}>
+                                            <div class="slds-progress__marker">
+                                                <span class="slds-assistive-text">{labels.ACTIVE_LABEL}</span>
+                                            </div>
+                                        </template>
+                                    </template>
+                                    <template if:true={isOrderCancelled}>
+                                        <div class="slds-progress__marker"></div>
+                                    </template>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                        <div class="slds-col slds-size_1-of-1 slds-border_bottom ">
+                                            <div class="slds-grid slds-p-bottom_small">
+                                                <div class="slds-col slds-size_3-of-12 slds-p-horizontal_none secondary-title">
+                                                    <img src={DeliveryIcon} alt="Delivery" class="journey-icon"/>
+                                                    {labels.DELIVERY_LABEL}
+                                                </div>
+                                                <div class="slds-col slds-size_4-of-12 label-inp patient-journey-status">
+                                                    {deliveryStatus}
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid slds-wrap slds-gutters slds-m-bottom_small">
+                                                <div class="slds-col slds-size_1-of-2">
+                                                    <template if:false={isDeliveryCompleted}>
+                                                        <template if:false={isDeliveryDateSelected}>
+                                                            <div class="parent-element" onclick={handleOpenCalendar}>
+                                                                <label class="slds-form-element__label">
+                                                                    {labels.PROJECTED_DRUG_PRODUCT_DELIVERYDATE}
+                                                                    <span>
+                                                                        <lightning-helptext class="custom-helptext"
+                                                                                            content={labels.PROJECTED_DELIVERY_DATE_HELPTEXT}>
+                                                                        </lightning-helptext>
+                                                                    </span>
+                                                                </label>
+                                                                <div class="placeholder-element"></div>
+                                                                <lightning-input type="date" label={labels.DRUG_PRODUCT_DELIVERY_DATE}
+                                                                                         value={selectedDeliveryDate}
+                                                                                         time-zone="UTC"
+                                                                                         weekday="short"
+                                                                                         month="short"
+                                                                                         day="2-digit"
+                                                                                         year="numeric"
+                                                                                         class="custom-date-cal"
+                                                                                         variant="label-hidden"
+                                                                    ></lightning-input>
+                                                            </div>
+                                                        </template>
+                                                        <template if:true={isDeliveryDateSelected}>
+                                                            <label class="slds-form-element__label">
+                                                                {labels.DRUG_PRODUCT_DELIVERY_DATE}
+                                                                <span>
+                                                                <lightning-helptext class="custom-helptext"
+                                                                                    content={labels.CONFIRMED_DRUG_PRODUCT_DELIVERY_DATE}>
+                                                                </lightning-helptext>
+                                                            </span>
+                                                            </label>
+                                                            <div class="cust-line-height">
+                                                                <lightning-formatted-date-time
+                                                                        value={selectedFPDeliveryDate}
+                                                                        time-zone="UTC"
+                                                                        month="short"
+                                                                        day="2-digit"
+                                                                        year="numeric"
+                                                                        class="formatted-date-inp"
+                                                                ></lightning-formatted-date-time>
+                                                            </div>
+                                                        </template>
+                                                    </template>
+                                                    <template if:true={isDeliveryCompleted}>
+                                                        <label class="slds-form-element__label">
+                                                            {labels.DRUG_PRODUCT_DELIVERY_DATE}
+                                                            <span>
+                                                                <lightning-helptext class="custom-helptext"
+                                                                                    content={labels.CONFIRMED_DRUG_PRODUCT_DELIVERY_DATE}>
+                                                                </lightning-helptext>
+                                                            </span>
+                                                        </label>
+                                                        <div class="cust-line-height">
+                                                            <lightning-formatted-date-time
+                                                                    value={confirmedFPDelieveryDate}
+                                                                    time-zone="UTC"
+                                                                    month="short"
+                                                                    day="2-digit"
+                                                                    year="numeric"
+                                                                    class="formatted-date-inp"
+                                                            ></lightning-formatted-date-time>
+                                                        </div>
+                                                    </template>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </template>
+                            <template if:false={isManufacturingCompleted}>
+                                <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                        <div class="slds-col slds-size_1-of-1 slds-border_bottom">
+                                            <div class="slds-grid slds-p-bottom_small">
+                                                <div class="slds-col slds-size_3-of-12 slds-p-horizontal_none secondary-title">
+                                                    <img src={DeliveryIcon} alt="Delivery" class="journey-icon"/>
+                                                    {labels.DELIVERY_LABEL}
+                                                </div>
+                                                <div class="slds-col slds-size_4-of-12 patient-journey-status">
+                                                    {deliveryStatus}
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid slds-wrap slds-gutters slds-m-bottom_small">
+                                                <div class="slds-col slds-size_1-of-2">
+                                                    <label class="slds-form-element__label">
+                                                        {labels.PROJECTED_DELIVERY_DATE}
+                                                        <span>
+                                                            <lightning-helptext class="custom-helptext"
+                                                                    content={labels.PROJECTED_DELIVERY_DATE_HELPTEXT}>
+                                                            </lightning-helptext>
+                                                        </span>
+                                                    </label>
+                                                    <div class="cust-line-height">
+                                                        <lightning-formatted-date-time
+                                                                value={projectedDeliveryDate}
+                                                                time-zone="UTC"
+                                                                month="short"
+                                                                day="2-digit"
+                                                                year="numeric"
+                                                                class="formatted-date-inp"
+                                                        ></lightning-formatted-date-time>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </template>
+                            <template if:false={isDeliveryCompleted}>
+                                <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                        <div class="slds-col slds-size_1-of-1">
+                                            <div class="slds-grid slds-p-bottom_small">
+                                                <div class="slds-col slds-size_7-of-12 slds-p-horizontal_none secondary-title">
+                                                    <img src={InfusionIcon} alt="Infusion" class="journey-icon"/>
+                                                    {labels.INFUSION_LABEL}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </template>
+                            <template if:true={isDeliveryCompleted}>
+                                <li class={getContainerClass}>
+                                    <template if:false={isOrderCancelled}>
+                                        <template if:true={isInfusionCompleted}>
+                                                <span class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon slds-progress__marker_icon-success"
+                                                      title="Complete">
+                                                    <svg class="slds-icon slds-icon_xx-small" aria-hidden="true">
+                                                        <use xlink:href={svgSuccessIcon}></use>
+                                                    </svg>
+                                                </span>
+                                        </template>
+                                        <template if:false={isInfusionCompleted}>
+                                            <div class="slds-progress__marker">
+                                                <span class="slds-assistive-text">{labels.ACTIVE_LABEL}</span>
+                                            </div>
+                                        </template>
+                                    </template>
+                                    <template if:true={isOrderCancelled}>
+                                        <div class="slds-progress__marker"></div>
+                                    </template>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                        <div class="slds-col slds-size_1-of-1">
+                                            <div class="slds-grid slds-p-bottom_small">
+                                                <div class="slds-col slds-size_3-of-12 slds-p-horizontal_none secondary-title">
+                                                    <img src={InfusionIcon} alt="Infusion" class="journey-icon"/>
+                                                    {labels.INFUSION_LABEL}
+                                                </div>
+                                                <div class="slds-col slds-size_4-of-12 patient-journey-status">
+                                                    {infusionStatus}
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid slds-wrap slds-gutters slds-m-bottom_small">
+                                                <div class="slds-col slds-size_1-of-2">
+                                                    <template if:false={isInfusionCompleted}>
+                                                        <div class="parent-element" onclick={handleOpenInfusionCalendar}>
+                                                            <label class="slds-form-element__label">
+                                                                {labels.INFUSION_DATE}
+                                                            </label>
+                                                            <div class="placeholder-element"></div>
+                                                            <lightning-input type="date" label=''
+                                                                             value={selectedInfusionDate}
+                                                                             time-zone="UTC"
+                                                                             weekday="short"
+                                                                             month="short"
+                                                                             day="2-digit"
+                                                                             year="numeric"
+                                                                             class="custom-date-cal"
+                                                                             variant="label-hidden"
+                                                            ></lightning-input>
+                                                        </div>
+                                                    </template>
+                                                    <template if:true={isInfusionCompleted}>
+                                                        <label class="slds-form-element__label">
+                                                            {labels.INFUSION_DATE}
+                                                        </label>
+                                                        <div class="cust-line-height">
+                                                            <lightning-formatted-date-time
+                                                                    value={infusionDate}
+                                                                    time-zone="UTC"
+                                                                    month="short"
+                                                                    day="2-digit"
+                                                                    year="numeric"
+                                                                    class="formatted-date-inp"
+                                                            ></lightning-formatted-date-time>
+                                                        </div>
+                                                    </template>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </template>
+                        </ol>
+                    </div>
+                </div>
+            </c-generic-card>
+        </div>
+        <div class="slds-col slds-size_4-of-12">
+            <c-display-patient-notifications record-id={recordId}>
+            </c-display-patient-notifications>
+            <c-generic-card class="card-item slds-m-top_small">
+                <h2 class="secondary-title slds-p-bottom_medium">{labels.PATIENT_SERVICE_PROGRAM_LABEL}</h2>
+                <p class="slds-p-bottom_medium text-default"> {getStatusText} </p>
+                <template if:true={showFindOutMoreButton}>
+                    <div class="slds-align_absolute-center slds-p-bottom_medium">
+                        <lightning-button label={labels.FINDOUT_MORE_LABEL} disabled></lightning-button>
+                    </div>
+                </template>
+                <template if:false={showFindOutMoreButton}>
+                    <div class="slds-align_absolute-center slds-p-bottom_medium">
+                        <lightning-button class="primary-button"
+                                          label={labels.FINDOUT_MORE_LABEL}
+                                          onclick={handlePatientServiceProgram}
+                                          variant="brand">
+                        </lightning-button>
+                    </div>
+                </template>
+            </c-generic-card>
+            <c-patient-documents-card record-id={recordId} patient-name={patientName}></c-patient-documents-card>
+        </div>
+    </div>
+    <div>
+        <c-generic-modal open={isPatientServiceProgram} size="small">
+            <div class="slds-float_right">
+                <lightning-icon icon-name="utility:close"
+                                alternative-text="close"
+                                variant="brand"
+                                onclick={handleClose}
+                                size="small">
+                </lightning-icon>
+            </div>
+            <div class="slds-align_absolute-center slds-m-vertical_medium">
+                <h2 class="custom-text-size-large">{labels.PATIENT_SERVICE_LABEL}</h2>
+            </div>
+            <div class="disclaimer-text slds-p-bottom_small">
+                <lightning-input name="patientService"
+                                 label={labels.PATIENT_SERVICE_CHECK_LABEL}
+                                 type="checkbox"
+                                 checked={enablePatientService}
+                                 onchange={handlePatientServiceCheck}>
+                </lightning-input>
+            </div>
+            <div class="disclaimer-text">{labels.PATIENT_SERVICE_PROGRAMS_POPUP_DISCLAIMER_LABEL}</div>
+            <div class="slds-align_absolute-center slds-p-top_medium">
+                <template if:true={showSubmitButton}>
+                    <lightning-button class="primary-button"
+                                      label={labels.SUBMIT_REQUEST_LABEL}
+                                      onclick={handleSubmitRequest}
+                                      variant="brand">
+                    </lightning-button>
+                </template>
+                <template if:false={showSubmitButton}>
+                    <lightning-button label={labels.SUBMIT_REQUEST_LABEL} disabled>
+                    </lightning-button>
+                </template>
+            </div>
+        </c-generic-modal>
+    </div>
+    <div>
+        <c-generic-modal open={openCalendar} size="small">
+            <div class="slds-float_right">
+                <lightning-icon icon-name="utility:close"
+                                alternative-text="close"
+                                variant="brand"
+                                onclick={handleCalendarClose}
+                                size="small">
+                </lightning-icon>
+            </div>
+            <div class="slds-m-top_small">
+                <h2 class="custom-text-size-large slds-align_absolute-center slds-m-bottom_small">{labels.SCHEDULED_DRUG_PRODUCT_DELIVERY}</h2>
+                <div class="slds-align_absolute-center text-semibold">{scheduledDrugProductDateHelpText}</div>
+            </div>
+            <div class="slds-grid cust-modal-height slds-p-around_x-small ">
+                <div class="slds-col slds-p-around_medium">
+                    <template if:true={delieveryDateError}>
+                        <div class="text-nunito slds-text-color--error slds-align_absolute-center">{labels.SCHEDULED_DRUG_PRODUCT_DELIVERY_ERRORTEXT}</div>
+                    </template>
+                    <template if:true={isDeliveryRangeError}>
+                        <div class="text-nunito slds-text-color--error slds-align_absolute-center">{scheduledDrugProductDateOutRangeErrorText}</div>
+                    </template>
+                    <div class="disclaimer-text slds-p-bottom_small cust-cal-height slds-align_absolute-center">
+                            <c-calendar show-weekends={showWeekend}
+                                        page="patientMilestone" oneventclick={handleSelectDate}
+                                        valid-range={delieveryRange} oncellclick={handleCellClick}
+                                        events={events}>
+                            </c-calendar>
+                    </div>
+                    <div class="slds-grid slds-grid_align-spread slds-p-bottom_small slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_1-of-1">
+                            <div class="text-semibold">
+                                <span>
+                                {labels.SELECTED_DRUG_PRODUCT_DELIVERY_DATE} :
+                                </span>
+                                <span>
+                                    <b>
+                                    <lightning-formatted-date-time
+                                            value={selectedDeliveryDate}
+                                            time-zone="UTC"
+                                            month="short"
+                                            day="2-digit"
+                                            year="numeric"
+                                    ></lightning-formatted-date-time>
+                                    </b>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-grid_align-spread slds-p-bottom_small slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_1-of-2">
+                            <div class="display-flex text-semibold">
+                                <div class="display-inline-block aph-block slds-m-right_small"></div>
+                                <span>{labels.DATES_AVAILABLE_FOR_DRUGPRODUCTDELIVERY}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_1-of-2">
+                            <div class="display-flex text-semibold">
+                                <div class="display-inline-block today-date slds-m-right_small"></div>
+                                <span>{labels.TODAY_DATE_LABEL}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-p-top_medium">
+                <lightning-button class="primary-button slds-float_right"
+                                  label={labels.SUBMIT_LABEL}
+                                  onclick={handleValidateDate}
+                                  variant="brand">
+                </lightning-button>
+            </div>
+        </c-generic-modal>
+        <c-generic-modal open={openInfusionCalendar} size="small">
+            <div class="slds-float_right">
+                <lightning-icon icon-name="utility:close"
+                                alternative-text="close"
+                                variant="brand"
+                                onclick={handleInfusionCalendarClose}
+                                size="small">
+                </lightning-icon>
+            </div>
+            <div class="slds-m-top_small">
+                <h2 class="custom-text-size-large slds-align_absolute-center slds-m-bottom_small">{labels.SELECT_INFUSION_DATE}</h2>
+                <div class="slds-align_absolute-center text-semibold">{infusionDateHelpText}</div>
+            </div>
+            <div class="slds-grid cust-modal-height slds-p-around_x-small ">
+                <div class="slds-col slds-p-around_medium">
+                    <template if:true={infusionDateError}>
+                        <div class="text-nunito slds-text-color--error slds-align_absolute-center">{labels.SCHEDULED_DRUG_PRODUCT_DELIVERY_ERRORTEXT}</div>
+                    </template>
+                    <div class="disclaimer-text slds-p-bottom_small cust-cal-height slds-align_absolute-center">
+                        <c-calendar show-weekends={showWeekend}
+                                    page="infusionCalendar" oneventclick={handleInfusionSelectDate}
+                                    valid-range={infusionRange} oncellclick={handleCellClick}
+                                    events={infusionEvents}>
+                        </c-calendar>
+                    </div>
+                    <div class="slds-grid slds-grid_align-spread slds-p-bottom_small slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_1-of-1">
+                            <div class="text-semibold">
+                                <span>
+                                {labels.SELECTED_INFUSION_DATE} :
+                                </span>
+                                <span>
+                                    <b>
+                                    <lightning-formatted-date-time
+                                            value={selectedInfusionDate}
+                                            time-zone="UTC"
+                                            month="short"
+                                            day="2-digit"
+                                            year="numeric"
+                                    ></lightning-formatted-date-time>
+                                    </b>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-grid_align-spread slds-p-bottom_small slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_1-of-2">
+                            <div class="display-flex text-semibold">
+                                <div class="display-inline-block aph-block slds-m-right_small"></div>
+                                <span>{labels.AVAILABLE_DATES_RECORD_INFUSION}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_1-of-2">
+                            <div class="display-flex text-semibold">
+                                <div class="display-inline-block today-date slds-m-right_small"></div>
+                                <span>{labels.TODAY_DATE_LABEL}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-p-top_medium">
+                <lightning-button class="primary-button slds-float_right"
+                                  label={labels.SAVE_BUTTON}
+                                  onclick={handleInfusionDateSave}
+                                  variant="brand">
+                </lightning-button>
+            </div>
+        </c-generic-modal>
+    </div>
+</template>

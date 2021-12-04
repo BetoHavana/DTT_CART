@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>EntityDefinition.FieldDefinitions$Label</field>
+    </columns>
+    <columns>
+        <field>EntityDefinition$DeveloperName</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>EntityDefinition.FieldDefinitions$Length</field>
+    </columns>
+    <columns>
+        <field>EntityDefinition.FieldDefinitions$ComplianceGroup</field>
+    </columns>
+    <columns>
+        <field>EntityDefinition.FieldDefinitions$Description</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>EntityDefinition.FieldDefinitions$IsFieldHistoryTracked</field>
+    </columns>
+    <columns>
+        <field>EntityDefinition$Label</field>
+    </columns>
+    <description>Show the field metadata</description>
+    <filter>
+        <criteriaItems>
+            <column>EntityDefinition$Label</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Account,Contact,Order,Associated Location,Location,Case,Associated Contact,Person Account,Account Team Member,Site Information,Account Contact Relationship</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>EntityDefinition$MasterLabel</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Metadata Definition</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>MetadataDefinition__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>EntityDefinition.FieldDefinitions$Label</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>EntityDefinition$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

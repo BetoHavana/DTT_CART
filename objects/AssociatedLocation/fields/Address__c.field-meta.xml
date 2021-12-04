@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address__c</fullName>
+    <description>Formula field for address related to location object.</description>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(Location.AddressLine2__c),
+Location.AddressLine1__c  + &quot;, &quot; + Location.City__c  + &quot;, &quot; +  Text(Location.State__c ) + &quot;, &quot; +  Text(Location.Country__c)  + &quot;, &quot; + Location.PostalCode__c,
+Location.AddressLine1__c  + &quot;, &quot; +  Location.AddressLine2__c  + &quot;, &quot; +  Location.City__c  + &quot;, &quot; +  Text(Location.State__c ) + &quot;, &quot; +  Text(Location.Country__c)  + &quot;, &quot; + Location.PostalCode__c)</formula>
+    <label>Address</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

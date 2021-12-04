@@ -1,0 +1,24 @@
+<template>
+    <lightning-card>
+        <lightning-layout multiple-rows>
+            <lightning-layout-item class="increaseHeight" padding="around-small" size="4" if:true={rescheduleReasonOptions}>
+                <lightning-combobox name="reasonForReschedule" onchange={changeHandler}
+                                    label={labels.REASONFORRESCHEDULE_LABEL} options={rescheduleReasonOptions}
+                                    value={reasonForReschedule}></lightning-combobox>
+            </lightning-layout-item>
+            <lightning-layout-item if:true={reasonRequired} padding="around-small" size="8">
+                <lightning-textarea padding="around-small" name="reason"
+                                    label={labels.SPECIFYREASONFORRESCHEDULE_LABEL}
+                                    value={reason} onchange={changeHandler}
+                                    message-when-value-missing={labels.REASONFORRESCHEDULEREQ_LABEL}
+                                    max-length="255" required={reasonRequired}></lightning-textarea>
+            </lightning-layout-item>
+        </lightning-layout>
+        <div slot="footer">
+            <lightning-button disabled={disableNextButton} label={labels.NEXT_LABEL} variant="brand"
+                              onclick={handleNextButtonClick}></lightning-button>
+            <lightning-button class="slds-p-left_large" label={labels.CANCEL_LABEL} variant="brand"
+                              onclick={closePopup}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

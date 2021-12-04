@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>On Hold</fullName>
+        <default>false</default>
+        <label>On Hold</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated</fullName>
+        <default>false</default>
+        <label>Escalated</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed</fullName>
+        <default>false</default>
+        <label>Closed</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>New</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Apheresis Pickup Date Requested</fullName>
+        <default>false</default>
+        <label>Apheresis Pickup Date Requested</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Apheresis Pickup Date Scheduled</fullName>
+        <default>false</default>
+        <label>Apheresis Pickup Date Scheduled</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Apheresed</fullName>
+        <default>false</default>
+        <label>Apheresed</label>
+        <closed>false</closed>
+        <isActive>false</isActive>
+    </standardValue>
+    <standardValue>
+        <fullName>Drug Product Shipped</fullName>
+        <default>false</default>
+        <label>Drug Product Shipped</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Drug Product Delivered</fullName>
+        <default>false</default>
+        <label>Drug Product Delivered</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Infused</fullName>
+        <default>false</default>
+        <label>Infused</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Manufacturing</fullName>
+        <default>false</default>
+        <label>Manufacturing</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Cells Delivered to Manufacturing Site</fullName>
+        <default>false</default>
+        <label>Cells Delivered to Manufacturing Site</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Shipping Cells to Manufacturing Site</fullName>
+        <default>false</default>
+        <label>Shipping Cells to Manufacturing Site</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+        <label>In Progress</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Complete</fullName>
+        <default>false</default>
+        <label>Complete</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - Order to be Rescheduled</fullName>
+        <default>false</default>
+        <label>Closed - Order to be Rescheduled</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - Order Continued</fullName>
+        <default>false</default>
+        <label>Closed - Order Continued</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - Order to be Cancelled</fullName>
+        <default>false</default>
+        <label>Closed - Order to be Cancelled</label>
+        <closed>true</closed>
+    </standardValue>
+</StandardValueSet>

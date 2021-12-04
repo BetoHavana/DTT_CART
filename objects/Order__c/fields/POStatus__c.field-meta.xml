@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POStatus__c</fullName>
+    <complianceGroup>GxP</complianceGroup>
+    <description>PO Status of the order.</description>
+    <externalId>false</externalId>
+    <label>PO Status</label>
+    <required>false</required>
+	<trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PO Pending</fullName>
+                <default>true</default>
+                <label>PO Pending</label>
+            </value>
+            <value>
+                <fullName>PO Received</fullName>
+                <default>false</default>
+                <label>PO Received</label>
+            </value>
+            <value>
+                <fullName>PO Exception</fullName>
+                <default>false</default>
+                <label>PO Exception</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

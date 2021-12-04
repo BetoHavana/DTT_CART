@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReasonForOrderWithdrawal__c</fullName>
+    <complianceGroup>GxP</complianceGroup>
+    <description>Reason for Order Withdrawal.</description>
+    <externalId>false</externalId>
+    <label>Reason for Order Cancellation</label>
+    <required>false</required>
+	<trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Patient withdrew consent for treatment with Janssen CAR-T</fullName>
+                <default>false</default>
+                <label>Patient withdrew consent for treatment with Janssen CAR-T</label>
+            </value>
+            <value>
+                <fullName>Patient health-related reason</fullName>
+                <default>false</default>
+                <label>Patient health-related reason</label>
+            </value>
+            <value>
+                <fullName>Other patient-related reason</fullName>
+                <default>false</default>
+                <label>Other patient-related reason</label>
+            </value>
+            <value>
+                <fullName>Other non-patient related reason</fullName>
+                <default>false</default>
+                <label>Other non-patient related reason</label>
+            </value>
+            <value>
+                <fullName>Patient Health – Deceased</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Patient Health – Deceased</label>
+            </value>
+            <value>
+                <fullName>Patient Health – Disease Progression</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Patient Health – Disease Progression</label>
+            </value>
+            <value>
+                <fullName>Patient opted out of treatment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Patient opted out of treatment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

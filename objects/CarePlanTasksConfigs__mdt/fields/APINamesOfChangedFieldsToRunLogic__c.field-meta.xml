@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>APINamesOfChangedFieldsToRunLogic__c</fullName>
+    <description>This Field stores Comma separated fields list to Set Due Daye</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>API Names of Changed Fields To Run Logic</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

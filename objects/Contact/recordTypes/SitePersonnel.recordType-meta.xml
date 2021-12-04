@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SitePersonnel</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>SitePersonneSitePersonnelCompactLayoutlCompactLayout</compactLayoutAssignment>
+    <label>Site Personnel</label>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SitePersona__c</picklist>
+        <values>
+            <fullName>CAR-T Coordinator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharmacist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physician</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

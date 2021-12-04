@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SlotStatus__c</fullName>
+    <complianceGroup>GxP</complianceGroup>
+    <description>Slot status of the order.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If the Slot Status is &apos;Slot Rejected&apos; then please select a new Apheresis Pickup Date.</inlineHelpText>
+    <label>Slot Status</label>
+    <required>false</required>
+	<trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Slot Requested</fullName>
+                <default>false</default>
+                <label>Slot Requested</label>
+            </value>
+            <value>
+                <fullName>Slot Confirmed</fullName>
+                <default>false</default>
+                <label>Slot Confirmed</label>
+            </value>
+            <value>
+                <fullName>Slot Blocked</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Slot Blocked</label>
+            </value>
+            <value>
+                <fullName>Slot Rejected</fullName>
+                <default>false</default>
+                <label>Slot Rejected</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

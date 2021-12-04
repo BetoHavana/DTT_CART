@@ -1,0 +1,38 @@
+<aura:component controller="OrderPlacementController"
+                implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader"
+                access="global" description="OrderPlacement">
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="fieldsInfo" type="String" default="" description="Order object null fields information."/>
+    <aura:attribute name="order" type="Order__c"
+                    default="{'sobjectType': 'Order__c', 'Id' : '', 'ApheresisPickUpDate__c' : '', 'CarePlanID__c' : ''}"/>
+
+    <aura:html tag="style">
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }
+        .slds-modal__content{
+        overflow-y:hidden !important;
+        height:unset !important;
+        max-height:unset !important;
+        }
+    </aura:html>
+
+    <div class="modal-header slds-modal__header slds-size_1-of-1">
+        <h1 class="title slds-text-heading--medium">{!$Label.c.OrderSubmitPageHeading}</h1>
+    </div>
+
+    <div class="slds-modal__content slds-p-around--x-small slds-align_absolute-center slds-size_1-of-1 slds-is-relative">
+        <p><strong>{!$Label.c.OrderSubmitConfirmationMessage}</strong></p>
+    </div>
+
+    <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+        <lightning:button variant="Brand" class="slds-button" label="{!$Label.c.OrderSubmitConfirmationButton}"
+                          onclick="{!c.validateOrder}"/>
+        <lightning:button variant="Neutral" class="slds-button" label="{!$Label.c.CancelButton}"
+                          onclick="{!c.handleCancel}"/>
+    </div>
+</aura:component>

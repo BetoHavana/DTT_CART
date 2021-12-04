@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ValidateCryoTypeAfterOrdIsOrderSubmitted</fullName>
+    <active>false</active>
+    <description>This validation rule will trigger when user try to changed cryo type when order is Order Submitted</description>
+    <errorConditionFormula>AND(ISCHANGED(CryoType__c),!ISCHANGED(OrderStatus__c) ,OR(ISPICKVAL(OrderStatus__c, &quot;Order Submitted&quot;),ISPICKVAL(OrderStatus__c, &quot;Order Verified&quot;),ISPICKVAL(OrderStatus__c, &quot;Order Rescheduled&quot;)))</errorConditionFormula>
+    <errorMessage>Cryo Type cannot be changed after order submission</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CellTherapyOrderSpecialist__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field will be used to associate and operations coordinator with a treatment site</description>
+    <externalId>false</externalId>
+    <label>Cell Therapy Order Specialist (CTOS)</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>RelatedAccounts</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

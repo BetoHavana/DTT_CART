@@ -1,0 +1,12 @@
+<messaging:emailTemplate subject="Patient Services Eligibility" recipientType="Contact" relatedToType="PatientServicesEnrollee__c">
+    <messaging:htmlEmailBody >
+        <apex:outputText value="{0,date,MM/dd/yyyy}">
+        <br/>
+        <apex:param value="{!relatedto.DateEligibilityCheckPerformed__c}" />
+        </apex:outputText>
+        <p>{!relatedTo.Patient__r.Name}<br></br>{!relatedTo.PatientAddressLine1__c},{!relatedTo.PatientAddressLine2__c},{!relatedTo.PatientCity__c},{!relatedTo.PatientState__c},{!relatedTo.PatientZip__c},{!relatedTo.PatientCountry__c}</p>
+        <p>{!$Label.DearPatient} {!relatedTo.Patient__r.Name},</p>
+        <p>{!$Label.PatientEligibleServicesBodyMessage}<br></br><apex:outputText escape="false" value="{!SUBSTITUTE(relatedTo.PatientServices__c,';','<br/>')}"/></p>
+        <p>{!$Label.Sincerely}<br></br>{!relatedTo.Owner.Name}<br></br>{!$Label.JanssenPatientServicesAgent}</p>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

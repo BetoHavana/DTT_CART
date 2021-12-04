@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllOrderMilestonesUpdateRules</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>MilestoneName__c</columns>
+    <columns>MilestoneSource__c</columns>
+    <columns>MilestoneType__c</columns>
+    <columns>OrderMilestoneStatus__c</columns>
+    <columns>SourceFieldAPIName__c</columns>
+    <columns>TargetFieldAPIName__c</columns>
+    <columns>TargetStatusAPIName__c</columns>
+    <columns>CryoType__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Order Milestones Update Rules</label>
+    <language>en_US</language>
+</ListView>

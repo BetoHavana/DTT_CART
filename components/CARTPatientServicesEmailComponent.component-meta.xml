@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <description>Component to retrieve additional Information for CAR-T Email Templates</description>
+    <label>CAR-T Patient Services Email Component</label>
+</ApexComponent>

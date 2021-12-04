@@ -1,0 +1,69 @@
+<template>
+    <lightning-spinner if:true={showSpinner} variant="brand" size="medium"
+                       alternative-text="Loading"></lightning-spinner>
+    <template if:true={showCalenderScreen}>
+        <div class="slds-grid slds-m-top_xxx-small slds-gutters">
+            <div class="slds-col slds-size_9-of-12">
+                <c-availability-calendar-c-c-m treatment-site-id={treatmentSiteId}
+                                               show-weekends={showWeekend}
+                                               onaphselect={handleSelectDate}
+                                               eventsdata={events}
+                                               onclearorderdata={handleClearData}
+                                               onclosepopup={communicateParentToCloseAction}
+                                               onsubmitorder={submitOrderInfo}
+                                               onhandlespinner={handleSpinner}
+                                               is-submit-button-disabled={isSubmitButtonDisabled}
+                                               patient-id={patientId}
+                                               request-type="New">
+                </c-availability-calendar-c-c-m>
+            </div>
+            <div class="slds-col slds-size_3-of-12">
+                <lightning-card class="applyBorder">
+                    <h2 slot="title"><b>{labels.ORDER_DETAILS_LABEL}</b></h2>
+                    <div class="slds-p-bottom_medium form-section">
+                        <template if:true={pickupHasError}>
+                            <div class="slds-text-color_error slds-p-vertical_medium">{orderError}</div>
+                        </template>
+                        <label class="slds-form-element__label">
+                            {labels.APHERESIS_PICKUP_DATE_LABEL}
+                            <abbr class="slds-required">*</abbr>
+                        </label>
+                        <div class="slds-m-bottom_small">
+                            <lightning-formatted-date-time
+                                    value={selectedPickupDate}
+                                    time-zone="UTC"
+                                    weekday="short"
+                                    month="short"
+                                    day="2-digit"
+                                    year="numeric"
+                                    class="formatted-date-inp"
+                            ></lightning-formatted-date-time>
+                        </div>
+                        <label class="slds-form-element__label">{labels.PROJECTED_DELIVERY_DATE_LABEL}</label>
+                        <div class="slds-m-bottom_small">
+                            <lightning-formatted-date-time
+                                    value={deliveryWindowStartDate}
+                                    time-zone="UTC"
+                                    weekday="short"
+                                    month="short"
+                                    day="2-digit"
+                                    year="numeric"
+                                    class="formatted-date-inp"
+                            ></lightning-formatted-date-time>
+                        </div>
+                    </div>
+                    <div class="slds-col">
+                        <div>
+                            <div class="display-inline-block aph-block slds-m-right_small"></div>
+                            <span>{labels.DATES_AVAIL_FOR_APHRESIS_PICKUP}</span>
+                        </div>
+                        <div>
+                            <div class="display-inline-block drugproduct-delivery-date slds-m-right_small"></div>
+                            <span>{labels.PROJECTED_DELIVERY_DATE_LABEL}</span>
+                        </div>
+                    </div>
+                </lightning-card>
+            </div>
+        </div>
+    </template>
+</template>

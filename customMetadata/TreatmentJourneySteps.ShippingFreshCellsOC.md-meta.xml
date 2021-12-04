@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Shipping Fresh Cells</label>
+    <protected>false</protected>
+    <values>
+        <field>ApheresisCompleted__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>ApheresisPickUpSectionStatus__c</field>
+        <value xsi:type="xsd:string">Apheresis Pickup Date Scheduled</value>
+    </values>
+    <values>
+        <field>CarePlanStatus__c</field>
+        <value xsi:type="xsd:string">Shipping Cells to Manufacturing Site</value>
+    </values>
+    <values>
+        <field>DeliveryCompleted__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>DeliveryStatus__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ManufacturingCompleted__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>ManufacturingStatus__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>OrderStatus__c</field>
+        <value xsi:type="xsd:string">Order Cancelled</value>
+    </values>
+    <values>
+        <field>POStatus__c</field>
+        <value xsi:type="xsd:string">PO Received</value>
+    </values>
+    <values>
+        <field>SectionName__c</field>
+        <value xsi:type="xsd:string">Shipping</value>
+    </values>
+    <values>
+        <field>ShippingCompleted__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>ShippingStatus__c</field>
+        <value xsi:type="xsd:string">Shipping Fresh Cells</value>
+    </values>
+    <values>
+        <field>SlotStatus__c</field>
+        <value xsi:type="xsd:string">Slot Confirmed</value>
+    </values>
+</CustomMetadata>

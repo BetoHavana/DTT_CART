@@ -1,0 +1,3070 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>TwoWeekView</fullName>
+        <categories>TCP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label used in site personal calendar to show 2 week view</shortDescription>
+        <value>2-Weeks View</value>
+    </labels>
+    <labels>
+        <fullName>APIKey</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>APIKey</shortDescription>
+        <value>AIzaSyASpORcw-uPOQx09IfeVuPkoDMxGC66V9c</value>
+    </labels>
+    <labels>
+        <fullName>Account</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account text used as hyperlink in patientlanding page</shortDescription>
+        <value>account</value>
+    </labels>
+    <labels>
+        <fullName>AcknowledgeSoftSlotIsBookedOrAllocated</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Acknowledge manufacturing slot is allocated</shortDescription>
+        <value>Acknowledge manufacturing slot is allocated</value>
+    </labels>
+    <labels>
+        <fullName>Active</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used as a status in the patient treatment journey process</shortDescription>
+        <value>Active</value>
+    </labels>
+    <labels>
+        <fullName>AddCaregiver</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Add Caregiver</shortDescription>
+        <value>Add Caregiver</value>
+    </labels>
+    <labels>
+        <fullName>Address</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label for Address used in AddressSearchController class for advanceMapLookup LWC</shortDescription>
+        <value>Address:</value>
+    </labels>
+    <labels>
+        <fullName>AddressCreatedSuccessfully</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Success Message after Address creation</shortDescription>
+        <value>Address Created Successfully</value>
+    </labels>
+    <labels>
+        <fullName>AddressLine1</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Address Line 1</shortDescription>
+        <value>Address Line 1</value>
+    </labels>
+    <labels>
+        <fullName>AddressLine2</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Address Line 2</shortDescription>
+        <value>Address Line 2</value>
+    </labels>
+    <labels>
+        <fullName>AddressSearchGoogleAPiEndpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AddressSearchGoogleAPiEndpoint</shortDescription>
+        <value>https://maps.googleapis.com/maps/api/place/REPLACEME/json?</value>
+    </labels>
+    <labels>
+        <fullName>AddressLookupError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Message while searching the address</shortDescription>
+        <value>An error occured while searching with the lookup field</value>
+    </labels>
+    <labels>
+        <fullName>AddressType</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Address Type</shortDescription>
+        <value>Address Type</value>
+    </labels>
+    <labels>
+        <fullName>AdditionalInformationRequested</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status value used in TCP Landing Page</shortDescription>
+        <value>Additional Information Requested</value>
+    </labels>
+    <labels>
+        <fullName>AddressSelectionBeforeSubmitting</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Warning message to select an address before submitting</shortDescription>
+        <value>You must make a selection before submitting!</value>
+    </labels>
+    <labels>
+        <fullName>AddressSelectionWarning</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Warning message while selecting an address.</shortDescription>
+        <value>Please make a selection and try again.</value>
+    </labels>
+    <labels>
+        <fullName>AdditionalInformationRequestedTitle</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status Help text value  used in TCP Landing page</shortDescription>
+        <value>Additional enrollment information requested by Cell Therapy Order Specialist (CTOS)</value>
+    </labels>
+    <labels>
+        <fullName>Alerts</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used for showing alert of Notifications in Community.</shortDescription>
+        <value>Alerts</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisPickUp</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used as a step in the patient treatment journey process</shortDescription>
+        <value>Apheresis Pick-Up</value>
+    </labels>
+    <labels>
+        <fullName>ScheduledApheresisPickUp</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used as button text in site personal calendar page </shortDescription>
+        <value>Scheduled Apheresis Pick-Up</value>
+    </labels>
+    <labels>
+        <fullName>ScheduleDrugProductDeliveryError</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error message that is shown when Manufacturing Status is other than QR Complete</shortDescription>
+        <value>Scheduling Drug Product Delivery is unavailable until Manufacturing Status = QR Complete</value>
+    </labels>
+    <labels>
+        <fullName>ScheduleExistingPatient</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>label used as a link in the patient card in availability calendar</shortDescription>
+        <value>Schedule Existing Patient</value>
+    </labels>
+	<labels>
+        <fullName>ScheduleShippedDrugProductDeliveryError</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ScheduleShippedDrugProductDeliveryError</shortDescription>
+        <value>The drug product is being shipped currently, the delivery date cannot be rescheduled</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisPickupAvailabilityError</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Apheresis Pickup Availability Error</shortDescription>
+        <value>Anaplan is unable to provide a response at this time. Request you to try again later.</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisPickupCancellationRequested</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ApheresisPickupCancellationRequested</shortDescription>
+        <value>An Apheresis Pick-Up Cancellation request was placed on ~ A Customer Care Representative will be in touch with you shortly for further details</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisPickUpDatabaseError</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Apheresis Pickup Database Error</shortDescription>
+        <value>Error occurred while processing message in Database. Please contact system administrator.</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisPickUpRequested</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status value used in TCP Landing Page</shortDescription>
+        <value>Apheresis Pick-Up Requested</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisPickUpSite</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label used in available Calendar page</shortDescription>
+        <value>Apheresis Pick-Up Site</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisPickUpRequestedTitle</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status Help text value  used in TCP Landing page</shortDescription>
+        <value>Apheresis pick-up requested and under review by Cell Therapy Order Specialist (CTOS)</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisPickUpScheduled</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status value used in TCP Landing Page</shortDescription>
+        <value>Apheresis Pick-Up Scheduled</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisPickUpScheduledTitle</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status Help text value  used in TCP Landing page</shortDescription>
+        <value>Apheresis pick-up scheduled</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisPickUpUnableToConnect</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Apheresis Pickup connection error</shortDescription>
+        <value>Unable to connect. Please try again later.</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisPickUpUnavailable</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ApheresisPickUpUnavailable</shortDescription>
+        <value>Please try again after some time, as a slot is unavailable at this point in time.</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisPoReceived</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in V2V email template</shortDescription>
+        <value>The Apheresis PO has been received for the new Order</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisPoRescheduleRequestReceived</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in V2V email template</shortDescription>
+        <value>A reschedule request has been received for Order with new Apheresis pickup date</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisSite</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used to show list of apheresis sites in availability calendar page</shortDescription>
+        <value>Apheresis Site</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisSlotUnavailable</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ApheresisSlotUnavailable</shortDescription>
+        <value>Slot Unavailable</value>
+    </labels>
+    <labels>
+        <fullName>Apheresed</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status value used in TCP Landing Page</shortDescription>
+        <value>Apheresed</value>
+    </labels>
+    <labels>
+        <fullName>ApheresedTitle</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status Help text value  used in TCP Landing page</shortDescription>
+        <value>Patient apheresis complete</value>
+    </labels>
+    <labels>
+        <fullName>AttestToCompletionOrderError</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Attest To Completion Order Submission Error</shortDescription>
+        <value>Please attest to completion of the order details by selecting &apos;Yes&apos; in the Attested for Completion field in the Order Information Section.</value>
+    </labels>
+    <labels>
+        <fullName>AvailabilityCalendar</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP header custom menu</shortDescription>
+        <value>Availability Calendar</value>
+    </labels>
+    <labels>
+        <fullName>AvailabilityCalendarConsentText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CustomLabel used as consent text in available calendar page</shortDescription>
+        <value>I confirm that the patient notice for Cilta-Cel was presented to the patient/caregiver prior to submitting this order. The patient/caregiver has been fully informed about the risks &amp; procedures involved in receiving Cilta-Cel and, where needed, has consented to allow Janssen/Legend to (1) collect &amp; process certain personal data, and (2) process &amp; store drug product for research purposes. I also confirm that I have, or will provide, the following materials to the patient/caregiver prior to the infusion of Cilta-Cel : (1) Patient Education Leaflet , and (2) Patient Services Program Leaflet, if requested</value>
+    </labels>
+    <labels>
+        <fullName>AvailabilityCalendarReScheduleConsentText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CustomLabel used as consent text in available calendar Reschedule page</shortDescription>
+        <value>I confirm that the patient notice for Cilta-Cel was presented to the patient/caregiver prior to submitting this order. The patient/caregiver has been fully informed about the risks &amp; procedures involved in receiving Cilta-Cel and, where needed, has consented to allow Janssen/Legend to (1) collect &amp; process certain personal data, and (2) process &amp; store drug product for research purposes. I also confirm that I have, or will provide, the following materials to the patient/caregiver prior to the infusion of Cilta-Cel : (1) Patient Education Leaflet , and (2) Patient Services Program Leaflet, if requested</value>
+    </labels>
+    <labels>
+        <fullName>AvailabilityCalendarPageValidationText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used as validation message in Availability Calendar Page</shortDescription>
+        <value>Please either select an existing patient to schedule Apheresis Pick-Up or enroll a new patient</value>
+    </labels>
+    <labels>
+        <fullName>AvailabilityCalendarSearch</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Placeholder for search of Patients in availability calendar page</shortDescription>
+        <value>Search by Patient or MRN</value>
+    </labels>
+    <labels>
+        <fullName>AvailabilityCalendarSuccessLabel</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Availability Calendar Success Label</shortDescription>
+        <value>You have successfully scheduled {0} Apheresis Pick-Up. A Customer Care Representative will be in touch with you if additional details are required</value>
+    </labels>
+    <labels>
+        <fullName>AvailabilitySearchCriteria</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used as a title for availability calendar page</shortDescription>
+        <value>Availability Search Criteria</value>
+    </labels>
+    <labels>
+        <fullName>AvailabilityCalendarRescheduleHelpText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used as help text in Patient Journey Available Reschedule</shortDescription>
+        <value>To continue re-scheduling the patient’s Apheresis Pick-Up, please reach out to a Customer Care Representative on +1-XXX-XXX-XXXX</value>
+    </labels>
+    <labels>
+        <fullName>AvailableDatesRecordInfusion</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Business Hours Name For PatientServiceEnrollee Tasks</shortDescription>
+        <value>Available dates to record Infusion</value>
+    </labels>
+    <labels>
+        <fullName>BusinessHoursNameForPatientServiceEnrolleeTasks</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Business Hours Name For PatientServiceEnrollee Tasks</shortDescription>
+        <value>JnJ Business Hours</value>
+    </labels>
+    <labels>
+        <fullName>BusinessHoursNameForOrderSubmissionRescheduling</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BusinessHours Name for checking order submission and reschedule validations</shortDescription>
+        <value>JnJ Business Hours</value>
+    </labels>
+    <labels>
+        <fullName>Back</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Back</shortDescription>
+        <value>Back</value>
+    </labels>
+    <labels>
+        <fullName>CareplanSubject</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Careplan Subject</shortDescription>
+        <value>Care Plan for</value>
+    </labels>
+    <labels>
+        <fullName>CARTCoordinator</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CAR-T Coordinator</shortDescription>
+        <value>CAR-T Coordinator</value>
+    </labels>
+    <labels>
+        <fullName>CARTCoordinatorEligibleBodyMessagePartOne</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Patient Services Eligibility Template for the CAR-T Coordinator Message Part One</shortDescription>
+        <value>It is our pleasure to inform you that your Patient</value>
+    </labels>
+    <labels>
+        <fullName>CARTCoordinatorEligibleServicesBodyMessagePartTwo</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Patient Services Eligibility Template for the CAR-T Coordinator Message Part Two</shortDescription>
+        <value>is eligible for the following services:</value>
+    </labels>
+    <labels>
+        <fullName>CARTCoordinatorIneligibileBodyMessagePartOne</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Patient Services Ineligibility Template for the CAR-T Coordinator Part One</shortDescription>
+        <value>We regret to inform you that your Patient</value>
+    </labels>
+    <labels>
+        <fullName>CARTCoordinatorIneligibileBodyMessagePartTwo</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Patient Services Ineligibility Template for the CAR-T Coordinator Part Two</shortDescription>
+        <value>is ineligible to receive Patient Services. Please find below details of other offerings available in the market for support: &lt;Link&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Calendar</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Landing Page - Custom Menu Tab set</shortDescription>
+        <value>My Calendar</value>
+    </labels>
+    <labels>
+        <fullName>CalendarHelpText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Availability calendar Page help text</shortDescription>
+        <value>Please note: In some circumstances, cryopreservation option selection may impact Projected Delivery Date due to cryopreservation slot availability, transportation, and lead time requirements.</value>
+    </labels>
+    <labels>
+        <fullName>CancelButton</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cancel Button</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>CancelOrder</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cancel Order</shortDescription>
+        <value>Cancel Order</value>
+    </labels>
+    <labels>
+        <fullName>CarePlanRecordType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CarePlanRecordType</shortDescription>
+        <value>CarePlan</value>
+    </labels>
+    <labels>
+        <fullName>CaregiverInformation</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CaregiverInformation</shortDescription>
+        <value>Caregiver Information</value>
+    </labels>
+    <labels>
+        <fullName>CaregiverLimit</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Caregiver Limit</shortDescription>
+        <value>You can enter a maximum of 1 caregiver&apos;s information</value>
+    </labels>
+    <labels>
+        <fullName>CaregiverRecordtype</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CaregiverRecordtype</shortDescription>
+        <value>Caregiver</value>
+    </labels>
+    <labels>
+        <fullName>CCMOperationsCoordinator</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCM Operations Coordinator</shortDescription>
+        <value>CCM Operations Coordinator</value>
+    </labels>
+    <labels>
+        <fullName>City</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>City</shortDescription>
+        <value>City</value>
+    </labels>
+    <labels>
+        <fullName>ChangePatient</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Label used in available Calendar Patient Card action</shortDescription>
+        <value>Change Patient</value>
+    </labels>
+    <labels>
+        <fullName>ClinicalProductsText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>clinicalProductsText</shortDescription>
+        <value>No Clinical Products are currently available.</value>
+    </labels>
+    <labels>
+        <fullName>ClinicalText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>clinicalText</shortDescription>
+        <value>Clinical</value>
+    </labels>
+    <labels>
+        <fullName>ClearAllFilters</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status value used in TCP Landing Page</shortDescription>
+        <value>Clear All Filters</value>
+    </labels>
+    <labels>
+        <fullName>Close</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Close</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>CloseDialog</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used for closing the pop up of Unread Notifications in community.</shortDescription>
+        <value>Close dialog</value>
+    </labels>
+    <labels>
+        <fullName>ClickHere</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label is used as a link to reset password in login screen</shortDescription>
+        <value>click here</value>
+    </labels>
+    <labels>
+        <fullName>CommercialText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>commercialText</shortDescription>
+        <value>Commercial</value>
+    </labels>
+    <labels>
+        <fullName>ConfirmAndUpdateFinalProductDeliveryDate</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Confirm and update final product delivery date</shortDescription>
+        <value>Confirm and update final product delivery date with CAR-T Coordinator; Communicate status with Vein to Vein Team</value>
+    </labels>
+	<labels>
+        <fullName>ConfirmDeliveryDate</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Confirm Delivery Date</shortDescription>
+        <value>Update the DP Delivery Date of the order on receiving the confirmed DP Delivery Date from the site</value>
+    </labels>
+    <labels>
+        <fullName>ConfirmPOIsRecordedFromPharmacistOrSD</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Confirm PO# is Recorded (from Pharmacist/SD)</shortDescription>
+        <value>Confirm SD PO# is recorded</value>
+    </labels>
+    <labels>
+        <fullName>ConfirmationCryoPreservedCellsDeliveredToTheManufacturingSite</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Confirmation: Cryo-preserved cells delivered to the Manufacturing site</shortDescription>
+        <value>Confirmation for delivery of cells to Manufacturing site</value>
+    </labels>
+    <labels>
+        <fullName>ConfirmationCryoPreservedCellsPickedUpFromTheCryoSitePickupLocation</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Confirmation: Cryo-preserved cells picked up from the Cryo site Pickup location</shortDescription>
+        <value>Confirmation for pickup of Cryo cells from Cryo site</value>
+    </labels>
+    <labels>
+        <fullName>ConfirmationForDeliveryOfCellsToManufacturingSite</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Confirmation for delivery of cells to Manufacturing site Task Name</shortDescription>
+        <value>Confirmation for delivery of cells to Manufacturing site</value>
+    </labels>
+    <labels>
+        <fullName>ConfirmationFromCryoSiteAboutCellDelivery</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Confirmation from Cryo Site about cell delivery</shortDescription>
+        <value>Confirmation from Cryo Site about cell delivery</value>
+    </labels>
+    <labels>
+        <fullName>ConfirmPOIsRecordedfromPharmacistSD</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Task Name for Confirm PO# is recorded</shortDescription>
+        <value>Confirm SD PO# is recorded</value>
+    </labels>
+    <labels>
+        <fullName>ConsentForms</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used to upload consent form(s) in treatment details page</shortDescription>
+        <value>Consent form(s)</value>
+    </labels>
+    <labels>
+        <fullName>ConsentError</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used as an error message  for consent form check box in treatment details</shortDescription>
+        <value>Please ensure that you read and attest to the following</value>
+    </labels>
+    <labels>
+        <fullName>ConsentCheckbox</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used for consent form check box</shortDescription>
+        <value>By checking this box, I hereby attest that I have collected all the relevant patient consent forms as required by my local treatment center and/or manufacturer agreements for this treatment option or will provide them once the patient is enrolled.</value>
+    </labels>
+    <labels>
+        <fullName>ContactInformation</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ContactInformation</shortDescription>
+        <value>Contact Information</value>
+    </labels>
+    <labels>
+        <fullName>Continue</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Continue</shortDescription>
+        <value>Continue</value>
+    </labels>
+    <labels>
+        <fullName>Country</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Country</shortDescription>
+        <value>Country</value>
+    </labels>
+    <labels>
+        <fullName>ConfirmedProductDeliveryPartOne</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in V2V email template</shortDescription>
+        <value>The confirmed Drug Product Delivery Date has been received for Order</value>
+    </labels>
+    <labels>
+        <fullName>ConfirmedProductDeliveryPartTwo</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in V2V email template</shortDescription>
+        <value>from the site</value>
+    </labels>
+    <labels>
+        <fullName>CryoType</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used to show list of cryo type options in availability calendar page</shortDescription>
+        <value>Cryopreservation Type</value>
+    </labels>
+    <labels>
+        <fullName>CurrentMonth</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in site personal calendar to show the calendar view</shortDescription>
+        <value>Current Month</value>
+    </labels>
+    <labels>
+        <fullName>CommunityPatientUrl</fullName>
+        <categories>This url is used to redirect CAT-T Coordinator on Patient Detail Page.</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Community Patient Url</shortDescription>
+        <value>https://dev-janssencart-tcp.cs54.force.com/s/account</value>
+    </labels>
+    <labels>
+        <fullName>DatesAvailableForDrugProductDelivery</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in patient milestone page under delivery section</shortDescription>
+        <value>Dates available for Drug Product Delivery</value>
+    </labels>
+    <labels>
+        <fullName>Date_of_Birth</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Date of Birth</shortDescription>
+        <value>Date of Birth</value>
+    </labels>
+    <labels>
+        <fullName>DateofBirth</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Date of Birth</shortDescription>
+        <value>Date of Birth</value>
+    </labels>
+    <labels>
+        <fullName>Delivery</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used as a step in the patient treatment journey process</shortDescription>
+        <value>Delivery</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Date</shortDescription>
+        <value>Delivery Date</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Window</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Window</shortDescription>
+        <value>Delivery Window</value>
+    </labels>
+    <labels>
+        <fullName>Displaying</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Field label value to show Selected statuses in TCP Landing Page</shortDescription>
+        <value>Displaying</value>
+    </labels>
+    <labels>
+        <fullName>Documents</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used as a section header in the patient journey screen</shortDescription>
+        <value>Documents</value>
+    </labels>
+    <labels>
+        <fullName>DocumentListEmpty</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used as a message if there is no document for patiens in treatment journey</shortDescription>
+        <value>There are currently no documents to display for</value>
+    </labels>
+    <labels>
+        <fullName>DocumentName</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DocumentName</shortDescription>
+        <value>Document Name</value>
+    </labels>
+    <labels>
+        <fullName>DPDeliveryDateUnavailable</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label used in TCP Availability Calendar page</shortDescription>
+        <value>Projected Delivery Date Unavailable</value>
+    </labels>
+    <labels>
+        <fullName>DPDeliveryUnavailableMessage</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label used in TCP Availability Calendar page</shortDescription>
+        <value>The projected delivery date for which you are trying to place this order is now unavailable. Please re-select an Apheresis Pick-Up date. Click &apos;OK&apos; to navigate to the &apos;Select Apheresis Pick-Up Date&apos; page</value>
+    </labels>
+    <labels>
+        <fullName>DropOffCryoType</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DropOffCryoType</shortDescription>
+        <value>Drop Off</value>
+    </labels>
+    <labels>
+        <fullName>DrugProductDelivered</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status value used in TCP Landing Page</shortDescription>
+        <value>Drug Product Delivered</value>
+    </labels>
+    <labels>
+        <fullName>DrugProductDeliveryDate</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label used in TCP patient milestone page</shortDescription>
+        <value>Drug Product Delivery Date</value>
+    </labels>
+    <labels>
+        <fullName>DrugProductDeliveredTitle</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status Help text value  used in TCP Landing page</shortDescription>
+        <value>Final Product delivered</value>
+    </labels>
+    <labels>
+        <fullName>DrugProductShipped</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status value used in TCP Landing Page</shortDescription>
+        <value>Drug Product Shipped</value>
+    </labels>
+    <labels>
+        <fullName>DrugProductShippedTitle</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status Help text value  used in TCP Landing page</shortDescription>
+        <value>Final Product shipped</value>
+    </labels>
+    <labels>
+        <fullName>EarliestProductDeliveryDate</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Earliest product delivery date label</shortDescription>
+        <value>Earliest product delivery date</value>
+    </labels>
+    <labels>
+        <fullName>Email</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in footer Email</shortDescription>
+        <value>xxxxxxxx@its.jnj.com</value>
+    </labels>
+    <labels>
+        <fullName>EmailFieldsValidation</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email field validation Message in TCP patient enrollment</shortDescription>
+        <value>Please enter an Email if preferred method of communication is Email</value>
+    </labels>
+    <labels>
+        <fullName>Extension</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used for Phone Extension in TCP profile settings page</shortDescription>
+        <value>Extension</value>
+    </labels>
+    <labels>
+        <fullName>EmailAddress</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EmailAddress</shortDescription>
+        <value>Email Address</value>
+    </labels>
+    <labels>
+        <fullName>Enrollment</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used as a step in the patient treatment journey process</shortDescription>
+        <value>Enrollment</value>
+    </labels>
+	<labels>
+        <fullName>ErrorArticles</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ErrorArticles</shortDescription>
+        <value>No articles found</value>
+    </labels>
+    <labels>
+        <fullName>Enrolled</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Enrolled</shortDescription>
+        <value>Enrolled</value>
+    </labels>
+    <labels>
+        <fullName>EnrolledBy</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status value used in TCP Landing Page</shortDescription>
+        <value>Enrolled by</value>
+    </labels>
+    <labels>
+        <fullName>EnrollNewPatient</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used in patient enrollment screen of TCP landing page</shortDescription>
+        <value>Enroll New Patient</value>
+    </labels>
+    <labels>
+        <fullName>Enquire</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Patient Journey Screen</shortDescription>
+        <value>Enquire</value>
+    </labels>
+    <labels>
+        <fullName>ErrorResponseCode</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Response Code</shortDescription>
+        <value>JNJ007</value>
+    </labels>
+	<labels>
+        <fullName>ErrorTopics</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ErrorTopics</shortDescription>
+        <value>An error occurred while loading the topics list</value>
+    </labels>
+    <labels>
+        <fullName>ExistingPatientContactFooter</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in Enroll patient duplicate check modal</shortDescription>
+        <value>Please call us at xxx-xxx-xxxx if you would like to continue enrolling this patient</value>
+    </labels>
+    <labels>
+        <fullName>ExistingPatientDuplicateText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in Patient Page in duplicate patient modal</shortDescription>
+        <value>Our record indicates that this record belongs to:</value>
+    </labels>
+    <labels>
+        <fullName>ExistingPatientFound</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Patient Page for Duplicate Patient Modal</shortDescription>
+        <value>Existing Patient found</value>
+    </labels>
+    <labels>
+        <fullName>FirstName</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FirstName</shortDescription>
+        <value>First Name</value>
+    </labels>
+    <labels>
+        <fullName>Filter</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label used in filter status of TCP landing page</shortDescription>
+        <value>Filter</value>
+    </labels>
+    <labels>
+        <fullName>FilterBy</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status value used in TCP Landing Page</shortDescription>
+        <value>Filter by</value>
+    </labels>
+    <labels>
+        <fullName>FindBy</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status value used in TCP Landing Page</shortDescription>
+        <value>Find By</value>
+    </labels>
+    <labels>
+        <fullName>FindByActiveStatusOnHoverText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label is used for showing on Hover text.</shortDescription>
+        <value>Patients that have an active order and/or have been infused with product within the last 30 days</value>
+    </labels>
+    <labels>
+        <fullName>FindByInactiveStatusOnHoverText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label is used for showing on Hover text.</shortDescription>
+        <value>Patients that do not have an active order and/or>= 30 days elapsed since they were infused with the product</value>
+    </labels>
+    <labels>
+        <fullName>FindOutMore</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Patient Journey Screen</shortDescription>
+        <value>Find Out More</value>
+    </labels>
+    <labels>
+        <fullName>FooterLabel</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>footerlabel</shortDescription>
+        <value>For Customer Support, please call +1 (800)-XXX-XXXX, Monday – Friday, 8:00 AM - 5:00 PM ET</value>
+    </labels>
+    <labels>
+        <fullName>Gender</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Gender</shortDescription>
+        <value>Gender</value>
+    </labels>
+    <labels>
+        <fullName>GeneralInquiryRecordType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label for General Inquiry Record Type</shortDescription>
+        <value>GeneralInquiry</value>
+    </labels>
+    <labels>
+        <fullName>Greetings</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Greetings</shortDescription>
+        <value>Hello</value>
+    </labels>
+    <labels>
+        <fullName>Home</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label for Home Button used in TCP Patient Enrollment Page</shortDescription>
+        <value>Home</value>
+    </labels>
+    <labels>
+        <fullName>Inactive</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status value used in TCP Landing Page</shortDescription>
+        <value>Inactive</value>
+    </labels>
+    <labels>
+        <fullName>InactiveStatusTreatmentSites</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inactive status for Treatment Sites</shortDescription>
+        <value>Inactive</value>
+    </labels>
+    <labels>
+        <fullName>InactiveTitle</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status Help text value  used in TCP Landing page</shortDescription>
+        <value>Patient inactive</value>
+    </labels>
+    <labels>
+        <fullName>Infusion</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used as a step in the patient treatment journey process</shortDescription>
+        <value>Infusion</value>
+    </labels>
+    <labels>
+        <fullName>InfusionDate</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used as a step in the patient treatment journey process</shortDescription>
+        <value>Infusion Date</value>
+    </labels>
+    <labels>
+        <fullName>InfusionDateHelpText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used as a step in the patient treatment journey process</shortDescription>
+        <value>Please select a date between {0} to {1}</value>
+    </labels>
+    <labels>
+        <fullName>JanssenPatientServicesAgent</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Janssen Patient Services Agent</shortDescription>
+        <value>Janssen Patient Services Agent</value>
+    </labels>
+    <labels>
+        <fullName>JanssenBiotechAndLegendBiotech</fullName>
+        <categories>This label is used for getting organization name in Email Template.</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JanssenBiotechAndLegendBiotech</shortDescription>
+        <value>Janssen Biotech, Inc. &amp; Legend Biotech</value>
+    </labels>
+    <labels>
+        <fullName>Infused</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status value used in TCP Landing Page</shortDescription>
+        <value>Infused</value>
+    </labels>
+    <labels>
+        <fullName>InfusedTitle</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status Help text value  used in TCP Landing page</shortDescription>
+        <value>Patient has been infused with final product</value>
+    </labels>
+    <labels>
+        <fullName>LastName</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LastName</shortDescription>
+        <value>Last Name</value>
+    </labels>
+    <labels>
+        <fullName>LatestProductDeliveryDate</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Latest product delivery date</shortDescription>
+        <value>Latest product delivery date</value>
+    </labels>
+    <labels>
+        <fullName>LoginHeader</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LoginHeader</shortDescription>
+        <value>Welcome!</value>
+    </labels>
+    <labels>
+        <fullName>LoginSecondaryHeader</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>loginSecondaryHeader</shortDescription>
+        <value>Please log in to view and manage your orders.</value>
+    </labels>
+    <labels>
+        <fullName>LoginTopHeader</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LoginTopHeader</shortDescription>
+        <value>Treatment Center Portal</value>
+    </labels>
+    <labels>
+        <fullName>Logout</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Logout</shortDescription>
+        <value>Logout</value>
+    </labels>
+    <labels>
+        <fullName>MandatoryField</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Mandatory Field</shortDescription>
+        <value>Complete this field.</value>
+    </labels>
+    <labels>
+        <fullName>MandatoryFieldsValidation</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Mandatory Fields Validation</shortDescription>
+        <value>Please fill all mandatory fields</value>
+    </labels>
+    <labels>
+        <fullName>MarkAsRead</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This is used for showing Mark As Read on custom button in Community.</shortDescription>
+        <value>Mark As Read</value>
+    </labels>
+    <labels>
+        <fullName>MI</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MI</shortDescription>
+        <value>MI</value>
+    </labels>
+    <labels>
+        <fullName>Manufacturing</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status value used in TCP Landing Page</shortDescription>
+        <value>Manufacturing</value>
+    </labels>
+    <labels>
+        <fullName>ManufacturingDrugProductGoal</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Manufacturing Drug Product Goal</shortDescription>
+        <value>Manufacturing Drug Product</value>
+    </labels>
+    <labels>
+        <fullName>ManufacturingTitle</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status Help text value  used in TCP Landing page</shortDescription>
+        <value>Manufacturing started</value>
+    </labels>
+    <labels>
+        <fullName>MRN</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MRN</shortDescription>
+        <value>Medical Record Number</value>
+    </labels>
+    <labels>
+        <fullName>MedicalRecordNumber</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Medical Record Number</shortDescription>
+        <value>Medical Record Number</value>
+    </labels>
+    <labels>
+        <fullName>MedicalRecordNumberToolTip</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tool Tip For Medical Record Number</shortDescription>
+        <value>Please note: The purpose of capturing patient's Medical Record Number is to ensure traceability across local treatment sites and manufacturer's patient details</value>
+    </labels>
+    <labels>
+        <fullName>MyAccount</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MyAccount</shortDescription>
+        <value>My Account</value>
+    </labels>
+    <labels>
+        <fullName>MyPatientsOnly</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status value used in TCP Landing Page</shortDescription>
+        <value>My Patients Only</value>
+    </labels>
+    <labels>
+        <fullName>Name</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used for Name in TCP profile settings page</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>Next</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Next</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>NewApheresisPickDate</fullName>
+        <categories>TCP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This custom label is used in order section in availability calendar</shortDescription>
+        <value>New Apheresis Pick-Up Date</value>
+    </labels>
+    <labels>
+        <fullName>NewButtonText</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New button text</shortDescription>
+        <value>New</value>
+    </labels>
+    <labels>
+        <fullName>NewEnrollment</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New Enrollment</shortDescription>
+        <value>New Enrollment</value>
+    </labels>
+    <labels>
+        <fullName>NewProjectedDeliveryDate</fullName>
+        <categories>TCP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This custom label is used in order section in availability calendar</shortDescription>
+        <value>New Projected Delivery Date</value>
+    </labels>
+    <labels>
+        <fullName>NewProjectedDeliveryDateHelpText</fullName>
+        <categories>TCP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This custom label is used in order section in availability calendar</shortDescription>
+        <value>Please note: Projected Drug Product Delivery Date is calculated based on manufacturing slot availability at time of Apheresis Pick Up scheduling. Actual Delivery Date confirmation will be communicated once manufacturing has begun</value>
+    </labels>
+    <labels>
+        <fullName>NoText</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label for No text</shortDescription>
+        <value>No</value>
+    </labels>
+    <labels>
+        <fullName>notificationCountLimit</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This is used to Limit the unread Notification Count.</shortDescription>
+        <value>20</value>
+    </labels>
+    <labels>
+        <fullName>NotifyStakeholdersAboutOrderPlacement</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Task name for notifying stakeholders about order placement</shortDescription>
+        <value>Notify stakeholders about order placement</value>
+    </labels>
+    <labels>
+        <fullName>OK</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label used in TCP availability calendar modal</shortDescription>
+        <value>OK</value>
+    </labels>
+    <labels>
+        <fullName>OrderAlreadyPlacedErrorMessage</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order already placed error message</shortDescription>
+        <value>The order has already been placed. Please select a new Apheresis Pick up date to reschedule.</value>
+    </labels>
+    <labels>
+        <fullName>Order</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order</shortDescription>
+        <value>Order</value>
+    </labels>
+    <labels>
+        <fullName>OrderCancellationDisclaimer</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Cancellation Request Disclaimer</shortDescription>
+        <value>Are you sure you want to place a request to cancel patient {0} order? If yes, please click on ‘Submit’ and a Customer Care Representative will be in touch with you shortly for further details.</value>
+    </labels>
+    <labels>
+        <fullName>OrderCancellationSubmitRequest</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Cancellation Submit Request Header</shortDescription>
+        <value>Order Cancellation - Submit Request</value>
+    </labels>
+    <labels>
+        <fullName>OrderCancellationViaPhoneText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Label used in order cancellation modal in patient journey screen</shortDescription>
+        <value>If you want to continue placing an Order Cancellation request, please reach out to a Customer Care Representative via +1-XXX-XXX-XXXX</value>
+    </labels>
+    <labels>
+        <fullName>OrderCantBeRescheduledWhenOrderIsNew</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order cannot be re-scheduled via the system as the Order is New</shortDescription>
+        <value>Order cannot be re-scheduled via the system as the Order is New</value>
+    </labels>
+    <labels>
+        <fullName>OrderCantBeRescheduledViaSystemAsOrderIsInProgress</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order cannot be re-scheduled via the system as the Order is already in Progress.</shortDescription>
+        <value>Order cannot be re-scheduled via the system as the Order is already in Progress.</value>
+    </labels>
+    <labels>
+        <fullName>OrderPlacementGoal</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Placement Goal</shortDescription>
+        <value>Order Placement</value>
+    </labels>
+	<labels>
+        <fullName>OrderReschedule</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Reschedule</shortDescription>
+        <value>Update/create the order in Vineti</value>
+    </labels>
+    <labels>
+        <fullName>OrderSetUpRequest</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in V2V email template</shortDescription>
+        <value>Request you to please set up this order in Vineti</value>
+    </labels>
+    <labels>
+        <fullName>OrderStatusSubmitted</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order status submitted text</shortDescription>
+        <value>Order Submitted</value>
+    </labels>
+	<labels>
+        <fullName>OrderStatusRescheduled</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Status Rescheduled</shortDescription>
+        <value>Order Rescheduled</value>
+    </labels>
+    <labels>
+        <fullName>OrderStatusVerified</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Status Verified text</shortDescription>
+        <value>Order Verified</value>
+    </labels>
+    <labels>
+        <fullName>OrderSubmissionGenericError</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Submission Generic Error</shortDescription>
+        <value>Some error has occured while submitting the order.</value>
+    </labels>
+    <labels>
+        <fullName>OrderSubmissionValidationError</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Submission Validation Error</shortDescription>
+        <value>Order cannot be submitted if the Apheresis Pickup Date or Projected Delivery Window are not populated.</value>
+    </labels>
+    <labels>
+        <fullName>OrderSubmitConfirmationButton</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Submit Confirmation Button</shortDescription>
+        <value>Yes</value>
+    </labels>
+    <labels>
+        <fullName>OrderPlacement</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Placement</shortDescription>
+        <value>Setup a new order in Vineti on receipt of Aph PO for order placement</value>
+    </labels>
+    <labels>
+        <fullName>OrderSubmitConfirmationMessage</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Submit Confirmation Message</shortDescription>
+        <value>Do you really want to submit the order?</value>
+    </labels>
+    <labels>
+        <fullName>OrderSubmitPageHeading</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Submit Page Heading</shortDescription>
+        <value>Submit Order</value>
+    </labels>
+    <labels>
+        <fullName>OrderSubmitted</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Submitted</shortDescription>
+        <value>Order has been submitted.</value>
+    </labels>
+    <labels>
+        <fullName>OrderSumissionErrorTitle</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Sumission Error Title</shortDescription>
+        <value>Order Submission error</value>
+    </labels>
+    <labels>
+        <fullName>OrderSubmissionValidationErrorStart</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Submission Validation Error Start</shortDescription>
+        <value>The order cannot be submitted. Please enter the</value>
+    </labels>
+    <labels>
+        <fullName>OrderSubmissionValidationErrorEnd</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Submission Validation Error End</shortDescription>
+        <value>value(s)</value>
+    </labels>
+    <labels>
+        <fullName>OrderUpdateRequest</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in V2V email template</shortDescription>
+        <value>Request you to update the order details in Vineti</value>
+    </labels>
+    <labels>
+        <fullName>PatientLink</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label used to store patient page link for redirection</shortDescription>
+        <value>/s/patients</value>
+    </labels>
+    <labels>
+        <fullName>Patient</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Patient</shortDescription>
+        <value>Patient</value>
+    </labels>
+    <labels>
+        <fullName>PatientIsAlreadyEnrolledInCarePlanErrMessage</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The patient is already enrolled in the selected Care Plan</shortDescription>
+        <value>The patient is already enrolled in the selected Care Plan</value>
+    </labels>
+    <labels>
+        <fullName>PatientName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label used in available calendar patient card section</shortDescription>
+        <value>Patient Name</value>
+    </labels>
+    <labels>
+        <fullName>PatientNeedsToBeEnrolledIntoCareProgramBeforeCarePlanErrorMessage</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Patient Needs to be Enrolled into Care Program before getting added to CarePlan</shortDescription>
+        <value>The patient is currently not enrolled to a Care Program. Please enroll the patient to a Care Program to proceed forward.</value>
+    </labels>
+    <labels>
+        <fullName>PatientNotFound</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Message shown when unable to find a Patient with matched Search Criteria</shortDescription>
+        <value>The patient you are searching for could not be found. Please try searching using a different search criteria</value>
+    </labels>
+    <labels>
+        <fullName>PickingFinalProductFromManufacturingSitP</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Confirmation on picking final product from Manufacturing Site</shortDescription>
+        <value>Confirmation on picking final product from Manufacturing Site</value>
+    </labels>
+    <labels>
+        <fullName>PatientGroupText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>patientGroupText</shortDescription>
+        <value>Which patient group are you working with?</value>
+    </labels>
+    <labels>
+        <fullName>PatientServicePrograms</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP patient enrollment- Chevron</shortDescription>
+        <value>Patient Services Program</value>
+    </labels>
+    <labels>
+        <fullName>PatientServiceProgramsCheck</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP patient enrollment steps</shortDescription>
+        <value>My patient is interested in learning more about Patient Services Program</value>
+    </labels>
+    <labels>
+        <fullName>PatientServiceProgramsDisclaimer</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Text used as disclaimer in Patient Service Enrollment process.</shortDescription>
+        <value>By checking this box, I attest that the patient has expressed interest in learning more about Patient Services Program offered by Janssen/Legend and has agreed to be contacted at their preferred channel of communication</value>
+    </labels>
+    <labels>
+        <fullName>PendingVerification</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status value used in TCP Landing Page</shortDescription>
+        <value>Pending Verification</value>
+    </labels>
+    <labels>
+        <fullName>PendingVerificationTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status Help text value  used in TCP Landing page</shortDescription>
+        <value>Enrollment details are under review by the Cell Therapy Order Specialist (CTOS)</value>
+    </labels>
+    <labels>
+        <fullName>PlanningCalendar</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Landing Page - Custom Menu Tab set</shortDescription>
+        <value>Planning Calendar</value>
+    </labels>
+    <labels>
+        <fullName>PreferredMethodofCommunication</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used for Preferred Method of Communication in TCP patient enrollment page</shortDescription>
+        <value>Preferred Method of Communication</value>
+    </labels>
+    <labels>
+        <fullName>PrimaryContactNumber</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used for Primary Contact Number in TCP patient enrollment page</shortDescription>
+        <value>Primary Contact Number</value>
+    </labels>
+    <labels>
+        <fullName>PleaseComplete</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used as a custom message when input value is missing in patient enrolment</shortDescription>
+        <value>Please complete this field.</value>
+    </labels>
+    <labels>
+        <fullName>PrimaryPhoneNumberType</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used for Primary Phone Number Type in TCP patient enrollment page</shortDescription>
+        <value>Primary Contact Number Type</value>
+    </labels>
+    <labels>
+        <fullName>ProjectedDrugProductDeliveryDate</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used Patient milestone page</shortDescription>
+        <value>Projected Drug Product Delivery Date</value>
+    </labels>
+    <labels>
+        <fullName>PatientInformation</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PatientInformation</shortDescription>
+        <value>Patient Information</value>
+    </labels>
+    <labels>
+        <fullName>PatientRecordtype</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PatientRecordtype</shortDescription>
+        <value>Patient</value>
+    </labels>
+    <labels>
+        <fullName>PatientServicesIneligibilityLetterPatient</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PatientServicesIneligibilityLetterPatient</shortDescription>
+        <value>Patient Services Inegibility Letter - Patient</value>
+    </labels>
+    <labels>
+        <fullName>PatientServicesIneligibilityLetterCARTCoordinator</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PatientServicesIneligibilityLetterCARTCoordinator</shortDescription>
+        <value>Patient Services Ineligibility Letter - CAR-T Coordinator</value>
+    </labels>
+    <labels>
+        <fullName>PatientStatusAdditionalInformationRequested</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PatientStatusAdditionalInformationRequested</shortDescription>
+        <value>Additional Information Requested</value>
+    </labels>
+    <labels>
+        <fullName>PatientStatusPendingVerification</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PatientStatusPendingVerification</shortDescription>
+        <value>Pending Verification</value>
+    </labels>
+    <labels>
+        <fullName>PatientStatusVerified</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PatientStatusVerified</shortDescription>
+        <value>Verified</value>
+    </labels>
+    <labels>
+        <fullName>PatientTreatingMilestone</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label for Patient List View used in TCP Patient Landing Page</shortDescription>
+        <value>Patient Treatment Milestone</value>
+    </labels>
+    <labels>
+        <fullName>PatientDetails</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Labels used in patient card in available calendar </shortDescription>
+        <value>Patient Details</value>
+    </labels>
+    <labels>
+        <fullName>PatientDetailsSubmitted</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Patient Details Submitted</shortDescription>
+        <value>Patient Details Submitted</value>
+    </labels>
+    <labels>
+        <fullName>PatientEligibleServicesBodyMessage</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Patient Services Eligibility Template for the Patient</shortDescription>
+        <value>It is our pleasure to inform you are eligible for the following services:</value>
+    </labels>
+    <labels>
+        <fullName>PatientEnrollmentHelp</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Patient Enrollment Help</shortDescription>
+        <value>In the interim, if you have any questions, please contact us at +1-XXX-XXX-XXXX</value>
+    </labels>
+    <labels>
+        <fullName>PatientEnrollmentSuccess</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Patient Enrollment Success</shortDescription>
+        <value>Patient {0} has been successfully enrolled. You can now proceed with scheduling their Apheresis Pick-Up date. In the event we require any additional information, a Customer Care Representative will be in touch with you.</value>
+    </labels>
+    <labels>
+        <fullName>PatientId</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label available to display patient Id in site personal calendar</shortDescription>
+        <value>Patient ID</value>
+    </labels>
+    <labels>
+        <fullName>PatientServicesEligibilityLetterCARTCoordinator</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PatientServicesEligibilityLetterCARTCoordinator</shortDescription>
+        <value>Patient Services Eligibility Letter - CAR-T Coordinator</value>
+    </labels>
+    <labels>
+        <fullName>PatientServicesEligibilityLetterPatient</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Patient ServicesEligibilityLetterPatient</shortDescription>
+        <value>Patient Services Eligibility Letter - Patient</value>
+    </labels>
+    <labels>
+        <fullName>PatientIneligibleBodyMessage</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Patient Services Ineligibility Template for the Patient</shortDescription>
+        <value>We regret to inform you that you are ineligible to receive Patient Services. Please find below details of other offerings available in the market for support: &lt;Link&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Patients</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Patients</shortDescription>
+        <value>Patients</value>
+    </labels>
+    <labels>
+        <fullName>PatientServiceDisclaimerText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in Patient Service Program disclaimer text</shortDescription>
+        <value>to provide them with further details</value>
+    </labels>
+    <labels>
+        <fullName>PatientServiceAgent</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in Patient Service Program disclaimer text</shortDescription>
+        <value>&apos;s enrollment form was received. A Patient Services&apos; Agent is currently reviewing their details and will reach out to you if additional support is needed</value>
+    </labels>
+    <labels>
+        <fullName>PatientServiceProgramTravelAndLogistics</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in Patient Service Program disclaimer text</shortDescription>
+        <value>has been enrolled for Patient Services Program – Travel and Logistics. Please find the eligibility letter which includes details on the services they are eligible for attached in the &apos;Documents&apos; section for your perusal.</value>
+    </labels>
+    <labels>
+        <fullName>PatientServiceProgramDisclaimerText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in Patient Service Program disclaimer text</shortDescription>
+        <value>is currently not enrolled in any Patient Services Program(s). If they&apos;ve expressed interest in knowing more, please click &apos;Find Out More&apos; to send a request to a Patient Services Agent to reach out to the patient with further information</value>
+    </labels>
+    <labels>
+        <fullName>PatientServiceProgramsDisclaimerText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in Patient Service Program disclaimer text</shortDescription>
+        <value>A Janssen/Legend representative will reach out to patient</value>
+    </labels>
+    <labels>
+        <fullName>PatientServiceProgramIneligible</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in Patient Service Program disclaimer text</shortDescription>
+        <value>does not qualify for Patient Services Program - Travel and Logistics. For additional details, please reach out a Patient Services&apos; Agent via +1-XXX-XXX-XXXX</value>
+    </labels>
+    <labels>
+        <fullName>PhoneNumber</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Phone Number</shortDescription>
+        <value>Phone Number</value>
+    </labels>
+    <labels>
+        <fullName>PickupCellsFromAphSiteLocationPerAphPickupDate</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Pickup cells from Aph. Site location per Aph pickup date</shortDescription>
+        <value>Confirmation from Apheresis Site about cell pickup</value>
+    </labels>
+    <labels>
+        <fullName>PickupCryoType</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PickupCryoType</shortDescription>
+        <value>Pickup</value>
+    </labels>
+    <labels>
+        <fullName>ProjectedDeliveryDate</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Projected Delivery Date</shortDescription>
+        <value>Projected Delivery Date</value>
+    </labels>
+    <labels>
+        <fullName>ProjectedDeliveryDateHelpText</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label used in TCP patient journey help text/</shortDescription>
+        <value>Please note: Projected Drug Product Delivery Date is calculated based on manufacturing slot availability at time of Apheresis Pick Up scheduling. Actual Delivery Date confirmation will be communicated once manufacturing has begun</value>
+    </labels>
+    <labels>
+        <fullName>ConfirmedDrugProductDeliveryDate</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label used in TCP patient journey help text/</shortDescription>
+        <value>Confirmed Drug Product Delivery Date</value>
+    </labels>
+    <labels>
+        <fullName>ConfirmedProjectedDeliveryDateHelpText</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label used in TCP patient journey help text/</shortDescription>
+        <value>Please note: Confirmed Drug Product Delivery Date is calculated based on manufacturing slot availability at time of Apheresis Pick Up scheduling. Actual Delivery Date confirmation will be communicated once manufacturing has begun</value>
+    </labels>
+    <labels>
+        <fullName>ProductName</fullName>
+        <categories>This label is used for getting Product name in Email Template.</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProductName</shortDescription>
+        <value>JNJ-4528-Commercial</value>
+    </labels>
+    <labels>
+        <fullName>Regards</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Regards</shortDescription>
+        <value>Regards</value>
+    </labels>
+    <labels>
+        <fullName>RescheduledOrderDetails</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP availability calendar reschedule section</shortDescription>
+        <value>Re-Scheduled Order Details</value>
+    </labels>
+    <labels>
+        <fullName>RescheduleApheresisPickUp</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Patient Journey section</shortDescription>
+        <value>Reschedule Apheresis Pick-Up</value>
+    </labels>
+    <labels>
+        <fullName>ReviewAndAttest</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Patient Enrollment - Prompt Attestation</shortDescription>
+        <value>Please review all details and attest that you have verified all details</value>
+    </labels>
+    <labels>
+        <fullName>ReviewSubmit</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Review &amp; Submit</shortDescription>
+        <value>Review &amp; Submit</value>
+    </labels>
+    <labels>
+        <fullName>ReviewSubmitCheck</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReviewSubmitCheck</shortDescription>
+        <value>I attest that the patient’s first name, last name, and Date of Birth matches their Government ID or Electronic Health Record</value>
+    </labels>
+    <labels>
+        <fullName>RelationshiptoPatient</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Relationship to Patient</shortDescription>
+        <value>Relationship to Patient</value>
+    </labels>
+    <labels>
+        <fullName>RemoveCaregiver</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Remove Caregiver</shortDescription>
+        <value>Remove Caregiver</value>
+    </labels>
+    <labels>
+        <fullName>RequestTimeout</fullName>
+        <categories>Integration</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RequestTimeout</shortDescription>
+        <value>120000</value>
+    </labels>
+    <labels>
+        <fullName>ResetText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label is used to reset password text in login screen</shortDescription>
+        <value>If you have trouble logging in, please </value>
+    </labels>
+    <labels>
+        <fullName>ResetPasswordText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used as a reset password text in login screen</shortDescription>
+        <value>to reset your password</value>
+    </labels>
+    <labels>
+        <fullName>Resources</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Resources</shortDescription>
+        <value>Resources</value>
+    </labels>
+    <labels>
+        <fullName>RoleAphresisSite</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RoleAphresisSite</shortDescription>
+        <value>Apheresis Site</value>
+    </labels>
+    <labels>
+        <fullName>RoleCoordinator</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RoleCoordinator</shortDescription>
+        <value>CAR-T Coordinator</value>
+    </labels>
+    <labels>
+        <fullName>RoleCryoSite</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RoleCryoSite</shortDescription>
+        <value>Cryo Site</value>
+    </labels>
+    <labels>
+        <fullName>RolePhysician</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RolePhysician</shortDescription>
+        <value>Physician</value>
+    </labels>
+    <labels>
+        <fullName>Salutation</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Salutation</shortDescription>
+        <value>Salutation</value>
+    </labels>
+    <labels>
+        <fullName>SaveButton</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label for Save Button used on advanceMapLookup LWC.</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>ScheduleApheresis</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Schedule Apheresis</shortDescription>
+        <value>Schedule Apheresis Pick-Up</value>
+    </labels>
+    <labels>
+        <fullName>ScheduleDrugProductDelivery</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Label used in site personal Calendar card</shortDescription>
+        <value>Schedule Drug Product Delivery</value>
+    </labels>
+    <labels>
+        <fullName>SelectedDate</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Label used in TCP patient milestone page</shortDescription>
+        <value>Selected Date</value>
+    </labels>
+    <labels>
+        <fullName>SelectedInfusionDate</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Label used in TCP patient milestone page</shortDescription>
+        <value>Selected Infusion Date</value>
+    </labels>
+    <labels>
+        <fullName>SelectedDrugProductDeliveryDate</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Label used in TCP patient milestone page for delivery</shortDescription>
+        <value>Selected Drug Product Delivery Date</value>
+    </labels>
+    <labels>
+        <fullName>SelectInfusionDate</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Label used in TCP patient milestone page for infusion</shortDescription>
+        <value>Select Infusion Date</value>
+    </labels>
+    <labels>
+        <fullName>EventType</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used as a event type in my calendar page</shortDescription>
+        <value>Event Type(s)</value>
+    </labels>
+    <labels>
+        <fullName>DrugProductDelivery</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used as a drug product  delivery in my calendar page</shortDescription>
+        <value>Drug Product Delivery</value>
+    </labels>
+    <labels>
+        <fullName>Search</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>label is used as button text for search in availability calendar page</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>SearchPatient</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Placeholder for Search of Patient List View in TCP Landing Page</shortDescription>
+        <value>Search by Name or MRN</value>
+    </labels>
+    <labels>
+        <fullName>SelectAnApheresisPickupDateTask</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select an Apheresis Pickup Date Task</shortDescription>
+        <value>Select an Apheresis Pickup date</value>
+    </labels>
+    <labels>
+        <fullName>SearchLocation</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SearchLocation</shortDescription>
+        <value>Search Location</value>
+    </labels>
+    <labels>
+        <fullName>SelectCoordinator</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>label text used as placeholder in patient landing page filter</shortDescription>
+        <value>Select Treatment Center Coordinator</value>
+    </labels>
+    <labels>
+        <fullName>SelectPhysician</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select Physician</shortDescription>
+        <value>Select Treating Physician</value>
+    </labels>
+	<labels>
+        <fullName>SelectTopic</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SelectTopic</shortDescription>
+        <value>Select a Data Category</value>
+    </labels>
+    <labels>
+        <fullName>Services</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Services</shortDescription>
+        <value>Services</value>
+    </labels>
+    <labels>
+        <fullName>ShippingApheresisSiteToCryoSite</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shipping Apheresis Site to Cryo Site</shortDescription>
+        <value>Shipping (Apheresis Site to Cryo Site)</value>
+    </labels>
+    <labels>
+        <fullName>ShippingCryoSiteToManufacturingSite</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shipping Cryo Site To Manufacturing Site Goal Name</shortDescription>
+        <value>Shipping (Cryo Site to Manufacturing Site)</value>
+    </labels>
+    <labels>
+        <fullName>ShippingManufacturingSiteToInfusionSite</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shipping Manufacturing Site to Infusion Site</shortDescription>
+        <value>Shipping (Manufacturing Site to Infusion Site)</value>
+    </labels>
+    <labels>
+        <fullName>Shipping</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used as a step in the patient treatment journey process</shortDescription>
+        <value>Shipping</value>
+    </labels>
+    <labels>
+        <fullName>Show</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status value used in TCP Landing Page</shortDescription>
+        <value>Show</value>
+    </labels>
+    <labels>
+        <fullName>ShowAll</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This text label is used for filter button Show All in TCP Landing Page</shortDescription>
+        <value>Show All</value>
+    </labels>
+    <labels>
+        <fullName>Sincerely</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sincerely</shortDescription>
+        <value>Sincerely,</value>
+    </labels>
+    <labels>
+        <fullName>SlotUnavailableMsg</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Slot Unavailable Msg</shortDescription>
+        <value>This slot is unavailable. Please select another Apheresis Pickup Date and re-submit the order.</value>
+    </labels>
+    <labels>
+        <fullName>SiteNameSupport</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used is used to describe about the cell sight 360</shortDescription>
+        <value>Janssen / Legend Cell Sight 360 provides treatment support to help your patients get started and stay on the Janssen treatment you prescribe. On the Janssen / Legend Cell Sight 360 Portal, you can enroll eligible, insured patients and review &amp; manage their treatment orders</value>
+    </labels>
+    <labels>
+        <fullName>SlotsNotConfirmedValidationMsg</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Slots Not Confirmed Validation Msg</shortDescription>
+        <value>Slot cannot be confirmed right now. Please try after sometime</value>
+    </labels>
+    <labels>
+        <fullName>State</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>State</shortDescription>
+        <value>State</value>
+    </labels>
+    <labels>
+        <fullName>Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status value used in TCP Landing Page</shortDescription>
+        <value>Status</value>
+    </labels>
+    <labels>
+        <fullName>StatusCompleted</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>status when a task is closed</shortDescription>
+        <value>Completed</value>
+    </labels>
+    <labels>
+        <fullName>Submit</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submit</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>SubmitRequest</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Patient Journey Screen</shortDescription>
+        <value>Submit Request</value>
+    </labels>
+    <labels>
+        <fullName>SubmitTheRequestForSchedulingApheresisPickupTask</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submit the request for Scheduling Apheresis Pickup Task</shortDescription>
+        <value>Submit the request for scheduling Apheresis Pickup</value>
+    </labels>
+    <labels>
+        <fullName>Success</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used as a status in the patient treatment journey process</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>SuccessResponseCode</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Success Response Code</shortDescription>
+        <value>JNJ101</value>
+    </labels>
+    <labels>
+        <fullName>TCPFooterEmail</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used as a TCP footer email</shortDescription>
+        <value>xxxxxxxx@its.jnj.com</value>
+    </labels>
+    <labels>
+        <fullName>TCPFooterText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Footer</shortDescription>
+        <value>and</value>
+    </labels>
+    <labels>
+        <fullName>TCPFooterContactUs</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Footer</shortDescription>
+        <value>Contact Us</value>
+    </labels>
+    <labels>
+        <fullName>TCPFooterContactUsLink</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Footer Link</shortDescription>
+        <value>#</value>
+    </labels>
+    <labels>
+        <fullName>TCPFooterCustomerSupportDisclaimer</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Footer</shortDescription>
+        <value>For Customer Support, please call +1 (800)-XXX-XXXX, Monday – Friday, 8:00 AM - 5:00 PM ET</value>
+    </labels>
+    <labels>
+        <fullName>TCPFooterDisclaimer</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Footer</shortDescription>
+        <value>Use of information on this site is subject to the terms of the</value>
+    </labels>
+    <labels>
+        <fullName>TCPFooterDisclaimerText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Footer</shortDescription>
+        <value>of Janssen Biotech, Inc. This site is published by Janssen Biotech, Inc. which has developed the content in conjunction with Legend Biotech. Any information that is collected on this site may be shared between Janssen Biotech, Inc. and Legend Biotech. This information is intended for use by our customers, patients, and healthcare professionals in the United States only. Janssen Biotech, Inc. and Legend Biotech, Corp. recognize that the internet is a global communication medium; however laws, regulatory requirements, and medical practices vary from country to country.</value>
+    </labels>
+    <labels>
+        <fullName>TCPFooterLegalNotice</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Footer</shortDescription>
+        <value>Legal Notice</value>
+    </labels>
+    <labels>
+        <fullName>TCPFooterLegalNoticeLink</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Footer Link</shortDescription>
+        <value>#</value>
+    </labels>
+    <labels>
+        <fullName>TCPFooterPatientServicesDisclaimer</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Footer</shortDescription>
+        <value>For Patient Services’ related queries, please call +1 (800)-XXX-XXXX, Monday – Friday, 8:00 AM - 5:00 PM ET</value>
+    </labels>
+    <labels>
+        <fullName>TCPFooterPrivacyPolicy</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Footer</shortDescription>
+        <value>Privacy Policy</value>
+    </labels>
+    <labels>
+        <fullName>TCPFooterPrivacyPolicyLink</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Footer Link</shortDescription>
+        <value>#</value>
+    </labels>
+    <labels>
+        <fullName>TCPFooterTrademark</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Footer</shortDescription>
+        <value>Third-party trademarks herein are trademarks of their respective owners.</value>
+    </labels>
+    <labels>
+        <fullName>TCPFooterTrademarkDisclaimer</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in TCP Footer</shortDescription>
+        <value>Capitalized product names are trademarks of Johnson &amp; Johnson or its affiliated companies.</value>
+    </labels>
+    <labels>
+        <fullName>TreatingPhysician</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Treating Physician</shortDescription>
+        <value>Treating Physician</value>
+    </labels>
+    <labels>
+        <fullName>Treatment</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Treatment</shortDescription>
+        <value>Treatment</value>
+    </labels>
+    <labels>
+        <fullName>TreatmentCenter</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>label used as name for the treatment Center in TCP landing page</shortDescription>
+        <value>Treatment Center:</value>
+    </labels>
+    <labels>
+        <fullName>TreatmentPhysician</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used as a label for Treatment Physician in TCP Filter Section</shortDescription>
+        <value>Treatment Physician</value>
+    </labels>
+    <labels>
+        <fullName>TreatmentJourney</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used as a title in the patient treatment journey process</shortDescription>
+        <value>Treatment Journey</value>
+    </labels>
+    <labels>
+        <fullName>TreatmentDetails</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TreatmentDetails</shortDescription>
+        <value>Treatment Details</value>
+    </labels>
+    <labels>
+        <fullName>TreatmentCenterCoordinator</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>label is used as a Treatment Center Coordinator in Tcp filter and my calendar</shortDescription>
+        <value>Treatment Center Coordinator</value>
+    </labels>
+    <labels>
+        <fullName>TreatmentSiteRecordType</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TreatmentSiteRecordType</shortDescription>
+        <value>Treatment Site</value>
+    </labels>
+    <labels>
+        <fullName>TreatmentTeam</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used as a  title for enrollment section in treatment journey page</shortDescription>
+        <value>Treatment Team</value>
+    </labels>
+    <labels>
+        <fullName>UnavailableSlotsValidationMsg</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Unavailable Slots Validation Message</shortDescription>
+        <value>Slot is unavailable. Please select another Apheresis Pickup Date.</value>
+    </labels>
+    <labels>
+        <fullName>Unfortunately</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in Patient Service Program disclaimer text</shortDescription>
+        <value>Unfortunately,</value>
+    </labels>
+    <labels>
+        <fullName>Username</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used for Username in TCP profile settings page</shortDescription>
+        <value>Username</value>
+    </labels>
+	<labels>
+        <fullName>V2VManagerQueue</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>V2V Manager Queue</shortDescription>
+        <value>VeinToVeinManagerQueue</value>
+    </labels>
+    <labels>
+        <fullName>Verified</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status value used in TCP Landing Page</shortDescription>
+        <value>Verified</value>
+    </labels>
+    <labels>
+        <fullName>VerifiedTitle</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status Help text value  used in TCP Landing page</shortDescription>
+        <value>Enrollment details have been verified by Cell Therapy Order Specialist (CTOS)</value>
+    </labels>
+    <labels>
+        <fullName>V2VManagerGreeting</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Greeting for V2V email alert</shortDescription>
+        <value>Dear V2V Manager</value>
+    </labels>
+    <labels>
+        <fullName>ZipCode</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Zip Code</shortDescription>
+        <value>Zip Code</value>
+    </labels>
+    <labels>
+        <fullName>communityFileDownloadPath</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom path to download the file from community</shortDescription>
+        <value>/sfc/servlet.shepherd/document/download/</value>
+    </labels>
+    <labels>
+        <fullName>fflib_QueryFactory_crossobject_fieldsets_not_allowed_error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error when selecting a cross-object fieldsset is not allowed and attempted.</shortDescription>
+        <value>Cross-object fields not allowed and field &quot;{0}&quot; is a cross-object field.</value>
+    </labels>
+    <labels>
+        <fullName>fflib_QueryFactory_fieldset_wrong_sobject_error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error when selecting a field set for a different sobject type.</shortDescription>
+        <value>Field set &quot;{0}&quot; is not for SObject type &quot;{1}&quot;</value>
+    </labels>
+    <labels>
+        <fullName>fflib_QueryFactory_recursive_subquery_error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Presented when attempting to nest subqueries.</shortDescription>
+        <value>Invalid call to subselectQuery.  You may not add a subselect query to a subselect query.</value>
+    </labels>
+    <labels>
+        <fullName>fflib_QueryFactory_subquery_invalid_relationship</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Presented when attempting to create a subquery from an invalid relationship.</shortDescription>
+        <value>Invalid call to subselectQuery.  Invalid relationship for table.</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_field_not_insertable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_field_not_insertable</shortDescription>
+        <value>You do not have permission to insert field {1} on {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_field_not_readable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_field_not_readable</shortDescription>
+        <value>You do not have permission to read the field {1} on {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_field_not_updateable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_field_not_updateable</shortDescription>
+        <value>You do not have permission to update the field {1} on {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_object_not_deletable</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_object_not_deletable</shortDescription>
+        <value>You do not have permission to delete {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_object_not_insertable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_object_not_insertable</shortDescription>
+        <value>You do not have permission to insert {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_object_not_readable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_object_not_readable</shortDescription>
+        <value>You do not have permission to read {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_object_not_updateable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_object_not_updateable</shortDescription>
+        <value>You do not have permission to update {0}</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisPickUpDate</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used to show the Apheresis Pick Up Date for order details section</shortDescription>
+        <value>Apheresis Pick-Up Date</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisPickUpDetails</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Apheresis Pick-Up Details</shortDescription>
+        <value>Apheresis Pick-Up Details</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisPickUpDateRequired</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used to show the Apheresis Pick Up Date mandatory in available Calendar</shortDescription>
+        <value>Please select an Apheresis Pick-Up Date</value>
+    </labels>
+    <labels>
+        <fullName>ApheresisPickUpPORequired</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used to show the Apheresis Pick Up Date and PO mandatory in Calendar</shortDescription>
+        <value>Please select an Apheresis Pick-Up Date &amp; enter a PO#</value>
+    </labels>
+    <labels>
+        <fullName>OrderRescheduledSuccessfully</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Rescheduled Successfully</shortDescription>
+        <value>Order Rescheduled Successfully</value>
+    </labels>
+    <labels>
+        <fullName>PONumberRequired</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used to show the PO# mandatory in available Calendar order section</shortDescription>
+        <value>Please enter a PO#</value>
+    </labels>
+    <labels>
+        <fullName>PSETemplateForTheCARTCoordinatorDevName</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PSETemplateForTheCARTCoordinatorDevName</shortDescription>
+        <value>PSETemplateForTheCARTCoordinator</value>
+    </labels>
+    <labels>
+        <fullName>PSETemplateForThePatientDevName</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PSETemplateForThePatientDevName</shortDescription>
+        <value>PSETemplateForThePatient</value>
+    </labels>
+    <labels>
+        <fullName>PSITemplateForTheCARTCoordinatorDevName</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PSITemplateForTheCARTCoordinatorDevName</shortDescription>
+        <value>PSITemplateForTheCARTCoordinator</value>
+    </labels>
+    <labels>
+        <fullName>PSITemplateForThePatientDevName</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PSITemplateForThePatientDevName</shortDescription>
+        <value>PSITemplateForThePatient</value>
+    </labels>
+    <labels>
+        <fullName>PleaseSpecifyReasonOfOrderReschedule</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please specify the reason for Order Reschedule</shortDescription>
+        <value>Please specify the reason for Order Reschedule</value>
+    </labels>
+    <labels>
+        <fullName>ProvideReasonForOrderCancellation</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Provide Reason For Order Cancellation</shortDescription>
+        <value>Please provide a reason for order cancellation</value>
+    </labels>
+    <labels>
+        <fullName>ReasonForOrderCancellation</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reason for Order Cancellation</shortDescription>
+        <value>Reason for Order Cancellation</value>
+    </labels>
+    <labels>
+        <fullName>ReasonForReschedule</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReasonForReschedule</shortDescription>
+        <value>Reason For Reschedule</value>
+    </labels>
+    <labels>
+        <fullName>SomethingWentWrongPleaseTryAgain</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Something Went Wrong , Please Try Again</shortDescription>
+        <value>Something Went Wrong , Please Try Again.</value>
+    </labels>
+    <labels>
+        <fullName>ViewAvailabilityToRescheduleOrderQuickActionLabel</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>View Availability to Reschedule Order</shortDescription>
+        <value>View Availability to Reschedule Order</value>
+    </labels>
+    <labels>
+        <fullName>SpecifyReasonForReschedule</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Specify the Other Reason for Reschedule</shortDescription>
+        <value>Specify the Other Reason for Reschedule</value>
+    </labels>
+    <labels>
+        <fullName>DatesAvailForAphresisPickup</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used to show the Apheresis Pick Up Date available on calendar section</shortDescription>
+        <value>Dates available for Apheresis Pick-Up</value>
+    </labels>
+    <labels>
+        <fullName>DatesAvailForInfusion</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used in patient milestone page</shortDescription>
+        <value>Dates available for Infusion</value>
+    </labels>
+    <labels>
+        <fullName>DearPatient</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Dear Patient</shortDescription>
+        <value>Dear</value>
+    </labels>
+    <labels>
+        <fullName>DrugProductDeliveryWindow</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used to show the availabilty Drug Product Delivery Window Dates</shortDescription>
+        <value>Projected Delivery Date</value>
+    </labels>
+    <labels>
+        <fullName>PONumber</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used to show PO Number in order details section</shortDescription>
+        <value>PO#</value>
+    </labels>
+    <labels>
+        <fullName>PONumberHelpText</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used to show PO Number help in order details section</shortDescription>
+        <value>PO # = Purchase Order number generated by the treatment center to initiate the order management process between the manufacturer, Specialty Distributor/Courier, and logistics teams</value>
+    </labels>
+    <labels>
+        <fullName>ReasonForRescheduling</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used to show error when rescheduling is not defined</shortDescription>
+        <value>Please provide a reason for rescheduling</value>
+    </labels>
+    <labels>
+        <fullName>OrderDetails</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used as a title for order details section of availability calendar  page</shortDescription>
+        <value>Order Details</value>
+    </labels>
+    <labels>
+        <fullName>OrderIdFormat</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Id Format</shortDescription>
+        <value>{0}-{1}-{2}-{3}</value>
+    </labels>
+    <labels>
+        <fullName>OrderSiteFieldApi</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Site in field in orderId</shortDescription>
+        <value>TreatmentSite__c</value>
+    </labels>
+    <labels>
+        <fullName>OrderIdSuffix</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Value of the first order Id suffix</shortDescription>
+        <value>01</value>
+    </labels>
+    <labels>
+        <fullName>TodayDate</fullName>
+        <categories>Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label used as a today's date for availability calendar page</shortDescription>
+        <value>Today's Date</value>
+    </labels>
+    <labels>
+        <fullName>OrderScheduledSuccessfully</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Scheduled Successfully</shortDescription>
+        <value>Order Scheduled Successfully</value>
+    </labels>
+    <labels>
+        <fullName>OrderStatusSubmittedOrVerified</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order already Submitted or Verified</shortDescription>
+        <value>This order has already been submitted. Please select the “View Availability to Reschedule Order" button to select a new Apheresis pickup date and reschedule the order.</value>
+    </labels>
+    <labels>
+        <fullName>OrderMandatoryFields</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order mandatory fields</shortDescription>
+        <value>Enter mandatory fields</value>
+    </labels>
+    <labels>
+        <fullName>ScheduledDrugProductDeliveryErrorTextWeekend</fullName>
+        <categories>TCP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label used as TCP delivery modal error text </shortDescription>
+        <value>Please select a different day, apart from Saturday, Sunday or Monday for delivery</value>
+    </labels>
+    <labels>
+        <fullName>ScheduledDrugProductDeliveryErrorText</fullName>
+        <categories>TCP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label used as TCP delivery modal error text </shortDescription>
+        <value>Please select a date from available dates</value>
+    </labels>
+    <labels>
+        <fullName>ScheduledDrugProductDeliveryOutRangeErrorText</fullName>
+        <categories>TCP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label used as TCP delivery modal error text </shortDescription>
+        <value>Please select a date between {0} and {1}</value>
+    </labels>
+    <labels>
+        <fullName>ScheduledDrugProductDeliveryHelpText</fullName>
+        <categories>TCP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label used as TCP delivery modal help text </shortDescription>
+        <value>Please select a date between (and inclusive of) {0} to {1}. If you need to select a date beyond {1}, please reach out to a Customer Care Representative via+1-XXX-XXX-XXXX for further assistance</value>
+    </labels>
+    <labels>
+        <fullName>OrderVerifiedStatus</fullName>
+        <categories>CCM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Verified</shortDescription>
+        <value>Order Verified</value>
+    </labels>
+</CustomLabels>

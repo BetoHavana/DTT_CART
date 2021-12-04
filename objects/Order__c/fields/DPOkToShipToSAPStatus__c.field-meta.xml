@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DPOkToShipToSAPStatus__c</fullName>
+    <description>DP Ok to Ship to SAP Status</description>
+    <externalId>false</externalId>
+    <label>DP Ok to Ship to SAP Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>false</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Retry</fullName>
+                <default>false</default>
+                <label>Retry</label>
+            </value>
+            <value>
+                <fullName>Manually Created</fullName>
+                <default>false</default>
+                <label>Manually Created</label>
+            </value>
+            <value>
+                <fullName>Failure</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Failure</label>
+            </value>
+            <value>
+                <fullName>Success</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Success</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email template is used to notify CART Coordinator when Drug Product Delivered</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>NotifyCARTCoordinatorWhenDrugProductDelivered</name>
+    <style>none</style>
+    <subject>{!$Label.ProductName} - Drug Product Delivered for {!Order__c.PatientID__c}</subject>
+    <textOnly>Hi {!Order__c.Coordinator__c},
+
+Your patient&apos;s (Patient ID: {!Order__c.PatientID__c}) drug product has been delivered. If available, please  provide their infusion date details.
+
+If you have any questions in the interim, please reach out to us via +1-XXX-XXX-XXXX
+
+Thank You,
+{!$Label.JanssenBiotechAndLegendBiotech}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Apheresis Pick-Up Scheduled Alert</label>
+    <protected>false</protected>
+    <values>
+        <field>Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>FinalStatus__c</field>
+        <value xsi:type="xsd:string">Apheresis Pickup Date Scheduled</value>
+    </values>
+    <values>
+        <field>InitialStatus__c</field>
+        <value xsi:type="xsd:string">Apheresis Pickup Date Requested</value>
+    </values>
+    <values>
+        <field>NotificationBody__c</field>
+        <value xsi:type="xsd:string">Patient &lt;Patient Name&gt;&apos;s Apheresis Pick-Up Date has been successfully scheduled for &lt;Apheresis Pick-Up Date&gt;</value>
+    </values>
+    <values>
+        <field>NotificationSubject__c</field>
+        <value xsi:type="xsd:string">Apheresis Pick-Up Date Scheduled for &lt;Patient Name&gt;</value>
+    </values>
+    <values>
+        <field>ObjectAPIName__c</field>
+        <value xsi:type="xsd:string">Case</value>
+    </values>
+    <values>
+        <field>SourceFieldAPIName__c</field>
+        <value xsi:type="xsd:string">Status</value>
+    </values>
+</CustomMetadata>

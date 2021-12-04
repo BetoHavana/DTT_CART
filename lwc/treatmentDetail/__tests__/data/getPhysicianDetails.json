@@ -1,0 +1,18 @@
+[
+    {
+        "icon": "standard:contact",
+        "id": "000000000000000XXB",
+        "sObjectType": "AccountContactRelation",
+        "subtitle": "Physician",
+        "title": "Test AGIS326",
+        "place_id": "000000000000000XXC"
+    },
+    {
+        "icon": "standard:contact",
+        "id": "000000000000000XXD",
+        "sObjectType": "AccountContactRelation",
+        "subtitle": "Physician",
+        "title": "Test User22",
+        "place_id": "000000000000000XBB"
+    }
+]

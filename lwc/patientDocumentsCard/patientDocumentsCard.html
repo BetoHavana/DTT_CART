@@ -1,0 +1,26 @@
+<template>
+    <c-generic-card class="card-item">
+        <h2 class="secondary-title slds-p-bottom_medium">
+            {labels.DOCUMENTS_LABEL}
+        </h2>
+        <div class="slds-p-bottom_small cust-doc-container scroll-bar text-default">
+            <template if:false={isDocumentListEmpty}>
+            <template for:each={documents} for:item="doc">
+                <div class="slds-media slds-media_center slds-p-bottom_x-small" key={doc.Id}>
+                    <div class="slds-media__figure">
+                      <span class="slds-avatar slds-avatar_small">
+                          <c-generic-file-icon icon={doc.FileExtension} size="x-small"></c-generic-file-icon>
+                      </span>
+                    </div>
+                    <div class="slds-media__body">
+                      <a class="wrapword" data-id={doc.ContentDocumentId} onclick={downloadFile}>{doc.PathOnClient}</a>
+                    </div>
+                  </div>
+            </template>
+            </template>
+            <template if:true={isDocumentListEmpty}>
+            {documentsMessage} {patientName}
+            </template>
+        </div>
+    </c-generic-card>
+</template>

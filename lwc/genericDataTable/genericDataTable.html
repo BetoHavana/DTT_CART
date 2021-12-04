@@ -1,0 +1,79 @@
+<template>
+    <template if:true={genericerror}>
+        {genericerror}
+    </template>
+    <template if:false={showPagination}>
+        <template if:true={genericdata}>
+            <lightning-datatable key-field={generickey}
+                                 columns={genericcolumns}
+                                 data={genericdata}
+                                 hide-checkbox-column={generichidecheckbox}
+                                 default-sort-direction={genericdefaultsortdirection}
+                                 sorted-direction={genericsorteddirection}
+                                 sorted-by={genericsortedby}
+                                 onrowaction={handleRowAction}
+                                 onsort={genericSortColumns}>
+            </lightning-datatable>
+        </template>
+    </template>
+    <template if:true={showPagination}>
+        <template if:true={genericdata}>
+            <lightning-datatable key-field={generickey}
+                                 columns={genericcolumns}
+                                 data={paginateddatafetch}
+                                 hide-checkbox-column={generichidecheckbox}
+                                 default-sort-direction={genericdefaultsortdirection}
+                                 sorted-direction={genericsorteddirection}
+                                 sorted-by={genericsortedby}
+                                 onsort={genericSortColumns}>
+            </lightning-datatable>
+            <template if:true={hasNoRows}>
+                <p class="slds-text-align_center slds-p-horizontal_x-large slds-p-bottom_medium slds-p-top_medium slds-text-heading_small">
+                    {messagewhennodata}
+                </p>
+            </template>
+            <template if:false={hasNoRows}>
+                <lightning-layout-item size="12">
+                    <div class="slds-align_absolute-center pagination-list">
+                        <ul class="slds-list_horizontal slds-has-inline-block-links_space">
+                            <li>
+                                <a class="paginationlink" onclick={onPrev}> ❮&nbsp;&nbsp;Prev </a>
+                            </li>
+                            <template for:each={pageListFirst} for:item="pageNumber">
+                                <li key={pageNumber}>
+                                    <a class="paginationlink" data-id={pageNumber}
+                                       onclick={displayPageDetails}>{pageNumber} </a>
+                                </li>
+                            </template>
+                            <template if:true={showFirstDot}>
+                                <a class="paginationlink"> | </a>
+                                <a class="paginationlink"> ... </a>
+                            </template>
+                            <template for:each={pageListToShow} for:item="pageNumber">
+                                <li key={pageNumber}>
+                                    <a class="paginationlink"> | </a>
+                                    <a class="paginationlink" data-id={pageNumber}
+                                       onclick={displayPageDetails}>{pageNumber} </a>
+                                </li>
+                            </template>
+                            <template if:true={showNextDot}>
+                                <a class="paginationlink"> | </a>
+                                <a class="paginationlink"> ... </a>
+                            </template>
+                            <template for:each={pageListLast} for:item="pageNumber">
+                                <li key={pageNumber}>
+                                    <a class="paginationlink"> | </a>
+                                    <a class="paginationlink" data-id={pageNumber}
+                                       onclick={displayPageDetails}>{pageNumber}</a>
+                                </li>
+                            </template>
+                            <li>
+                                <a class="paginationlink" onclick={onNext}> Next&nbsp;&nbsp;❯ </a>
+                            </li>
+                        </ul>
+                    </div>
+                </lightning-layout-item>
+            </template>
+        </template>
+    </template>
+</template>

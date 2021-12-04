@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>NotifyCARTCoordinatorWhenDrugProductIsDelivered</fullName>
+        <description>Notify CARTCoordinator When Drug Product Is Delivered</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Coordinator__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>tempocart@its.jnj.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>TCPCommunityEmailTemplates/NotifyCARTCoordinatorWhenDrugProductDelivered</template>
+    </alerts>
+    <alerts>
+        <fullName>NotifyCARTCoordinatorWhenOrderIsCancelled</fullName>
+        <description>Notify CAR-T Coordinator when Order is cancelled</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Coordinator__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>tempocart@its.jnj.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>TCPCommunityEmailTemplates/NotifyCARTCoordinatorWhenOrderIsCancelled</template>
+    </alerts>
+    <alerts>
+        <fullName>NotifyCARTCoordinatorWhenOrderIsRescheduled</fullName>
+        <description>Notify CARTCoordinator When Order Is Rescheduled</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Coordinator__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>tempocart@its.jnj.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>TCPCommunityEmailTemplates/NotifyCARTCoordinatorWhenOrderIsRescheduled</template>
+    </alerts>
+    <alerts>
+        <fullName>NotifyCARTCoordinatorWhenOrderIsScheduled</fullName>
+        <description>Notify CARTCoordinator When Order Is Scheduled</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Coordinator__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>tempocart@its.jnj.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>TCPCommunityEmailTemplates/NotifyCARTCoordinatorWhenOrderIsScheduled</template>
+    </alerts>
+    <alerts>
+        <fullName>NotifyToScheduleDrugProductDelivery</fullName>
+        <description>NotifyToScheduleDrugProductDelivery</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Coordinator__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>tempocart@its.jnj.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>TCPCommunityEmailTemplates/ScheduleDrugProductDelivery</template>
+    </alerts>
+    <alerts>
+        <fullName>NotifyVinetiToCreateOrderAlert</fullName>
+        <ccEmails>RA-CAR-TVein-to-Vein@ITS.JNJ.com</ccEmails>
+        <description>Notify Vineti To Create Order Alert</description>
+        <protected>false</protected>
+        <senderAddress>tempocart@its.jnj.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>VinetiEmailTemplates/NotifyVinetiToCreateOrderTemplate</template>
+    </alerts>
+    <alerts>
+        <fullName>NotifyVinetiToRescheduleOrderAlert</fullName>
+        <ccEmails>RA-CAR-TVein-to-Vein@ITS.JNJ.com</ccEmails>
+        <description>Notify Vineti To Reschedule Order Alert</description>
+        <protected>false</protected>
+        <senderAddress>tempocart@its.jnj.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>VinetiEmailTemplates/NotifyVinetiToRescheduleOrderTemplate</template>
+    </alerts>
+    <alerts>
+        <fullName>NotifyVinetiToUpdateConfirmedDrugProductDeliveryDateAlert</fullName>
+        <ccEmails>RA-CAR-TVein-to-Vein@ITS.JNJ.com</ccEmails>
+        <description>Notify Vineti To Update Confirmed Drug Product Delivery Date Alert</description>
+        <protected>false</protected>
+        <senderAddress>tempocart@its.jnj.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>VinetiEmailTemplates/NotifyVinetiToUpdateConfirmedDrugProductDeliveryDateTemplate</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>UpdateCancellationDateField</fullName>
+        <description>Update cancellation date field when status is equals to order cancelled</description>
+        <field>DateOfCancellation__c</field>
+        <formula>today()</formula>
+        <name>Update Cancellation Date Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Order Update Rule</fullName>
+        <actions>
+            <name>UpdateCancellationDateField</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Order__c.OrderStatus__c</field>
+            <operation>equals</operation>
+            <value>Order Cancelled</value>
+        </criteriaItems>
+        <description>Order update workflow rule</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

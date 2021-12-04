@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PatientIDPrefix__c</fullName>
+    <defaultValue>IF( $RecordType.Name = &apos;Patient&apos;, &apos;US-&apos;,&apos;&apos;)</defaultValue>
+    <description>Prefix for External Patient Id</description>
+    <externalId>false</externalId>
+    <label>PatientIDPrefix</label>
+    <length>8</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

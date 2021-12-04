@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HealthCloudGA__Healthcare</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Apheresis Pickup Date Requested</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Apheresis Pickup Date Scheduled</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Cells Delivered to Manufacturing Site</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Drug Product Delivered</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Drug Product Shipped</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Infused</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Manufacturing</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>New</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>Shipping Cells to Manufacturing Site</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

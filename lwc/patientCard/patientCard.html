@@ -1,0 +1,51 @@
+<template>
+    <c-generic-card>
+        <template if:true={showValidationMessage}>
+            <div class="slds-text-color_error slds-p-bottom_x-small">{labels.VALIDATION_MESSAGE}</div>
+        </template>
+        <div class="slds-grid" slot="card-header">
+            <div class="slds-col slds-p-horizontal_none">
+                <h2 class="secondary-title">{labels.PATIENT_DETAILS}</h2>
+            </div>
+        </div>
+        <div class="slds-col slds-p-horizontal_none slds-p-bottom_x-small" if:true={showIfStepOne}>
+            <div>
+                <a class="text-semibold" onclick={navigateToLandingPage}>{labels.SCHEDULE_EXISTING_PATIENT_LABEL}</a>
+            </div>
+            <div class="slds-p-top_x-small">
+                <a class="text-semibold" onclick={navigateToPatientEnrollment}>{labels.ENROLL_PATIENT}</a>
+            </div>
+        </div>
+        <div class="patient-card">
+            <div class="form-section slds-gutters_direct">
+                <template if:true={patientData}>
+                    <div class="slds-col slds-size_1-of-1">
+                        <lightning-input name="name" label={labels.PATIENTNAME} value={patientName}
+                                         read-only></lightning-input>
+                    </div>
+
+                    <div class="slds-col slds-size_1-of-1">
+                        <lightning-input name="name" label={labels.MRN} value={patientData.memberMRN}
+                                         read-only></lightning-input>
+                    </div>
+
+
+                    <div class="slds-col slds-size_1-of-1">
+                        <lightning-input name="name" label={labels.PRIMARY_CONTACT_NUMBER} value={patientData.memberPhone}
+                                         read-only></lightning-input>
+                    </div>
+
+                    <div class="slds-col slds-size_1-of-1">
+                        <lightning-input name="name" label={labels.TREATMENT_CENTER_COORDINATOR_LABEL} value={patientData.cartCoordinator}
+                                         read-only></lightning-input>
+                    </div>
+
+                    <div class="slds-col slds-size_1-of-1">
+                        <lightning-input name="name" label={labels.TREATING_PHYSICIAN} value={patientData.treatingPhysician}
+                                         read-only></lightning-input>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </c-generic-card>
+</template>

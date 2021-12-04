@@ -1,0 +1,10 @@
+Hi {!Order__c.Coordinator__c}, <br/><br/>
+
+Quality Assurance Release has been completed for your patient's (Patient ID: {!Order__c.PatientID__c}) drug product.  Please login to the portal to <a href ="{!$Label.CommunityPatientUrl}/{!Order__c.PatientIdForEmailAlerts__c}">  schedule their drug product delivery </a> as soon as you can.
+
+<br/><br/>
+If you are facing issues scheduling their delivery, please reach out to us via +1-XXX-XXX-XXXX
+
+<br/><br/>
+Thank You, <br/>
+{!$Label.JanssenBiotechAndLegendBiotech}

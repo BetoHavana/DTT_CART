@@ -1,0 +1,16 @@
+<aura:component implements="forceCommunity:themeLayout" description="CommunityThemeLayout">
+    <ltng:require styles="{!$Resource.CellSight360Resource  + '/css/SRJNJ.css'}"/>
+    <div class="community-container">
+        <div class="page-width">
+            <div>
+                <c:communityHeader/>
+            </div>
+            <div class="grey-section">
+                {!v.body}
+            </div>
+            <div class="slds-p-bottom_medium">
+                <c:tcpGlobalFooter/>
+            </div>
+        </div>
+    </div>
+</aura:component>

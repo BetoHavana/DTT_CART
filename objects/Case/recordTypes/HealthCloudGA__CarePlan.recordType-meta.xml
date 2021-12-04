@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HealthCloudGA__CarePlan</fullName>
+    <active>true</active>
+    <businessProcess>HealthCloudGA__Healthcare</businessProcess>
+    <description>Defines a care plan for an individual and their care team</description>
+    <label>CarePlan</label>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Certification Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT and Tech Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient and Caregiver support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site Management</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>CCM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TCP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SubCategory__c</picklist>
+        <values>
+            <fullName>Certification Inquiries and Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Negotiation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Coordination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Education Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Questions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Login and Password Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Guidance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

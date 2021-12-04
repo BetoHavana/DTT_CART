@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ShippingCompleted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>To indicate the Shipping Section progress as Completed or Active in Treatment Journey Screen</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Shipping Completed</label>
+    <type>Checkbox</type>
+</CustomField>

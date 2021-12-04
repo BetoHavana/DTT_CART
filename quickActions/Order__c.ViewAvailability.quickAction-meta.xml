@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Quick Action button for the Lightning Component named ApheresisPickupAvailability that is being used to check apheresis pickup date availability on care plan.</description>
+    <height>1200</height>
+    <label>View Availability to Place Order</label>
+    <lightningComponent>ApheresisPickupDateAvailability</lightningComponent>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>LightningComponent</type>
+    <width>-100</width>
+</QuickAction>

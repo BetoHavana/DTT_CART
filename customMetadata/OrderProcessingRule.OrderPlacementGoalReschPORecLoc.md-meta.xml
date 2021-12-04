@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OrderPlacementGoalReschPORecLoc</label>
+    <protected>false</protected>
+    <values>
+        <field>APINamesOfChangedFieldsToRunLogic__c</field>
+        <value xsi:type="xsd:string">SlotStatus__c</value>
+    </values>
+    <values>
+        <field>CarePlanConditionsInfo__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>CarePlanUpdateInfo__c</field>
+        <value xsi:type="xsd:string">[ { &quot;fieldName&quot;:&quot;Status&quot;, &quot;valueToSet&quot;:&quot;Apheresis Pickup Date Scheduled&quot; } ]</value>
+    </values>
+    <values>
+        <field>CryoType__c</field>
+        <value xsi:type="xsd:string">Local</value>
+    </values>
+    <values>
+        <field>GoalsConditionsInfo__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>GoalsUpdateInfo__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>IsActive__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>OrderConditionsInfo__c</field>
+        <value xsi:type="xsd:string">[ { &quot;fieldName&quot;:&quot;POStatus__c&quot;, &quot;valueToCompare&quot;:&quot;PO Received&quot; }, { &quot;fieldName&quot;:&quot;SlotStatus__c&quot;, &quot;valueToCompare&quot;:&quot;Slot Confirmed&quot; }, { &quot;fieldName&quot;:&quot;ApheresisPOStatus__c&quot;, &quot;valueToCompare&quot;:&quot;Aph PO Pending&quot; }]</value>
+    </values>
+    <values>
+        <field>OrderUpdateInfo__c</field>
+        <value xsi:type="xsd:string">[ { &quot;fieldName&quot;:&quot;OrderStatus__c&quot;, &quot;valueToSet&quot;:&quot;Order Rescheduled&quot; } ]</value>
+    </values>
+    <values>
+        <field>RuleOrder__c</field>
+        <value xsi:type="xsd:double">37.0</value>
+    </values>
+    <values>
+        <field>TaskConditionsInfo__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TaskUpdateInfo__c</field>
+        <value xsi:type="xsd:string">[{ &quot;taskSubject&quot;:&quot;Select an Apheresis Pickup date&quot;, &quot;goalNameForTasksFilter&quot;:&quot;Order Placement&quot;, &quot;taskStatusToSet&quot;:&quot;Completed&quot; }, { &quot;taskSubject&quot;:&quot;Submit the request for scheduling Apheresis Pickup&quot;, &quot;goalNameForTasksFilter&quot;:&quot;Order Placement&quot;, &quot;taskStatusToSet&quot;:&quot;Completed&quot; },  { &quot;taskSubject&quot;:&quot;Acknowledge manufacturing slot is allocated&quot;, &quot;goalNameForTasksFilter&quot;:&quot;Order Placement&quot;, &quot;taskStatusToSet&quot;:&quot;Completed&quot; }, { &quot;taskSubject&quot;:&quot;Confirm SD PO# is recorded&quot;, &quot;goalNameForTasksFilter&quot;:&quot;Order Placement&quot;, &quot;taskStatusToSet&quot;:&quot;Completed&quot; }  ]</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GeneralInquiry</fullName>
+    <active>true</active>
+    <businessProcess>GeneralInquiry</businessProcess>
+    <description>General Inquiries from the Treatment Sites that are not connected directly connected to the Patient Treatment Journey or Order.</description>
+    <label>General Inquiry</label>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Certification Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT and Tech Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient and Caregiver support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Treatment Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site Management</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Complex functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User didn%27t attend training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SubCategory__c</picklist>
+        <values>
+            <fullName>CTEL Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certification Inquiries and Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Drug Product Deliveries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Coordination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Education Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Questions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Login and Password Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Patient Enrollment %2F Order Placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Cancellation Requests</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Reschedule Requests</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Order Related Inquiries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Services %E2%80%93 Enrollment Inquiries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Services %E2%80%93 New Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site Relationship Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Treatment Inquiries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

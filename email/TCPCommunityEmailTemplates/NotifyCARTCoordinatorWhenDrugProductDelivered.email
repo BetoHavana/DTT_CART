@@ -1,0 +1,14 @@
+Hi {!Order__c.Coordinator__c},<br/><br/>
+
+
+
+
+Your patient's (Patient ID: {!Order__c.PatientID__c}) drug product has been delivered. If available, please  <a href ="{!$Label.CommunityPatientUrl}/{!Order__c.PatientIdForEmailAlerts__c}"> provide their infusion date details</a>.
+<br/><br/>
+
+
+
+If you have any questions in the interim, please reach out to us via +1-XXX-XXX-XXXX
+<br/><br/>
+Thank You,<br/>
+{!$Label.JanssenBiotechAndLegendBiotech}

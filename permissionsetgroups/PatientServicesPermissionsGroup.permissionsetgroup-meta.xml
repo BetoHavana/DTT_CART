@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission Set Group for Patient Services Agent and Patient Services Manager</description>
+    <label>Patient Services Permissions Group</label>
+    <permissionSets>CaseManager</permissionSets>
+    <permissionSets>KnowledgeReadOnly</permissionSets>
+    <permissionSets>PatientReadOnly</permissionSets>
+    <permissionSets>PatientServicesManagement</permissionSets>
+    <permissionSets>SiteReadOnly</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

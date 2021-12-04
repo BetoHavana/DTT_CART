@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForRecordHome,lightning:actionOverride,force:hasRecordId" >
+    <lightning:workspaceAPI aura:id="workspace"/>
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:attribute name="accountId" type="String"/>
+    <c:advanceMapLookup showCancelButton="true" oncancelbuttonclick="{!c.closeSubTab}" recordId="{!v.accountId}"/>
+</aura:component>

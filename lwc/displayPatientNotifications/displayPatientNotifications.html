@@ -1,0 +1,45 @@
+<template>
+    <c-generic-card class="card-item slds-m-top_small">
+        <div class="slds-text-heading_small" slot="card-header">
+            <div class="patient-alert-container">
+                <svg class="slds-button__icon slds-global-header__icon slds-m-right_x-small alert-icon" aria-hidden="true">
+                    <use xlink:href={notificationIcon}></use>
+                </svg>
+                {labels.ALERTS_LABEL}
+            </div>
+            <template if:true={unReadPatientNotifications}>
+                <span class="slds-badge slds-theme_error slds-float_right">{unReadPatientNotifications}</span>
+            </template>
+            <template if:false={unReadPatientNotifications}>
+                <span class="slds-badge slds-float_right">0</span>
+            </template>
+        </div>
+        <div class="card-item slds-scrollable scroll-bar alert-panel-height alert-panel-background-color">
+            <template if:true={PatientUnreadNotificationList} for:each={PatientUnreadNotificationList} for:item="notificationObj">
+                <li key={notificationObj.Id}
+                    class="slds-global-header__notification slds-global-header__notification_unread alert-patient-list">
+                    <div class="slds-media slds-has-flexi-truncate slds-p-around_x-small">
+                        <div class="slds-media__body">
+                            <div class="slds-grid slds-grid_align-spread">
+                                <a href="javascript:void(0);"
+                                   class="slds-text-link_reset slds-has-flexi-truncate">
+                                    <h3 class="slds-truncate alert-Message">
+                                        {notificationObj.Message__c}
+                                    </h3>
+                                </a>
+                                <lightning-button
+                                        value={notificationObj.Id}
+                                        variant="base"
+                                        label={labels.MARKASREAD}
+                                        onclick={handleClick}
+                                        class="slds-m-left_x-small alert-Mark-Button"
+                                        disabled={isLoading}>
+                                </lightning-button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </template>
+        </div>
+    </c-generic-card>
+</template>

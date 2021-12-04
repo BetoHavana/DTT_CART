@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SpecifyTheOtherReasonForReschedule__c</fullName>
+    <description>This field stores the reason of rescheduling order when user reschedules the order submission</description>
+    <externalId>false</externalId>
+    <label>Specify The Other Reason For Reschedule</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

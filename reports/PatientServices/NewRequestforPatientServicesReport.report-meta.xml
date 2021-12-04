@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>PatientServicesEnrollee__c.Patient__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Case.TreatmentSite__c</field>
+    </columns>
+    <columns>
+        <field>PatientServicesEnrollee__c.PatientServicesStatus__c</field>
+    </columns>
+    <columns>
+        <field>PatientServicesEnrollee__c.DateofRequest__c</field>
+    </columns>
+    <description>New Request for Patient Services Report</description>
+    <filter>
+        <criteriaItems>
+            <column>PatientServicesEnrollee__c.PatientServicesStatus__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>New Patient Services Request</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>New Request for Patient Services</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$PatientServicesEnrollee__c@PatientServicesEnrollee__c.CarePlan__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

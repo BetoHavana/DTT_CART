@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Responsible to oversee and monitor activities performed by Vein to Vein users.</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Vein to Vein Supervisor</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>CCMExecutive</parentRole>
+</Role>

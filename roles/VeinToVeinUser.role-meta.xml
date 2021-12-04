@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Responsible for slot management and updating Vineti for COI/COC.</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Vein to Vein User</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>VeinToVeinSupervisor</parentRole>
+</Role>

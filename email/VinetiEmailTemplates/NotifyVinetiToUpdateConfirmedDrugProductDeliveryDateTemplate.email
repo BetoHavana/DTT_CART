@@ -1,0 +1,10 @@
+{!$Label.V2VManagerGreeting},<br/><br/>
+
+{!$Label.ConfirmedProductDeliveryPartOne} : {!Order__c.CartOrderId__c}
+{!$Label.ConfirmedProductDeliveryPartTwo}.<br/><br/>
+
+{!$Label.OrderUpdateRequest}.<br/>
+<a href="{!Order.Link}"> {!$Label.Order} </a><br/><br/>
+
+{!$Label.Regards},<br/>
+{!$Label.CCMOperationsCoordinator}

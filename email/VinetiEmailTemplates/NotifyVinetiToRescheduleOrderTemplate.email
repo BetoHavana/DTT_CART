@@ -1,0 +1,9 @@
+{!$Label.V2VManagerGreeting},<br/><br/>
+
+{!$Label.ApheresisPoRescheduleRequestReceived}: {!Order__c.ApheresisPickUpDate__c}.<br/><br/>
+
+{!$Label.OrderUpdateRequest}.<br/>
+<a href="{!Order.Link}"> {!$Label.Order} </a><br/><br/>
+
+{!$Label.Regards},<br/>
+{!$Label.CCMOperationsCoordinator}

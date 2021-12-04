@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllCarePlanTasksConfigs</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>OrderConditionsInfo__c</columns>
+    <columns>TasksConditionsInfo__c</columns>
+    <columns>NoOfDaysToAddToInheritedDate__c</columns>
+    <columns>IsProtected</columns>
+    <columns>APINamesOfChangedFieldsToRunLogic__c</columns>
+    <columns>InheritDueDateFromOrderField__c</columns>
+    <columns>IsActive__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>AllCarePlanTasksConfigs</label>
+    <language>en_US</language>
+</ListView>

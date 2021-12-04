@@ -1,0 +1,12 @@
+<aura:component implements="forceCommunity:themeLayout" description="LoginThemeLayout">
+    <ltng:require styles="{!$Resource.CellSight360Resource  + '/css/SRJNJ.css'}" />
+    <div class="container">
+    <div class="page-width">
+        <div class="login-box">
+            <div class="slds-p-top_xx-large slds-text-align_center">
+                {!v.body}
+            </div>
+        </div>
+    </div>
+    </div>
+</aura:component>

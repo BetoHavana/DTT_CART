@@ -1,0 +1,1132 @@
+.header-text {
+    background-color: var(--c-ColorBlackPearl);
+    border-radius: var(--c-SizeXXXSmall);
+    top: -36px;
+    position: relative;
+    color: var(--c-ColorPurewhite);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.logo-img {
+    position: relative;
+    bottom: 3px;
+    width: 100px;
+}
+
+.primary-header {
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.welcome-text {
+    color: var(--c-ColorDarkBlue);
+    font-size: var(--c-ContentTitle);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.commercial-btn {
+    border-radius: var(--c-SizeXXSmall);
+    color: var(--c-ColorCharcoal);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.clinical-btn {
+    background-color: var(--c-ColorSmokeWhite);
+    border-radius: var(--c-SizeXXSmall);
+    cursor: not-allowed;
+    color: var(--c-ColorSuvaGrey);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.login-box {
+    margin: auto;
+    max-width: 500px;
+}
+
+.login-box .salesforceIdentityLoginForm2 {
+    margin: 1.5rem 3rem;
+}
+
+.login-box .salesforceIdentityLoginForm2 .inputContainer {
+    border-radius: 6px;
+}
+
+.login-box .salesforceIdentityLoginForm2 .uiButton .label {
+    color: var(--c-ColorPurewhite);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.login-box .siteforceContentArea .comm-layout-column .ui-widget:not(:last-child),
+.login-box .siteforceContentArea .cb-section_column .ui-widget:not(:last-child) {
+    margin: 0;
+}
+
+.blue-header {
+    background-color: var(--c-ColorBlackPearl);
+    color: var(--c-ColorPurewhite);
+}
+
+.blue-header .brand-text {
+    color: var(--c-ColorPurewhite);
+}
+
+.slds-global-header.heading-secondary {
+    background-color: var(--c-ColorPurewhite);
+    font-size: var(--c-SizeMedium);
+    padding: 0;
+}
+
+.slds-global-header.heading-secondary .slds-global-header__item,
+.slds-global-header.heading-secondary .slds-global-actions,
+.slds-global-header.heading-secondary .slds-global-actions .slds-global-actions__item {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--c-NunitoSemiBold);
+    font-size: var(--c-SizeLarge);
+}
+
+.slds-global-header.heading-secondary .slds-global-actions__item:focus,
+.slds-global-header.heading-secondary .slds-global-actions__item:active {
+    outline: none;
+}
+
+.slds-global-header.heading-secondary .slds-global-actions__item a {
+    padding: 0 0.5rem;
+    color: var(--c-ColorCharcoal);
+    text-decoration: none;
+    outline: none;
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.nav-active .slds-truncate {
+    color: var(--c-ColorBlackPearl);
+}
+
+.nav-active svg {
+    animation: bounce 2s;
+}
+
+@keyframes bounce {
+    0%,
+    25%,
+    50%,
+    75%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-12px);
+    }
+}
+
+.nav-active {
+    background-color: var(--c-ColorSmokeWhite);
+}
+
+.logo-blue {
+    width: 100px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.profile-text .slds-button {
+    color: var(--c-ColorPurewhite);
+    font-family: var(--c-NunitoLight);
+    font-size: var(--c-FontSizeValue);
+}
+
+.profile-text .slds-dropdown .slds-dropdown__item > a {
+    color: var(--c-ColorPurewhite);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.profile-text .slds-dropdown .slds-dropdown__item > a:focus {
+    color: var(--c-ColorPurewhite);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.profile-section .slds-dropdown-trigger_click.slds-is-open .slds-dropdown,
+.profile-section .slds-dropdown-trigger--click.slds-is-open .slds-dropdown {
+    background-color: var(--c-ColorBlackPearl);
+}
+
+.uiButton--brand.slds-button,
+.primary-button .slds-button {
+    border-radius: var(--c-SizeXXSmall);
+    color: var(--c-ColorPurewhite);
+    background-color: var(--c-ColorNavyBlue);
+    padding: var(--c-PaddingMedium);
+    font-family: var(--c-NunitoSemiBold);
+    font-size: var(--c-FontSizeValue);
+}
+
+.siteforcePanelsContainer .title {
+    font-size: var(--c-SizeXXPageLarge);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.search-box {
+    position: relative;
+    bottom: 10px;
+}
+
+.search-box .slds-input {
+    border-radius: 25px;
+    padding: .5rem 2rem;
+    font-family: var(--c-NunitoLight);
+    font-size: var(--c-FontSizeValue);
+}
+
+.generic-data-table .slds-table thead th span,
+.generic-data-table .slds-th__action:hover,
+.generic-data-table .slds-th__action:focus,
+.generic-data-table .slds-has-focus .slds-th__action,
+.generic-data-table .slds-has-focus .slds-th__action:hover,
+.generic-data-table .slds-has-focus .slds-th__action:focus {
+    background-color: var(--c-ColorPattensBlue);
+    color: var(--c-ColorCharcoal);
+    box-shadow: none;
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.generic-data-table .slds-th__action {
+    height: 50px;
+}
+
+.generic-data-table thead tr {
+    height: var(--c-SizeLarge);
+}
+
+.generic-data-table .slds-th__action .slds-truncate {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    text-align: left;
+    display: block;
+    width: 85%;
+}
+
+.generic-data-table .slds-has-button-menu .slds-th__action {
+    padding: var(--c-SizeXXSmall) 0 var(--c-SizeXXSmall) var(--lwc-squareIconXSmallContent);
+}
+
+.generic-data-table .slds-button lightning-primitive-icon svg[data-key="chevrondown"] {
+    display: none;
+}
+
+.login-box [data-region-name="content"] {
+    background-color: var(--c-ColorSmokeWhite);
+    border-radius: 0 0 5px 5px;
+}
+
+.secondary-button .slds-button {
+    border-radius: var(--c-SizeXXSmall);
+    color: var(--c-ColorCharcoal);
+    background-color: var(--c-ColorLightGrey);
+    padding: var(--c-PaddingMedium);
+    font-size: var(--c-FontSizeValue);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.territory-button .slds-button {
+    padding: var(--c-PaddingMedium);
+    font-size: var(--c-FontSizeValue);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.progress-steps .slds-path__nav .slds-is-current:first-child:before {
+    background-color: var(--c-ColorNavyBlue);
+}
+
+.progress-steps .slds-path__nav .slds-is-current {
+    border: none;
+    background-color: var(--c-ColorNavyBlue);
+    font-size: var(--c-FontSizeValue);
+    font-family: var(--c-NunitoLight);
+}
+
+.progress-steps .slds-path__nav .slds-is-current .slds-path__link {
+    color: var(--c-ColorPurewhite);
+    font-family: var(--c-NunitoLight);
+    font-size: var(--c-FontSizeValue);
+}
+
+.progress-steps .slds-path__nav .slds-is-current .slds-path__link:hover {
+    color: var(--c-ColorPurewhite);
+    font-family: var(--c-NunitoLight);
+    font-size: var(--c-FontSizeValue);
+}
+
+.progress-steps .slds-path__nav .slds-is-current:after, .progress-steps .slds-path__nav .slds-is-current:before {
+    background-color: var(--c-ColorNavyBlue);
+    background-image: none;
+}
+
+.progress-steps .slds-path__nav .slds-is-incomplete {
+    background-color: var(--c-ColorLightGrey);
+}
+
+.progress-steps .slds-path__nav .slds-is-current:hover:before, .progress-steps .slds-path__nav .slds-is-current:hover:after {
+    background-image: none;
+}
+
+.progress-steps .slds-path__nav .slds-is-incomplete:before, .progress-steps .slds-path__nav .slds-is-incomplete:after {
+    background-color: var(--c-ColorLightGrey);
+}
+
+.progress-steps .slds-path__nav .slds-is-complete {
+    background-color: var(--c-ColorGreenApple);
+}
+
+.progress-steps .slds-path__nav .slds-is-complete:before, .progress-steps .slds-path__nav .slds-is-complete:after {
+    background-color: var(--c-ColorGreenApple);
+}
+
+.progress-steps .slds-path__nav .slds-is-complete .slds-path__link {
+    color: var(--c-ColorPurewhite);
+    font-family: var(--c-NunitoLight);
+    font-size: var(--c-FontSizeValue);
+}
+
+.progress-steps .slds-path__nav .slds-is-active .slds-path__title {
+    font-family: var(--c-NunitoLight);
+    font-size: var(--c-FontSizeValue);
+}
+
+.progress-steps .slds-path__title, .progress-steps .slds-path__stage {
+    font-family: var(--c-NunitoLight);
+    font-size: var(--c-FontSizeValue);
+}
+
+.primary-title {
+    color: var(--c-ColorPureBlack);
+    font-size: var(--c-SizeXXPageLarge);
+    font-family: var(--c-NunitoSemiBold);
+    display: flex;
+}
+
+.secondary-title {
+    color: var(--c-ColorPureBlack);
+    font-size: var(--c-SizeMedium);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.patientdetails-section {
+    background-color: var(--c-ColorPurewhite);
+    border-radius: var(--c-SizeXXSmall);
+    margin-bottom: var(--c-SizeMedium);
+    padding: var(--c-SizeXXSmallCustom);
+}
+
+.custom-consent-upload .slds-file-selector__dropzone .slds-file-selector__text {
+    font-size: var(--c-SizeXSmall);
+    font-family: var(--c-NunitoLight);
+    color: var(--c-ColorSuvaGrey);
+}
+
+.custom-consent-upload .slds-file-selector__dropzone .slds-file-selector__button {
+    color: var(--c-ColorNavyBlue);
+    font-family: var(--c-NunitoSemiBold);
+    font-size: var(--c-FontSizeValue);
+}
+
+.custom-consent-upload .slds-file-selector__body {
+    padding: var(--c-PaddingXXLarge);
+}
+
+.disabled-input .slds-form-element__control {
+    background-color: var(--c-ColorLightGrey);
+    border-radius: 4px;
+}
+
+.disabled-input .slds-form-element__control .slds-input {
+    padding-left: 8px;
+}
+
+.form-section .slds-form-element__label {
+    color: var(--c-ColorSuvaGrey);
+    font-size: var(--c-SizeXSmall);
+    font-family: var(--c-NunitoLight);
+}
+
+.button-alignment {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--c-NunitoSemiBold);
+    font-size: var(--c-SizeMedium);
+}
+
+.enrolled-section .slds-icon-utility-success svg {
+    fill: var(--c-ColorGreenApple);
+}
+
+.edit-icon {
+    padding-left: var(--c-SizeMedium);
+}
+
+.edit-icon svg {
+    fill: var(--c-ColorBlackPearl);
+    cursor: pointer;
+}
+
+.wrapper {
+    min-height: var(--c-ViewPortHeight);
+}
+
+.customfileupload-datatable {
+    width: 40%;
+    max-width: 65%;
+}
+
+.grey-section {
+    background-color: var(--c-ColorSmokeWhite);
+}
+
+.grey-section .slds-col--padded .contentRegion .comm-layout-column {
+    padding: 0;
+}
+
+.grey-section .slds-col--padded {
+    padding: 0;
+}
+
+.status-buttons .slds-col .slds-button {
+    border-radius: var(--c-SizeMedium);
+}
+
+.selected button, .selected button:focus, .selected button:hover {
+    background-color: var(--c-ColorNavyBlue);
+    color: var(--c-ColorPurewhite);
+}
+
+.filter-icon {
+    position: relative;
+    right: var(--c-SizeXSmall);
+    padding: var(--c-SizeXXSmall);
+    border: 1px solid var(--c-ColorSuvaGrey);
+    cursor: pointer;
+}
+
+.heading-medium {
+    font-size: var(--c-SizeSmall);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.card-item .slds-card {
+    margin-bottom: var(--c-SizeMedium);
+}
+
+.journey-icon {
+    position: relative;
+    right: var(--c-SizeMedium);
+    width: var(--c-SizeXXLarge);
+    height: var(--c-SizeXXLarge);
+}
+
+.journey-path .slds-progress_vertical .slds-progress__item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.journey-path .slds-progress_vertical .slds-progress__item:after {
+    top: 10%;
+    bottom: 0;
+}
+
+.journey-path .slds-progress_vertical .slds-progress__item_content {
+    margin: 0;
+}
+
+.icon-down {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.generic-card {
+    border: none;
+}
+
+.custom-text-size-large {
+    font-size: var(--c-SizeXLarge);
+    line-height: var(--c-SizeXXLarge);
+    font-family: var(--c-NunitoSemiBold);
+    color: var(--c-ColorDarkGrey);
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.container {
+    height: var(--c-ViewPortContainer);
+}
+
+.page-width {
+    margin: 0 auto;
+    width: var(--c-PageWidth);
+}
+
+.login-box .salesforceIdentityLoginForm2 .inputContainer .inputBox {
+    font-family: var(--c-NunitoLight);
+    font-size: var(--c-FontSizeValue);
+}
+
+.text-default {
+    font-family: var(--c-NunitoLight);
+    color: var(--c-ColorDarkGrey);
+    font-size: var(--c-FontSizeValue);
+}
+
+@font-face {
+    font-family: 'NunitoLight';
+    src: url('/resource/CellSight360Resource/fonts/NunitoSans-Light.ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NunitoSemiBold';
+    src: url('/resource/CellSight360Resource/fonts/NunitoSans-SemiBold.ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NunitoExtraBold';
+    src: url('/resource/CellSight360Resource/fonts/NunitoSans-ExtraBold.ttf');
+    font-display: swap;
+}
+
+.community-container {
+    background-color: var(--c-ColorSmokeWhite);
+}
+
+.filter-button .slds-button {
+    padding: var(--c-PaddingMedium);
+}
+
+.mydatatable .slds-table_header-fixed_container .slds-table .slds-truncate a {
+    color: var(--c-ColorBlackPearl);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.mydatatable .slds-table_header-fixed_container .slds-table {
+    font-family: var(--c-NunitoLight);
+    font-size: var(--c-FontSizeValue);
+}
+
+.customfileupload-datatable .slds-table thead th,
+.customfileupload-datatable .slds-table td {
+    color: var(--c-ColorCharcoal);
+    font-family: var(--c-NunitoSemiBold);
+    font-size: var(--c-FontSizeValue);
+}
+
+.generic-data-table .slds-table_striped tbody tr:nth-of-type(even) > td,
+.generic-data-table .slds-table_striped tbody tr:nth-of-type(even) > th,
+.generic-data-table .slds-table--striped tbody tr:nth-of-type(even) > td,
+.generic-data-table .slds-table--striped tbody tr:nth-of-type(even) > th {
+    background-color: var(--c-ColorPurewhite);
+}
+
+.pagination-list {
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.button-filter {
+    border-radius: var(--c-SizeXXSmall);
+    color: var(--c-ColorCharcoal);
+    padding: var(--c-PaddingMedium);
+    font-family: var(--c-NunitoSemiBold);
+    font-size: var(--c-FontSizeValue);
+}
+
+.heading-secondary .slds-global-header__item {
+    padding: 0;
+}
+
+.heading-secondary .slds-global-actions__item {
+    margin: 0;
+}
+
+.wrapper .slds-form-element .slds-input {
+    font-family: var(--c-NunitoLight);
+    font-size: var(--c-SizeMedium);
+    color: var(--c-ColorDarkGrey);
+}
+
+.wrapper .slds-form-element .slds-form-element__help {
+    font-family: var(--c-NunitoSemiBold);
+    font-size: var(--c-SizeXSmall);
+    color: var(--c-ColorRed);
+}
+
+.wrapper .slds-form-element .slds-has-error .slds-input {
+    border-color: var(--c-ColorRed);
+}
+
+.wrapper .slds-text-color--error {
+    font-family: var(--c-NunitoSemiBold);
+    font-size: var(--c-SizeMedium);
+    color: var(--c-ColorRed);
+}
+
+.wrapper .slds-breadcrumb .slds-list__item > a, .wrapper .slds-breadcrumb__item > a {
+    font-family: var(--c-NunitoLight);
+    font-size: var(--c-FontSizeValue);
+    color: var(--c-ColorCharcoal);
+}
+
+.content-heading_subtitle {
+    font-family: var(--c-NunitoSemiBold);
+    font-size: var(--c-SizeMedium);
+    color: var(--c-ColorCharcoal);
+}
+
+.form-section .slds-file-selector_files .slds-file-selector__text,
+.form-section .slds-file-selector--files .slds-file-selector__text {
+    font-family: var(--c-NunitoLight);
+    color: var(--c-ColorSuvaGrey);
+}
+
+.wrapper .slds-checkbox .slds-checkbox__label .slds-form-element__label {
+    font-family: var(--c-NunitoLight);
+    color: var(--c-ColorDarkGrey);
+    font-size: var(--c-SizeMedium);
+}
+
+.content-heading_title {
+    color: var(--c-ColorPureBlack);
+    font-size: var(--c-ContentTitle);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.filter-btn .slds-button {
+    font-family: var(--c-NunitoSemiBold);
+    font-size: var(--c-FontSizeValue);
+    color: var(--c-Charcoal);
+}
+
+.filter-btn.cust-width .slds-button {
+    min-width: 112px;
+}
+
+.filter-brand .slds-button {
+    color: var(--c-ColorPurewhite);
+    background-color: var(--c-ColorNavyBlue);
+}
+
+lightning-combobox.inline-combobox {
+    min-width: 240px
+}
+
+lightning-combobox.inline-combobox[lightning-combobox_combobox-host] {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.cust-status-btn-row {
+    display: flex;
+}
+
+.hoverEffect{
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 100%;
+    height: 100%;
+}
+
+.hoverEffect .available-select{
+    background-color: var(--c-ColorGreenApple);
+    color: var(--c-ColorPurewhite);
+    padding: var(--c-SizeXXSmallCustom) var(--c-SizeLarge);
+    font-family: var(--c-NunitoSemiBold);
+    font-size: var(--c-FontSizeValue);
+    border-radius: 4px;
+    border: 1px solid var(--c-ColorGreenApple);
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    z-index: 3;
+}
+
+.cust-status-btn-row{
+    display: flex;
+}
+
+.cust-doc-container{
+    max-height: 160px;
+    overflow-y: auto;
+}
+
+.wrapword {
+    white-space: -moz-pre-wrap;
+    white-space: -webkit-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+}
+
+.scroll-bar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--c-ColorMediumGrey) var(--c-ColorLightGrey);
+}
+
+.scroll-bar::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 4px;
+}
+
+.scroll-bar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: var(--c-SizeXXSmallCustom);
+    background: var(--c-ColorLightGrey);
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+    background-color: var(--c-ColorDarkGrey);
+    border-radius: var(--c-SizeXXSmallCustom);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+}
+
+.disclaimer-text {
+    color: var(--c-ColorSuvaGrey);
+    font-size: var(--c-FontSizeValue);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.calendar-header{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.display-inline-block{
+    display: inline-block;
+}
+
+.slds-popover_tooltip{
+    background-color: var(--c-ColorPurewhite);
+    color: var(--c-ColorPureBlack);
+}
+
+.aph-block{
+    width: var(--c-SizeXXLarge);
+    height: var(--c-SizeLarge);
+    background: var(--c-ColorGreenAppleLight);
+}
+
+c-calendar .fc-bgevent{
+    opacity: 0.8;
+}
+
+.displayToggle {
+    display: none;
+}
+
+.alert-header {
+    color: var(--c-ColorPureBlack);
+    font-size: var(--c-SizeMedium);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.alert-popover {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: -12px;
+    max-height: 200px;
+    width: 500px;
+}
+
+.alert-subject {
+    color: var(--c-ColorPureBlack);
+    font-size: var(--c-SizeSmall);
+    font-family: var(--c-NunitoLight);
+
+}
+
+.alert-Message {
+    color: var(--c-ColorPureBlack);
+    font-size: var(--c-SizexSmall);
+    font-family: var(--c-NunitoLight);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+}
+
+.alert-Mark-Button {
+    color: var(--c-ColorPureBlack);
+    font-size: var(--c-SizeXSmall);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.alert-position {
+    display: inline-block;
+    padding-right: var(--c-SizeXSmall);
+}
+
+.alert-patient-list {
+    list-style: none;
+    background-color: white;
+}
+
+.alert-panel-height {
+    max-height: 40vh;
+}
+
+.alert-panel-background-color {
+    background-color: white;
+}
+
+.formatted-date-inp{
+    font-family: var(--c-NunitoLight);
+    font-size: var(--c-SizeMedium);
+    color: var(--c-ColorDarkGrey);
+}
+
+.fc-bgevent-skeleton {
+    pointer-events: none;
+}
+
+.fc-bgevent-skeleton .fc-bgevent {
+    pointer-events: auto;
+}
+
+.custom-patient-search{
+    border-radius: 10px;
+}
+
+.patient-card-background{
+    background-color: var(--c-ColorPattensBlue);
+    border-radius: var(--c-SizeXXSmall);
+}
+
+.patient-card-heading{
+    color: var(--c-ColorNavyBlue)
+}
+
+.event-buttons {
+    display: flex;
+    width: 98%;
+    border: 1px solid #d4d4d4;
+    background-color: var(--c-ColorPurewhite);
+    border-radius: 5px;
+}
+
+.event-button-icons {
+    width: var(--c-SizeXXLarge);
+    height: var(--c-SizeXXLarge);
+}
+
+.event-cal-icons{
+    min-width: var(--c-SizeSmall);
+    min-height: var(--c-SizeSmall);
+}
+
+
+.drugproduct-delivery-date {
+    width: var(--c-SizeXXLarge);
+    height: var(--c-SizeLarge);
+    background: var(--c-ColorOrange);
+}
+
+.today-date {
+    width: var(--c-SizeXXLarge);
+    height: var(--c-SizeLarge);
+    background: var(--c-ColorNavyBlue);
+}
+
+.generic-data-table .slds-table thead th span.slds-resizable__divider:before {
+    background-color: var(--c-ColorPurewhite);
+    width: 2px;
+}
+
+.menu-section div ul li a .menu-text {
+    position: relative;
+    top:var(--c-SizeMicro);
+}
+
+.fc-today {
+    background: var(--c-ColorNavyBlue);
+    font-weight: bold;
+    display:flex;
+}
+
+.aph-event {
+    height: var(--c-SizeXXLarge);
+}
+
+.fc-unthemed td.fc-today {
+    background: var(--c-ColorNavyBlue);
+    height: var(--c-SizeXXLarge);
+    color: var(--c-ColorPurewhite);
+}
+
+.custom-event{
+    display: flex;
+    justify-content: flex-start;
+    font-family: var(--c-NunitoSemiBold);
+    font-size: var(--c-SizeMedium);
+}
+
+.custom-event-text{
+    font-size: var(--c-SizeXSmall);
+}
+
+.custom-patient-card-container{
+    max-height: 58.8rem;
+    overflow-y: auto;
+}
+
+.patient-alert-container{
+    display: inline-flex;
+    font-family: var(--c-NunitoSemiBold);
+    font-size: var(--c-SizeMedium);
+    align-items: center;
+}
+
+.notifications button,
+.alert-icon{
+    width: 2rem;
+}
+
+.custom-brand {
+    border-radius: var(--c-SizeXXSmall);
+    color: var(--c-ColorPurewhite);
+    background-color: var(--c-ColorNavyBlue);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.event-buttons.slds-button_neutral {
+    background-color: var(--c-ColorPurewhite);
+    color: var(--c-Charcoal);
+    justify-content: center;
+}
+
+.brand-show-all {
+    background-color: var(--c-ColorPurewhite);
+    font-family: var(--c-NunitoSemiBold);
+    font-size: var(--c-FontSizeValue);
+    color: var(--c-ColorCharcoal);
+    justify-content: center;
+}
+
+.cust-required-right abbr {
+    float: right;
+}
+
+.progress-steps .slds-path__nav .slds-is-current:first-child {
+    border: 2px solid var(--c-ColorNavyBlue);
+}
+
+.slds-path__nav .slds-is-current:first-child:hover,
+.slds-path__nav .slds-is-current:first-child:active {
+    border-color: var(--c-ColorNavyBlue);
+}
+
+.fc-day-number{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.cust-line-height {
+    line-height: var(--lwc-heightInput);
+}
+
+.patient-journey-status {
+    font-family: var(--c-NunitoLight);
+    font-size: var(--c-SizeMedium);
+    color: var(--c-ColorDarkGrey);
+}
+
+.patient-journey-wrapper .slds-form-element .slds-input {
+    font-family: var(--c-NunitoLight);
+    font-size: var(--c-SizeMedium);
+    color: var(--c-ColorDarkGrey);
+}
+
+.patient-journey-date .slds-button {
+    display: none;
+}
+
+.error-button .slds-button {
+    border:1px solid var(--c-ColorMelon);
+    border-radius: var(--c-SizeXXSmall);
+    color: var(--c-ColorPurewhite);
+    background-color: var(--c-ColorMelon);
+    padding: var(--c-PaddingMedium);
+    font-family: var(--c-NunitoSemiBold);
+    font-size: var(--c-FontSizeValue);
+    float:right;
+}
+
+.menu-dividers ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+.menu-dividers ul li
+{
+    list-style-type: none;
+    display: inline;
+}
+
+.menu-dividers li:not(:first-child):before {
+    content: " | ";
+}
+
+.menu-dividers a {
+    text-decoration: underline;
+}
+
+.global-footer {
+    box-shadow: 0px -2px 10px -1px rgba(0,0,0,0.2);
+    background-color: var(--c-ColorPurewhite);
+    font-family: var(--c-NunitoLight);
+    font-size: var(--c-FontSizeValue);
+    border-radius: var(--c-SizeXXSmall);
+}
+
+.alert-Mark-Button .slds-button {
+    width:100px;
+}
+
+.formatted-date-inp .slds-input__icon {
+    display:none;
+}
+
+.text-ellipsis {
+    white-space: pre;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cust-modal-height{
+    overflow-y: auto;
+}
+
+.cust-cal-height{
+    width: 350px;
+}
+
+.cust-cal-height .fc-day-grid-container{
+    overflow: hidden;
+}
+
+.display-pointer{
+    cursor: pointer;
+}
+
+.custom-date-cal .fc-bgevent{
+    cursor: pointer;
+}
+
+
+.parent-element{
+    position: relative;
+}
+
+.placeholder-element{
+    position: absolute;
+    display: block;
+    height: 44px;
+    top: 24px;
+    z-index: 4;
+    width: 318px;
+}
+
+.custom-helptext{
+    display: inline-flex;
+    vertical-align: text-bottom;
+}
+
+.profile-text .slds-button svg {
+    margin-left : var(--c-SizeXXSmall);
+}
+
+.consent-label-text {
+    font-family: var(--c-NunitoLight);
+    color: var(--c-ColorDarkGrey);
+    font-size: var(--c-SizeMedium);
+}
+
+.progress-steps .slds-path__nav .slds-is-current:first-child::after {
+    bottom: -0.125rem !important;
+}
+
+.progress-steps .slds-path__nav .slds-is-current:first-child::before {
+    top: -0.125rem !important;
+}
+
+.progress-steps  .slds-path__nav .slds-is-active:first-child .slds-path__link {
+      height: 28px;
+}
+
+.disable-date .slds-button[disabled],.disable-date .slds-button:disabled {
+    display:none;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.display-inline-flex {
+    display: inline-flex;
+}
+
+.search-box-width .slds-input-has-icon_left-right .slds-input,
+.search-box-width .slds-input-has-icon_left-right .slds-input_bare,
+.search-box-width .slds-input-has-icon_left-right .slds-input--bare,
+.search-box-width .slds-input-has-icon--left-right .slds-input,
+.search-box-width .slds-input-has-icon--left-right .slds-input_bare,
+.search-box-width .slds-input-has-icon--left-right .slds-input--bare {
+    padding: 0 0 0 2rem;
+}
+
+.label-style {
+    color: var(--c-ColorSuvaGrey);
+    font-size: var(--c-SizeXSmall);
+    font-family: var(--c-NunitoLight);
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.popup-style .slds-modal__container .slds-modal__content {
+    border-radius: var(--c-SizeXXSmall);
+}
+
+.text-nunito {
+    font-size: var(--c-FontSizeValue);
+    font-family: var(--c-NunitoLight);
+}
+
+.text-semibold {
+    font-family: var(--c-NunitoSemiBold);
+    font-size: var(--c-FontSizeValue);
+}
+
+.custom-height {
+    display: block;
+    min-height: 40px;
+}
+
+.cust-required-color {
+    color: var(--c-ColorRed);
+}

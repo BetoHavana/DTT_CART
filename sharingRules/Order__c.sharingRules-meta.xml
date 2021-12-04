@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>IntegrationSharingRuleOnOrder</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This rule is to share order records with Integration user.</description>
+        <label>Integration Sharing Rule On Order</label>
+        <sharedTo>
+            <group>IntegrationUsers</group>
+        </sharedTo>
+        <sharedFrom>
+            <role>InternalSiteAdministrator</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>SecurityAnalystOrderSharingRule</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Read only access to security analyst on order records</description>
+        <label>Security Analyst Order Sharing Rule</label>
+        <sharedTo>
+            <role>SecurityAnalyst</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>CCMExecutive</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

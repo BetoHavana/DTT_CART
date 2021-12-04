@@ -1,0 +1,40 @@
+<aura:tokens>
+    <aura:token name="ColorBlackPearl" value="#0b4b85"/>
+    <aura:token name="ColorCharcoal" value="#454545"/>
+    <aura:token name="ColorDarkBlue" value="#18428b"/>
+    <aura:token name="ColorDarkGrey" value="#333333"/>
+    <aura:token name="ColorGreenApple" value="#57bb50"/>
+    <aura:token name="ColorGreenAppleLight" value="#DAFBE1"/>
+    <aura:token name="ColorLightGrey" value="#cecece"/>
+    <aura:token name="ColorMediumGrey" value="#ade8f7"/>
+    <aura:token name="ColorMelon" value="#feb5b1"/>
+    <aura:token name="ColorNavyBlue" value="#0b6ec5"/>
+    <aura:token name="ColorOrange" value="#f57e20"/>
+    <aura:token name="ColorPureBlack" value="#000000"/>
+    <aura:token name="ColorPurewhite" value="#ffffff"/>
+    <aura:token name="ColorPattensBlue" value="#D5EEF4"/>
+    <aura:token name="ColorRed" value="#AF0120"/>
+    <aura:token name="ColorSmokeWhite" value="#f0f0f0"/>
+    <aura:token name="ColorSuvaGrey" value="#898989"/>
+    <aura:token name="ContentTitle" value="1.664rem"/>
+    <aura:token name="FontSizeValue" value="0.889rem"/>
+    <aura:token name="NunitoExtraBold" value="NunitoExtraBold,sans-serif"/>
+    <aura:token name="NunitoLight" value="NunitoLight,sans-serif"/>
+    <aura:token name="NunitoSemiBold" value="NunitoSemiBold,sans-serif"/>
+    <aura:token name="PaddingMedium" value=".5rem 2rem"/>
+    <aura:token name="PaddingXXLarge" value="3rem 24rem"/>
+    <aura:token name="PageWidth" value="71rem"/>
+    <aura:token name="SizeLarge" value="1.125rem"/>
+    <aura:token name="SizeMedium" value="1rem"/>
+    <aura:token name="SizeMicro" value="2.5px"/>
+    <aura:token name="SizeSmall" value="0.875rem"/>
+    <aura:token name="SizeXLarge" value="1.25rem"/>
+    <aura:token name="SizeXSmall" value="0.79rem"/>
+    <aura:token name="SizeXXSmall" value="0.3rem"/>
+    <aura:token name="SizeXXXSmall" value="0.2rem 0.2rem 0 0"/>
+    <aura:token name="SizeXXSmallCustom" value="0.625rem"/>
+    <aura:token name="SizeXXLarge" value="1.5rem"/>
+    <aura:token name="SizeXXPageLarge" value="1.424rem"/>
+    <aura:token name="ViewPortContainer" value="100vh"/>
+    <aura:token name="ViewPortHeight" value="calc(100vh - 8.563rem)"/>
+</aura:tokens>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PopulatePatientServicesEligibilityFields</fullName>
+    <active>true</active>
+    <description>When the patient services status = &apos;Eligible&apos;, all patient services eligibility fields must be populated</description>
+    <errorConditionFormula>AND(
+     OR(
+         ISPICKVAL( PatientServicesStatus__c , &apos;Eligible&apos;),
+         ISPICKVAL( PatientServicesStatus__c , &apos;Ineligible&apos;)),
+     OR(
+          ISBLANK(DistanceMileage__c ),
+          ISBLANK(TEXT(MileageEligibility__c  )), 
+          ISBLANK(DistanceTime__c ), 
+          ISBLANK(TEXT(TimeEligibility__c  )),
+          ISBLANK(TEXT(IncomeEligibility__c  )),
+          ISBLANK(TEXT(NonEmergencyMedicalTravel__c )),
+          ISBLANK(TEXT(InsuranceEligibility__c )), 
+          ISBLANK(TEXT(LodgingSupport__c )), 
+          ISBLANK(TEXT(LodgingEligibility__c )),
+          ISBLANK(TEXT(DateEligibilityCheckPerformed__c ))
+      )
+)</errorConditionFormula>
+    <errorMessage>Please complete all eligibility criteria to mark status as &apos;Eligible&apos; or &apos;Ineligible</errorMessage>
+</ValidationRule>

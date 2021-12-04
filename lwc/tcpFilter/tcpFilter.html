@@ -1,0 +1,89 @@
+<template>
+    <div class="slds-grid slds-wrap slds-p-bottom_large">
+        <div class="slds-col slds-size_4-of-12">
+            <lightning-input type="search" class="search-box" name="Search" placeholder={searchPlaceholder} onchange={handleSearch}>
+            </lightning-input>
+        </div>
+        <div class="slds-col slds-size_2-of-12 slds-p-left_large slds-p-top_x-small">
+            <button class="slds-button slds-button_neutral button-filter"  onclick={handleToggleFilter}>
+                <template if:true={toggleFilter}>
+                    <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
+                         aria-hidden="true">
+                        <use xlink:href={closeIcon}></use>
+                    </svg>{labels.CLOSE_LABEL}
+                </template>
+                <template if:false= {toggleFilter}>
+                    <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
+                         aria-hidden="true">
+                        <use xlink:href={filterIcon}></use>
+                    </svg>{labels.FILTER_LABEL}
+                </template>
+            </button>
+        </div>
+        <div class="slds-col slds-size_6-of-12">
+            <div class="slds-float_right slds-p-top_xx-small">
+                <lightning-button variant="brand" label={labels.ENROLL_NEW_PATIENT_LABEL} onclick={handleChevron}
+                                  class=" primary-button ">
+                </lightning-button>
+            </div>
+        </div>
+    </div>
+
+    <template if:true={toggleFilter}>
+        <div class="slds-grid status-section slds-border_bottom slds-p-bottom_x-small">
+            <div class="slds-col slds-size_7-of-12 patient-journey-wrapper">
+                <div class="slds-grid slds-media_center slds-m-vertical_small">
+                    <div class="slds-col slds-size_5-of-12">
+                        <legend class="text-semibold">{labels.FILTER_BY_LABEL} {labels.STATUS_LABEL}</legend>
+                    </div>
+                    <div class="slds-col slds-size_7-of-12 slds-grid_align-spread cust-status-btn-row">
+                        <lightning-button label={labels.SHOW_ALL_LABEL} class={statusAllButtonStyle} onclick={handleStatusActive}></lightning-button>
+                        <lightning-button label={labels.ACTIVE_LABEL}  class={statusActiveButtonStyle} onclick={handleStatusActive} title={labels.FILTER_BY_ACTIVE_STATUS_HOVER_TEXT_LABEL}></lightning-button>
+                        <lightning-button label={labels.INACTIVE_LABEL}  class={statusInActiveButtonStyle} onclick={handleStatusActive} title={labels.FILTER_BY_INACTIVE_STATUS_HOVER_TEXT_LABEL}></lightning-button>
+                    </div>
+                </div>
+                <div class="slds-grid slds-media_center slds-m-vertical_small">
+                    <div class="slds-col slds-size_5-of-12">
+                        <legend class="text-semibold">{labels.FILTER_BY_LABEL} {labels.TREATMENT_CENTER_COORDINATOR_LABEL}</legend>
+                    </div>
+                    <div class="slds-col slds-size_7-of-12 slds-grid_align-spread">
+                        <lightning-button label={labels.SHOW_ALL_LABEL} class={coordinatorAllButtonStyle} onclick={handleAllCoordinatorActive}></lightning-button>
+                        <lightning-combobox
+                                name="coordinator"
+                                class="inline-combobox label-hidden"
+                                label=""
+                                value={selectedCartCoordinator}
+                                placeholder={labels.SELECT_COORDINATOR_LABEL}
+                                options={optionsCoordinators}
+                                variant="label-hidden"
+                                onchange={handleCoordinatorChange} >
+                        </lightning-combobox>
+                    </div>
+                </div>
+                <div class="slds-grid slds-media_center slds-m-vertical_small">
+                    <div class="slds-col slds-size_5-of-12">
+                        <legend class="text-semibold">{labels.FILTER_BY_LABEL} {labels.TREATING_PHYSICIAN_LABEL}</legend>
+                    </div>
+                    <div class="slds-col slds-size_7-of-12 slds-grid_align-spread">
+                        <lightning-button label={labels.SHOW_ALL_LABEL} class={physicianAllButtonStyle} onclick={handlePhysicianActive}></lightning-button>
+                        <lightning-combobox
+                                name="physician"
+                                class="inline-combobox"
+                                label=""
+                                value={selectedPhysician}
+                                placeholder={labels.SELECT_PHYSICIAN_LABEL}
+                                variant="label-hidden"
+                                options={optionsPhysicians}
+                                onchange={handlePhysicianChange} >
+                        </lightning-combobox>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid slds-m-bottom_small">
+            <div class="slds-col_bump-left">
+                <button class="slds-button text-semibold" onclick={handleClear}>{labels.CLEAR_ALL_FILTER_LABEL}</button>
+            </div>
+        </div>
+    </template>
+</template>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>ShipMfgToInfusnWhenMfgStatusIsQRCmpltCen</label>
+    <protected>false</protected>
+    <values>
+        <field>APINamesOfChangedFieldsToRunLogic__c</field>
+        <value xsi:type="xsd:string">OrderStatus__c</value>
+    </values>
+    <values>
+        <field>CarePlanConditionsInfo__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>CarePlanUpdateInfo__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>CryoType__c</field>
+        <value xsi:type="xsd:string">3rd Party</value>
+    </values>
+    <values>
+        <field>GoalsConditionsInfo__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>GoalsUpdateInfo__c</field>
+        <value xsi:type="xsd:string">[{&quot;goalName&quot;:&quot;Shipping (Manufacturing Site to Infusion Site)&quot;,&quot;goalStatusToSet&quot;:&quot;In Progress&quot;}]</value>
+    </values>
+    <values>
+        <field>IsActive__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>OrderConditionsInfo__c</field>
+        <value xsi:type="xsd:string">[ { &quot;fieldName&quot;:&quot;PatientStatus__c&quot;, &quot;valueToCompare&quot;:&quot;Verified&quot; }, { &quot;fieldName&quot;:&quot;OrderStatus__c&quot;, &quot;valueToCompare&quot;:&quot;Drug Product Delivery Date Scheduled&quot; } ]</value>
+    </values>
+    <values>
+        <field>OrderUpdateInfo__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>RuleOrder__c</field>
+        <value xsi:type="xsd:double">11.0</value>
+    </values>
+    <values>
+        <field>TaskConditionsInfo__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TaskUpdateInfo__c</field>
+        <value xsi:type="xsd:string">[ { &quot;taskSubject&quot;:&quot;Confirmation on picking final product from Manufacturing Site&quot;, &quot;goalNameForTasksFilter&quot;:&quot;Shipping (Manufacturing Site to Infusion Site)&quot;, &quot;taskStatusToSet&quot;:&quot;In Progress&quot; }, { &quot;taskSubject&quot;:&quot;Confirmation on delivery of final product to the Infusion/ Treatment Site&quot;, &quot;goalNameForTasksFilter&quot;:&quot;Shipping (Manufacturing Site to Infusion Site)&quot;, &quot;taskStatusToSet&quot;:&quot;In Progress&quot; } ]</value>
+    </values>
+</CustomMetadata>

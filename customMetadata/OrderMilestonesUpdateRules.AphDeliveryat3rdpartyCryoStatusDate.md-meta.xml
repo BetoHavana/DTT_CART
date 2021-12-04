@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Aph Delivery at 3rd party Cryo Status &amp;</label>
+    <protected>false</protected>
+    <values>
+        <field>CryoType__c</field>
+        <value xsi:type="xsd:string">Central</value>
+    </values>
+    <values>
+        <field>MilestoneName__c</field>
+        <value xsi:type="xsd:string">Apheresis DroppedOff at CentralCryo</value>
+    </values>
+    <values>
+        <field>MilestoneSource__c</field>
+        <value xsi:type="xsd:string">Vineti</value>
+    </values>
+    <values>
+        <field>MilestoneType__c</field>
+        <value xsi:type="xsd:string">COI-COC</value>
+    </values>
+    <values>
+        <field>OrderMilestoneStatus__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>SourceFieldAPIName__c</field>
+        <value xsi:type="xsd:string">MilestoneDatetime__c</value>
+    </values>
+    <values>
+        <field>TargetFieldAPIName__c</field>
+        <value xsi:type="xsd:string">FreshCellDropOffDateAndTime__c</value>
+    </values>
+    <values>
+        <field>TargetStatusAPIName__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

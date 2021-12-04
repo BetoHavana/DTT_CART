@@ -1,0 +1,121 @@
+<template>
+    <div class="form-section">
+        <template if:true={showPatientMandatory}>
+            <div class="slds-text-heading--small slds-text-color--error slds-align_absolute-center">
+                {labels.MANDATORY_FIELDS_LABEL}
+            </div>
+        </template>
+        <template if:false={readonlyChild}>
+            <div class="primary-title slds-p-vertical_small">{labels.PATIENT_INFORMATION_LABEL}</div>
+        </template>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_4-of-12">
+                <lightning-input class="slds-p-left_large" type="text" name="patientFirstName"
+                                 label={labels.FIRSTNAME_LABEL}
+                                 value={patientFirstName} required={readonlyRequired}
+                                 message-when-value-missing={labels.PLEASE_COMPLETE_LABEL}
+                                 read-only={readonlyChild}></lightning-input>
+
+            </div>
+            <div class="slds-col slds-size_4-of-12">
+                <lightning-input type="text" name="patientLastName" label={labels.LASTNAME_LABEL} required={readonlyRequired}
+                                 message-when-value-missing={labels.PLEASE_COMPLETE_LABEL}
+                                 value={patientLastName} read-only={readonlyChild}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_4-of-12">
+                <template if:false={readonlyChild}>
+                    <lightning-combobox if:true={salutationPicklistValues.data}
+                                        name="patientSalutation"
+                                        label={labels.SALUTATION_LABEL}
+                                        value={patientSalutation}
+                                        placeholder="Select"
+                                        options={salutationPicklistValues.data.values}
+                                        read-only={readonlyChild}>
+                    </lightning-combobox>
+                </template>
+                <template if:true={readonlyChild}>
+                    <lightning-input type="text" label={labels.SALUTATION_LABEL} value={patientSalutation}
+                                     read-only></lightning-input>
+                </template>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters slds-m-vertical_small">
+            <div class="slds-col slds-size_4-of-12">
+                <lightning-input type="text" class="slds-p-left_large" name="patientMRN"
+                                 label={labels.MEDICAL_RECORD_NUMBER_LABEL} value={patientMRN}
+                                 message-when-value-missing={labels.PLEASE_COMPLETE_LABEL}
+                                 required={readonlyRequired} read-only={readonlyChild}
+                                 field-level-help={labels.MEDICAL_RECORD_NUMBER_TOOL_TIP_LABEL}>
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-size_4-of-12">
+                <lightning-input type="date" name="patientDOB" label={labels.DATE_OF_BIRTH_LABEL} value={patientDOB}
+                                 message-when-value-missing={labels.PLEASE_COMPLETE_LABEL}
+                                 class="disable-date" required={readonlyRequired} read-only={readonlyChild}>
+                </lightning-input>
+            </div>
+
+        </div>
+        <div class="secondary-title slds-p-vertical_medium">{labels.CONTACT_INFORMATION_LABEL}</div>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_4-of-12">
+                <lightning-input type="tel" class="slds-p-left_large" name="patientPhone"
+                                 label={labels.PRIMARY_CONTACT_NUMBER_LABEL}
+                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                 max-length="12" value={patientPhone} required={readonlyRequired}
+                                 message-when-value-missing={labels.PLEASE_COMPLETE_LABEL}
+                                 onchange={mobileHandler} onkeydown={handleMobileKeyPress}
+                                 read-only={readonlyChild}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_4-of-12">
+                <template if:false={readonlyChild}>
+                    <lightning-combobox if:true={primaryPhoneTypePicklistValues.data}
+                                        name="patientPrimaryPhoneNumberType"
+                                        label={labels.PRIMARY_PHONE_NUMBER_TYPE_LABEL}
+                                        value={patientPrimaryPhoneNumberType}
+                                        placeholder="Select"
+                                        options={primaryPhoneTypePicklistValues.data.values}
+                                        read-only={readonlyChild}></lightning-combobox>
+                </template>
+                <template if:true={readonlyChild}>
+                    <lightning-input type="text" label={labels.PRIMARY_PHONE_NUMBER_TYPE_LABEL}
+                                     value={patientPrimaryPhoneNumberType}
+                                     read-only></lightning-input>
+                </template>
+            </div>
+            <div class="slds-col slds-size_4-of-12">
+                <template if:false={readonlyChild}>
+                    <lightning-combobox if:true={preferredMethodPicklistValues.data}
+                                        name="patientPreferredMethodOfCommunication"
+                                        label={labels.PREFERRED_METHOD_OF_COMMUNICATION_LABEL}
+                                        value={patientPreferredMethodOfCommunication}
+                                        onchange={handlePatientPreferredMethodOfCommunication}
+                                        placeholder="Select"
+                                        options={preferredMethodPicklistValues.data.values}
+                                        message-when-value-missing={labels.PLEASE_COMPLETE_LABEL}
+                                        required={readonlyRequired} read-only={readonlyChild}></lightning-combobox>
+                </template>
+                <template if:true={readonlyChild}>
+                    <div>
+                        <lightning-input type="text" label={labels.PREFERRED_METHOD_OF_COMMUNICATION_LABEL}
+                                         value={patientPreferredMethodOfCommunication}
+                                         required={readonlyRequired}
+                                         message-when-value-missing={labels.PLEASE_COMPLETE_LABEL}
+                                         read-only></lightning-input>
+                    </div>
+                </template>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters slds-m-vertical_medium">
+            <div class="slds-col slds-size_4-of-12">
+                <lightning-input type="email" name="patientEmail" label={labels.EMAIL_ADDRESS_LABEL}
+                                 read-only={readonlyChild}
+                                 class="slds-p-left_large"
+                                 value={patientEmail} required={isPatientEmailRequired}
+                                 message-when-value-missing={labels.EMAIL_VALIDATION_LABEL}>
+                </lightning-input>
+            </div>
+        </div>
+
+    </div>
+</template>

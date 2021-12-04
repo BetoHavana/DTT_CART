@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Order__c.TreatmentSite__c</field>
+    </columns>
+    <columns>
+        <field>Order__c.Patient__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>Order__c.ApheresisPickUpDate__c</field>
+    </columns>
+    <columns>
+        <field>DaysRemaining</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>Order__c.ApheresisPickUpDate__c - 2 - TODAY()</calculatedFormula>
+        <dataType>Double</dataType>
+        <description>days remaining until apherisis pickup date</description>
+        <developerName>DaysRemaining</developerName>
+        <label>Days Remaining</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <description>Report to show all orders with pending PO</description>
+    <filter>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <column>Order__c.OrderStatus__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Order Submitted,Order Verified,Order Rescheduled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Order__c.POStatus__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>PO Pending</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Orders Pending PO</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Order__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Order__c.ApheresisPickUpDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

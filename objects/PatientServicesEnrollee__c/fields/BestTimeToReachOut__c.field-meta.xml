@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BestTimeToReachOut__c</fullName>
+    <description>Time of day that the Patient prefers to be contact by Patient Services</description>
+    <defaultValue>&apos;Morning&apos;</defaultValue>
+    <externalId>false</externalId>
+    <label>Best Time for Outreach</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Morning</fullName>
+                <default>false</default>
+                <label>Morning</label>
+            </value>
+            <value>
+                <fullName>Afternoon</fullName>
+                <default>false</default>
+                <label>Afternoon</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

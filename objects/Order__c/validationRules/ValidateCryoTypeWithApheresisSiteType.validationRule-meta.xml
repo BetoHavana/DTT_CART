@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ValidateCryoTypeWithApheresisSiteType</fullName>
+    <active>true</active>
+    <description>This validation rule triggers when cryotype on the order is changed to &apos;Local&apos; and prior value of Cryo Type is central and type defined on Apheresis Site is &apos;Central&apos;.</description>
+    <errorConditionFormula>ISPICKVAL(ApheresisSite__r.Type , &quot;Central&quot;) &amp;&amp;
+ NOT(ISPICKVAL(OrderStatus__c , &quot;Order Submitted&quot;)) &amp;&amp;
+ NOT(ISPICKVAL(OrderStatus__c , &quot;Order Rescheduled&quot;)) &amp;&amp; 
+ NOT(ISPICKVAL(OrderStatus__c , &quot;Order Verified&quot;)) &amp;&amp; 
+ ISPICKVAL(PRIORVALUE(CryoType__c),&quot;Central&quot;) &amp;&amp;
+ ISPICKVAL(CryoType__c,&quot;Local&quot;)</errorConditionFormula>
+    <errorMessage>Cryo Type cannot be changed for this Order. The Apheresis Site is certified only for &apos;Centralized&apos; cryo preservation.</errorMessage>
+</ValidationRule>

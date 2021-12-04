@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>ShipCryToMfgCentrlSiteCnfmDelCellsPickup</label>
+    <protected>false</protected>
+    <values>
+        <field>APINamesOfChangedFieldsToRunLogic__c</field>
+        <value xsi:type="xsd:string">SlotStatus__c</value>
+    </values>
+    <values>
+        <field>InheritDueDateFromOrderField__c</field>
+        <value xsi:type="xsd:string">ApheresisPickUpDate__c</value>
+    </values>
+    <values>
+        <field>IsActive__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>NoOfDaysToAddToInheritedDate__c</field>
+        <value xsi:type="xsd:double">3.0</value>
+    </values>
+    <values>
+        <field>OrderConditionsInfo__c</field>
+        <value xsi:type="xsd:string">[
+   {
+      &quot;fieldName&quot;:&quot;OrderStatus__c&quot;,
+      &quot;value&quot;:&quot;Order Submitted,Order Rescheduled&quot;
+   },
+   {
+      &quot;fieldName&quot;:&quot;CryoType__c&quot;,
+      &quot;value&quot;:&quot;Central&quot;
+   }
+]</value>
+    </values>
+    <values>
+        <field>TasksConditionsInfo__c</field>
+        <value xsi:type="xsd:string">{
+  &quot;subject&quot;: &quot;Confirmation for delivery of cells to Manufacturing site&quot;,
+  &quot;goalName&quot;: &quot;Shipping (Cryo Site to Manufacturing Site)&quot;
+}</value>
+    </values>
+</CustomMetadata>

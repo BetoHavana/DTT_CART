@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ERPSiteID__c</fullName>
+    <complianceGroup>GxP</complianceGroup>
+    <caseSensitive>false</caseSensitive>
+    <description>ERP Site ID for Treatment Sites will be received from ERP System and ERP Site ID for Apheresis Sites &amp; Cryo Sites will be received from Anaplan.</description>
+    <externalId>true</externalId>
+    <inlineHelpText>ERP Site ID for Treatment Sites will be received from ERP System and ERP Site ID for Apheresis Sites &amp; Cryo Sites will be received from Anaplan</inlineHelpText>
+    <label>ERP Site ID</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

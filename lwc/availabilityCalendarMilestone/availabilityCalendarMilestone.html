@@ -1,0 +1,12 @@
+<template>
+    <div class="slds-p-vertical_medium progress-steps">
+        <lightning-progress-indicator type="path" current-step={selectedStep}>
+            <template for:each={progressSteps} for:item="progress">
+                <lightning-progress-step label={progress.title}
+                                         key={progress.id}
+                                         value={progress.value}>
+                </lightning-progress-step>
+            </template>
+        </lightning-progress-indicator>
+    </div>
+</template>

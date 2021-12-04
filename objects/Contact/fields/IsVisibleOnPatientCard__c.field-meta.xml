@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsVisibleOnPatientCard__c</fullName>
+    <description>The field is being referenced in the below Patient Cared configuration records.
+- Medical Record Number
+- Phone
+- Email</description>
+    <externalId>false</externalId>
+    <formula>NOT(ISBLANK(LastName))</formula>
+    <label>IsVisibleOnPatientCard</label>
+    <type>Checkbox</type>
+</CustomField>

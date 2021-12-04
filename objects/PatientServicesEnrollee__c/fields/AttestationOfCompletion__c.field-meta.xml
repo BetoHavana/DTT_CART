@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AttestationOfCompletion__c</fullName>
+    <description>Attestation statement to ensure completion of form</description>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <label>Attestation of Completion</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

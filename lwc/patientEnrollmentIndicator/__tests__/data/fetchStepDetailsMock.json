@@ -1,0 +1,42 @@
+[
+  {
+    "attributes": {
+      "type": "PatientEnrollmentSteps__mdt",
+      "url": "/services/data/v49.0/sobjects/PatientEnrollmentSteps__mdt/m0P8A0000000AnUUAU"
+    },
+    "DeveloperName": "PatientInformation",
+    "Id": "m0P8A0000000AnUUAU",
+    "MasterLabel": "Patient Information",
+    "Order__c": 1
+  },
+  {
+    "attributes": {
+      "type": "PatientEnrollmentSteps__mdt",
+      "url": "/services/data/v49.0/sobjects/PatientEnrollmentSteps__mdt/m0P8A0000000AnWUAU"
+    },
+    "DeveloperName": "TreatmentDetails",
+    "Id": "m0P8A0000000AnWUAU",
+    "MasterLabel": "Treatment Details",
+    "Order__c": 2
+  },
+  {
+    "attributes": {
+      "type": "PatientEnrollmentSteps__mdt",
+      "url": "/services/data/v49.0/sobjects/PatientEnrollmentSteps__mdt/m0P8A0000000AnVUAU"
+    },
+    "DeveloperName": "ReviewSubmit",
+    "Id": "m0P8A0000000AnVUAU",
+    "MasterLabel": "Review & Submit",
+    "Order__c": 3
+  },
+  {
+    "attributes": {
+      "type": "PatientEnrollmentSteps__mdt",
+      "url": "/services/data/v49.0/sobjects/PatientEnrollmentSteps__mdt/m0P8A0000000AnTUAU"
+    },
+    "DeveloperName": "Enrolled",
+    "Id": "m0P8A0000000AnTUAU",
+    "MasterLabel": "Enrolled",
+    "Order__c": 4
+  }
+]

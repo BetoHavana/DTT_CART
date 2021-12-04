@@ -1,0 +1,5 @@
+<apex:component controller="PatientServicesEnrolleesController" access="global">
+    <apex:attribute name="currentRecordId" description="" assignTo="{!pseId}" type="Id"/>
+    <p>{!cartCoordinatorName}<br></br>{!treatmentSiteName}<br></br>{!treatmentSiteAddress}</p>
+    <p>{!$Label.DearPatient} {!cartCoordinatorName},</p>
+</apex:component>

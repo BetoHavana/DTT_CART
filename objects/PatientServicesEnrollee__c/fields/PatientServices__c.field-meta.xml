@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PatientServices__c</fullName>
+    <description>List of Patient Services available</description>
+    <defaultValue>&apos;Travel (Ground and Air transport) Services​&apos;</defaultValue>
+    <externalId>false</externalId>
+    <label>Patient Services</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Travel (Ground and Air transport) Services​</fullName>
+                <default>false</default>
+                <label>Travel (Ground and Air transport) Services​</label>
+            </value>
+            <value>
+                <fullName>Accommodation Services​</fullName>
+                <default>false</default>
+                <label>Accommodation Services​</label>
+            </value>
+            <value>
+                <fullName>Meals Services</fullName>
+                <default>false</default>
+                <label>Meals Services</label>
+            </value>
+            <value>
+                <fullName>Miscellaneous Services</fullName>
+                <default>false</default>
+                <label>Miscellaneous Services</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

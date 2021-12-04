@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader"
+                access="global" description="ScheduleDrugProductDelivery">
+	<aura:attribute name="recordId" type="String"/>
+    <ltng:require styles="{!$Resource.CCMViewAvailabilityForPlaceRescheduleOrderStyles}"/>
+    <aura:html tag="style">
+        .slds-modal__container{
+        max-width: 80rem !important;
+        width:80% !important;
+        }
+    </aura:html>
+     <div class="slds-grid">
+        <div class="slds-col">
+            <c:scheduleOrderDrugProductDelivery orderId="{!v.recordId}" onclosepopup="{!c.closeModalPopup}"/>
+        </div>
+    </div>
+</aura:component>

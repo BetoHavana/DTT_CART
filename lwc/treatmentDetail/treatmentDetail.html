@@ -1,0 +1,62 @@
+<template>
+    <div class="form-section slds-p-vertical_small">
+        <template if:true={showPhysicianMandatory}>
+            <div class="slds-text-heading--small slds-text-color--error slds-align_absolute-center">
+                {labels.MANDATORY_FIELDS_LABEL}
+            </div>
+        </template>
+        <template if:true={showCheckMandatory}>
+            <div class="slds-text-color--error slds-align_absolute-center">
+                {labels.CONSENT_ERROR_LABEL}
+            </div>
+        </template>
+        <template if:false={readonlyChild}>
+            <div class="primary-title slds-p-bottom_small">{labels.TREATMENT_LABEL}</div>
+        </template>
+        <template if:false={readonlyChild}>
+            <div class="slds-grid slds-grid_vertical">
+                <div class="slds-col slds-p-bottom_large slds-size_4-of-12 slds-p-left_large">
+                    <lightning-combobox
+                            name="physician"
+                            label={labels.TREATING_PHYSICIAN_LABEL}
+                            value={selectedPhysicianOption}
+                            placeholder={labels.SELECT_PHYSICIAN_LABEL}
+                            options={physicianOptions}
+                            required
+                            onchange={handlePhysicianChange}
+                            message-when-value-missing={labels.PLEASE_COMPLETE_LABEL}
+                    >
+                    </lightning-combobox>
+                </div>
+                <div class="slds-col disabled-input slds-p-bottom_large slds-size_4-of-12 slds-p-left_large">
+                    <lightning-input type="text" label={labels.TREATMENT_CENTER_COORDINATOR_LABEL} value={coordinatoruserName}
+                                     required
+                                     readonly></lightning-input>
+                </div>
+            </div>
+        </template>
+        <template if:true={readonlyChild}>
+            <div class="slds-grid slds-gutters slds-p-bottom_medium slds-p-left_large">
+                <div class="slds-col slds-size_4-of-12">
+                    <lightning-input type="text" label={labels.TREATING_PHYSICIAN_LABEL} value={selectedPhysicianTitle}
+                                     readonly></lightning-input>
+                </div>
+                <div class="slds-col slds-size_4-of-12">
+                    <lightning-input type="text" label={labels.TREATMENT_CENTER_COORDINATOR_LABEL} value={coordinatoruserName}
+                                     readonly></lightning-input>
+                </div>
+            </div>
+        </template>
+        <div class="slds-grid">
+            <div class="slds-col slds-p-left_large">
+                <lightning-input type="checkbox"
+                                 label={consentLabel}
+                                 class="consentLabelClass"
+                                 checked={isConsentStrategy}
+                                 disabled={readonlyChild}
+                                 onchange={handleConsentStrategyCheck} required={readonlyTreatmentDetails}>
+                </lightning-input>
+            </div>
+        </div>
+    </div>
+</template>

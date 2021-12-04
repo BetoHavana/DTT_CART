@@ -1,0 +1,517 @@
+<template>
+    <div class="wrapper slds-is-relative">
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-1">
+                <c-availability-calendar-milestone selected-step={selectedStep}></c-availability-calendar-milestone>
+            </div>
+        </div>
+        <div class="slds-grid slds-m-top_large slds-gutters">
+            <div class="slds-col slds-size_9-of-12">
+                <c-generic-card class="card-item">
+                    <div>
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_1-of-1">
+                                <template if:true={showIfStepOne}>
+                                    <c-availability-calendar
+                                            show-weekends={showWeekend}
+                                            onaphselect={handleSelectDate}
+                                            eventsdata={events}
+                                            onclearorderdata={handleClearData}
+                                            onselectedaph={handleAphSelect}
+                                            is-order-reschedule={isOrderReschedule}
+                                    >
+                                    </c-availability-calendar>
+                                </template>
+                                <template if:true={showIfStepTwo}>
+                                    <div class="content-heading_title slds-p-bottom_medium">
+                                        {labels.REVIEW_SUBMIT_LABEL}
+                                    </div>
+                                    <h2 class="secondary-title">{labels.APHERESIS_PICKUP_DETAILS_LABEL}</h2>
+                                    <div class="slds-grid slds-gutters slds-p-bottom_medium form-section">
+                                        <div class="slds-col slds-size_6-of-12">
+                                            <lightning-input type="text" label={labels.APHERESIS_PICKUP_SITE}
+                                                             value={selectedApheresisSite}
+                                                             read-only></lightning-input>
+                                        </div>
+                                        <div class="slds-col slds-size_6-of-12">
+                                            <lightning-input type="text" label={labels.CRYO_TYPE_LABEL}
+                                                             value={selectedCryoType}
+                                                             read-only></lightning-input>
+                                        </div>
+                                    </div>
+                                    <div class="slds-p-bottom_medium">
+                                        <h2 class="secondary-title">{labels.ORDER_DETAILS_LABEL}</h2>
+                                        <template if:false={isOrderReschedule}>
+                                            <div class="slds-grid slds-gutters">
+                                                <div class="slds-col slds-size_6-of-12 form-section">
+                                                    <label class="slds-form-element__label slds-show">
+                                                        {labels.APHERESIS_PICKUP_DATE_LABEL}
+                                                    </label>
+                                                    <lightning-formatted-date-time
+                                                            value={selectedPickupDate}
+                                                            time-zone="UTC"
+                                                            weekday="short"
+                                                            month="short"
+                                                            day="2-digit"
+                                                            year="numeric"
+                                                            class="formatted-date-inp"
+                                                    ></lightning-formatted-date-time>
+                                                </div>
+                                                <div class="slds-col slds-size_6-of-12 form-section">
+                                                    <label class="slds-form-element__label">{labels.DRUG_PRODUCT_DELIVERY_WINDOW_LABEL}</label>
+                                                    <div class="cust-line-height">
+                                                        <lightning-formatted-date-time
+                                                                value={deliveryWindowStartDate}
+                                                                time-zone="UTC"
+                                                                weekday="short"
+                                                                month="short"
+                                                                day="2-digit"
+                                                                year="numeric"
+                                                                class="formatted-date-inp"
+                                                        ></lightning-formatted-date-time>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid slds-gutters">
+                                                <div class="slds-col slds-size_6-of-12 form-section">
+                                                    <lightning-input type="text" label={labels.PO_NUMBER_LABEL}
+                                                                     read-only
+                                                                     value={selectedPONumber}></lightning-input>
+                                                </div>
+                                            </div>
+                                        </template>
+                                        <template if:true={isOrderReschedule}>
+                                            <div class="slds-grid slds-gutters form-section">
+                                                <div class="slds-col slds-size_6-of-12">
+                                                    <label class="slds-form-element__label slds-show">
+                                                        {labels.NEW_APHERESIS_PICKUP_DATE}
+                                                    </label>
+                                                    <lightning-formatted-date-time
+                                                            value={selectedPickupDate}
+                                                            time-zone="UTC"
+                                                            weekday="short"
+                                                            month="short"
+                                                            day="2-digit"
+                                                            year="numeric"
+                                                            class="formatted-date-inp"
+                                                    ></lightning-formatted-date-time>
+                                                </div>
+                                                <div class="slds-col slds-size_6-of-12 form-section">
+                                                    <label class="slds-form-element__label">{labels.NEW_PROJECTED_DELIVERY_DATE}</label>
+                                                    <div class="cust-line-height">
+                                                        <lightning-formatted-date-time
+                                                                value={deliveryWindowStartDate}
+                                                                time-zone="UTC"
+                                                                weekday="short"
+                                                                month="short"
+                                                                day="2-digit"
+                                                                year="numeric"
+                                                                class="formatted-date-inp"
+                                                        ></lightning-formatted-date-time>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid slds-gutters form-section">
+                                                <div class="slds-col slds-size_6-of-12">
+                                                    <template if:true={reasonRequired}>
+                                                        <lightning-input type="text"
+                                                                         label={labels.REASONFORRESCHEDULE_LABEL}
+                                                                         value={reason}
+                                                                         read-only></lightning-input>
+                                                    </template>
+                                                    <template if:false={reasonRequired}>
+                                                        <lightning-input type="text"
+                                                                         label={labels.REASONFORRESCHEDULE_LABEL}
+                                                                         value={reasonForReschedule}
+                                                                         read-only></lightning-input>
+                                                    </template>
+                                                </div>
+                                                <div class="slds-col slds-size_6-of-12 form-section">
+                                                    <lightning-input type="text" label={labels.PO_NUMBER_LABEL}
+                                                                     read-only
+                                                                     value={selectedPONumber}></lightning-input>
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </div>
+                                    <div class="slds-p-vertical_large">
+                                        <lightning-input name="testBoolean"
+                                                         label={consentLabel}
+                                                         onchange={updateConsentBox}
+                                                         type="checkbox" required>
+                                        </lightning-input>
+                                    </div>
+                                </template>
+                                <template if:true={showIfStepThree}>
+                                    <div class="enrolled-section">
+                                        <div class="slds-media">
+                                            <div class="slds-media__figure">
+                                                <lightning-icon icon-name="utility:success" size="small"
+                                                                alternative-text="Submitted"></lightning-icon>
+                                            </div>
+                                            <div class="slds-media__body">
+                                                <p class="secondary-title">{labels.SUCCESS_LABEL}</p>
+                                            </div>
+                                        </div>
+                                        <div class="slds-p-vertical_medium text-default">
+                                            {successMessage}
+                                        </div>
+                                    </div>
+                                    <template if:false={isOrderReschedule}>
+                                        <div class="slds-p-bottom_medium">
+                                            <h2 class="secondary-title">{labels.APHERESIS_PICKUP_DETAILS_LABEL}</h2>
+                                            <div class="slds-grid slds-gutters form-section">
+                                                <div class="slds-col slds-size_6-of-12">
+                                                    <label class="slds-form-element__label">
+                                                        {labels.APHERESIS_PICKUP_DATE_LABEL}
+                                                    </label>
+                                                    <div class="cust-line-height">
+                                                        <lightning-formatted-date-time
+                                                                value={selectedPickupDate}
+                                                                time-zone="UTC"
+                                                                weekday="short"
+                                                                month="short"
+                                                                day="2-digit"
+                                                                year="numeric"
+                                                                class="formatted-date-inp"
+                                                        ></lightning-formatted-date-time>
+                                                    </div>
+                                                </div>
+                                                <div class="slds-col slds-size_6-of-12">
+                                                    <lightning-input type="text" label={labels.APHERESIS_PICKUP_SITE}
+                                                                     value={selectedApheresisSite}
+                                                                     read-only></lightning-input>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid slds-gutters">
+                                                <div class="slds-col slds-size_6-of-12">
+                                                    <lightning-input type="text" label={labels.CRYO_TYPE_LABEL}
+                                                                     value={selectedCryoType}
+                                                                     read-only></lightning-input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slds-p-bottom_medium">
+                                            <h2 class="secondary-title">{labels.ORDER_DETAILS_LABEL}</h2>
+                                            <div class="slds-grid slds-gutters">
+                                                <div class="slds-col slds-size_1-of-2 form-section">
+                                                    <label class="slds-form-element__label">{labels.DRUG_PRODUCT_DELIVERY_WINDOW_LABEL}</label>
+                                                    <div class="cust-line-height">
+                                                        <lightning-formatted-date-time
+                                                                value={deliveryWindowStartDate}
+                                                                time-zone="UTC"
+                                                                weekday="short"
+                                                                month="short"
+                                                                day="2-digit"
+                                                                year="numeric"
+                                                                class="formatted-date-inp"
+                                                        ></lightning-formatted-date-time>
+                                                    </div>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 form-section">
+                                                    <lightning-input type="text" label={labels.PO_NUMBER_LABEL}
+                                                                     read-only
+                                                                     value={selectedPONumber}></lightning-input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </template>
+                                    <template if:true={isOrderReschedule}>
+                                        <div class="slds-p-bottom_medium">
+                                            <h2 class="secondary-title">{labels.APHERESIS_PICKUP_DETAILS_LABEL}</h2>
+                                            <div class="slds-grid slds-gutters ">
+                                                <div class="slds-col slds-size_6-of-12">
+                                                    <lightning-input type="text" label={labels.APHERESIS_PICKUP_SITE}
+                                                                     value={selectedApheresisSite}
+                                                                     read-only></lightning-input>
+                                                </div>
+                                                <div class="slds-col slds-size_6-of-12">
+                                                    <lightning-input type="text" label={labels.CRYO_TYPE_LABEL}
+                                                                     value={selectedCryoType}
+                                                                     read-only></lightning-input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slds-p-bottom_medium">
+                                            <h2 class="secondary-title">{labels.ORDER_DETAILS_LABEL}</h2>
+                                            <div class="slds-grid slds-wrap slds-gutters form-section">
+                                                <div class="slds-col slds-size_1-of-2 form-section">
+                                                    <label class="slds-form-element__label">{labels.NEW_APHERESIS_PICKUP_DATE}</label>
+                                                    <div class="cust-line-height">
+                                                        <lightning-formatted-date-time
+                                                                value={selectedPickupDate}
+                                                                time-zone="UTC"
+                                                                weekday="short"
+                                                                month="short"
+                                                                day="2-digit"
+                                                                year="numeric"
+                                                                class="formatted-date-inp"
+                                                        ></lightning-formatted-date-time>
+                                                    </div>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 form-section">
+                                                    <label class="slds-form-element__label">{labels.NEW_PROJECTED_DELIVERY_DATE}</label>
+                                                    <div class="cust-line-height">
+                                                        <lightning-formatted-date-time
+                                                                value={deliveryWindowStartDate}
+                                                                time-zone="UTC"
+                                                                weekday="short"
+                                                                month="short"
+                                                                day="2-digit"
+                                                                year="numeric"
+                                                                class="formatted-date-inp"
+                                                        ></lightning-formatted-date-time>
+                                                    </div>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2 form-section">
+                                                    <lightning-input type="text" label={labels.PO_NUMBER_LABEL}
+                                                                     read-only
+                                                                     value={selectedPONumber}></lightning-input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </template>
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-p-around_small slds-grid_align-spread slds-grid_vertical-align-center">
+                            <template if:true={showIfStepOne}>
+                                <div class="slds-col slds-size_1-of-2">
+                                    <div class="slds-p-left_large display-inline-flex">
+                                        <div class="display-inline-block aph-block slds-m-right_small"></div>
+                                        <span class="text-semibold">{labels.DATES_AVAIL_FOR_APHRESIS_PICKUP}</span>
+                                    </div>
+                                    <div class="slds-p-left_large display-inline-flex">
+                                        <div class="display-inline-block drugproduct-delivery-date slds-m-right_small"></div>
+                                        <span class="text-semibold">{labels.DRUG_PRODUCT_DELIVERY_WINDOW_LABEL}</span>
+                                    </div>
+                                    <div class="slds-p-left_large display-flex">
+                                        <div class="display-inline-block today-date slds-m-right_small"></div>
+                                        <span class="text-semibold">{labels.TODAY_DATE_LABEL}</span>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size_1-of-2">
+                                    <lightning-button label={labels.CONTINUE_LABEL} variant="brand"
+                                                      class="primary-button slds-float_right"
+                                                      onclick={handleNext}></lightning-button>
+                                </div>
+                            </template>
+                            <template if:true={showIfStepTwo}>
+                                <div class="slds-col slds-size_1-of-2">
+                                    <lightning-button icon-name="utility:chevronleft" label={labels.BACK_LABEL}
+                                                      class="secondary-button slds-float_left"
+                                                      onclick={handlePrev}></lightning-button>
+                                </div>
+                                <div class="slds-col slds-size_1-of-2">
+                                    <template if:true={consentChecked}>
+                                        <lightning-button label={labels.SUBMIT_ORDER_LABEL}
+                                                          class="slds-float_right territory-button"
+                                                          variant="brand"
+                                                          disabled></lightning-button>
+                                    </template>
+                                    <template if:false={consentChecked}>
+                                        <lightning-button label={labels.SUBMIT_ORDER_LABEL} variant="brand"
+                                                          class="primary-button slds-float_right"
+                                                          onclick={handleNext}></lightning-button>
+                                    </template>
+                                </div>
+                            </template>
+                            <template if:true={showIfStepThree}>
+                                <div class="slds-col slds-size_1-of-1">
+                                    <lightning-button label={labels.HOME} variant="brand"
+                                                      class="primary-button slds-float_right"
+                                                      onclick={navigateToLandingPage}
+                                    ></lightning-button>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </c-generic-card>
+            </div>
+            <div class="slds-col slds-size_3-of-12">
+                <c-patient-card selected-step={selectedStep}></c-patient-card>
+                <template if:true={showIfStepOne}>
+                    <template if:false={isOrderReschedule}>
+                        <c-generic-card class="card-item">
+                            <div class="slds-grid" slot="card-header">
+                                <div class="slds-col slds-p-horizontal_none">
+                                    <h2 class="secondary-title" slot="card-header">{labels.ORDER_DETAILS_LABEL}</h2>
+                                </div>
+                            </div>
+
+                            <div class="slds-p-bottom_medium form-section">
+                                <template if:true={pickupHasError}>
+                                    <div class="slds-text-color_error slds-p-bottom_x-small">{orderError}</div>
+                                </template>
+                                <div>
+                                    <div>
+                                        <label class="slds-form-element__label">
+                                            {labels.APHERESIS_PICKUP_DATE_LABEL}
+                                            <span class="cust-required-color">&nbsp;*</span>
+                                        </label>
+                                    </div>
+                                    <lightning-formatted-date-time
+                                            value={selectedPickupDate}
+                                            time-zone="UTC"
+                                            weekday="short"
+                                            month="short"
+                                            day="2-digit"
+                                            year="numeric"
+                                            class="formatted-date-inp custom-height"
+                                    ></lightning-formatted-date-time>
+                                </div>
+                                <div class="slds-grid">
+                                    <div>
+                                        <div>
+                                            <label class="slds-form-element__label">{labels.DRUG_PRODUCT_DELIVERY_WINDOW_LABEL}
+                                                <lightning-helptext class="slds-p-left_xx-small display-inline-flex"
+                                                                    content={labels.NEW_PROJECTED_DELIVERY_DATE_HELP_TEXT}></lightning-helptext>
+                                            </label>
+                                        </div>
+                                        <lightning-formatted-date-time
+                                                value={deliveryWindowStartDate}
+                                                time-zone="UTC"
+                                                weekday="short"
+                                                month="short"
+                                                day="2-digit"
+                                                year="numeric"
+                                                class="formatted-date-inp custom-height"
+                                        ></lightning-formatted-date-time>
+                                    </div>
+                                </div>
+                                <div class="slds-m-bottom_small">
+
+                                    <lightning-input type="text" label={labels.APHERESIS_SITE_LABEL}
+                                                     value={selectedApheresisSite}
+                                                     read-only></lightning-input>
+
+                                </div>
+                                <div class="slds-m-bottom_small">
+
+                                    <lightning-input type="text" label={labels.CRYO_TYPE_LABEL}
+                                                     value={selectedCryoType}
+                                                     read-only></lightning-input>
+
+                                </div>
+                                <lightning-input type="text" label={labels.PO_NUMBER_LABEL} required
+                                                 class="cust-required-right"
+                                                 value={selectedPONumber} field-level-help={labels.PO_NUMBER_HELP_TEXT}
+                                                 onchange={handlePoChange}></lightning-input>
+                            </div>
+                        </c-generic-card>
+                    </template>
+                    <template if:true={isOrderReschedule}>
+                        <c-generic-card class="card-item">
+                            <h2 class="secondary-title" slot="card-header">{labels.RESCHEDULED_ORDER_DETAILS}</h2>
+                            <div class="slds-p-bottom_medium form-section">
+                                <template if:true={pickupHasError}>
+                                    <div class="slds-text-color_error slds-p-bottom_x-small">{orderError}</div>
+                                </template>
+                                <div>
+                                    <div>
+                                        <label class="slds-form-element__label slds-show">
+                                            {labels.NEW_APHERESIS_PICKUP_DATE}
+                                            <span class="cust-required-color">&nbsp;*</span>
+                                        </label>
+                                    </div>
+                                    <lightning-formatted-date-time
+                                            value={selectedPickupDate}
+                                            time-zone="UTC"
+                                            weekday="short"
+                                            month="short"
+                                            day="2-digit"
+                                            year="numeric"
+                                            class="formatted-date-inp custom-height"
+                                    ></lightning-formatted-date-time>
+
+                                </div>
+                                <div class="slds-grid">
+                                    <div>
+                                        <div>
+                                            <label class="slds-form-element__label">{labels.NEW_PROJECTED_DELIVERY_DATE}
+                                                <lightning-helptext class="slds-p-left_xx-small display-inline-flex "
+                                                                    content={labels.NEW_PROJECTED_DELIVERY_DATE_HELP_TEXT}>
+
+                                                </lightning-helptext>
+                                            </label>
+                                        </div>
+                                        <lightning-formatted-date-time
+                                                value={deliveryWindowStartDate}
+                                                time-zone="UTC"
+                                                weekday="short"
+                                                month="short"
+                                                day="2-digit"
+                                                year="numeric"
+                                                class="formatted-date-inp custom-height"
+                                        ></lightning-formatted-date-time>
+                                    </div>
+                                </div>
+                                <div class="slds-m-bottom_small">
+
+                                    <lightning-input type="text" label={labels.APHERESIS_SITE_LABEL}
+                                                     value={selectedApheresisSite}
+                                                     read-only></lightning-input>
+
+                                </div>
+                                <div class="slds-m-bottom_small">
+
+                                    <lightning-input type="text" label={labels.CRYO_TYPE_LABEL}
+                                                     value={selectedCryoType}
+                                                     read-only></lightning-input>
+                                </div>
+                                <lightning-input type="text" label={labels.PO_NUMBER_LABEL}
+                                                 required field-level-help={labels.PO_NUMBER_HELP_TEXT}
+                                                 class="cust-required-right"
+                                                 value={selectedPONumber} onchange={handlePoChange}
+                                                 read-only></lightning-input>
+                                <lightning-combobox name="reasonForReschedule" onchange={changeReasonHandler}
+                                                    label={labels.REASONFORRESCHEDULE_LABEL}
+                                                    options={rescheduleReasonOptions}
+                                                    required class="cust-required-right"
+                                                    value={reasonForReschedule}></lightning-combobox>
+                                <template if:true={reasonRequired}>
+                                    <lightning-textarea padding="around-small" name="reason"
+                                                        label={labels.SPECIFYREASONFORRESCHEDULE_LABEL}
+                                                        value={reason} onchange={changeReasonHandler}
+                                                        class="cust-required-right"
+                                                        message-when-value-missing={labels.REASONFORRESCHEDULEREQ_LABEL}
+                                                        max-length="255"></lightning-textarea>
+                                </template>
+                            </div>
+                        </c-generic-card>
+                    </template>
+                </template>
+            </div>
+        </div>
+    </div>
+    <c-generic-modal open={isSlotUnavailableModalOpen} size="small">
+        <div class="slds-float_right">
+            <lightning-icon icon-name="utility:close"
+                            alternative-text="close"
+                            variant="brand"
+                            onclick={closeErrorModal}
+                            size="small">
+            </lightning-icon>
+        </div>
+        <div class="slds-m-vertical_small">
+            <h2 class="custom-text-size-large slds-align_absolute-center slds-m-bottom_small">
+                {labels.DRUG_PRODUCT_DELIVERY_DATE_UNAVAILABLE_LABEL}
+            </h2>
+        </div>
+        <div class="slds-grid slds-p-around_x-small ">
+            <div class="slds-col">
+                <div class="slds-p-around_small">
+                    <p class="disclaimer-text">
+                        {labels.DRUG_PRODUCT_DELIVERY_DATE_UNAVAILABLE_MESSAGE_LABEL}
+                    </p>
+                    <div class="slds-align_absolute-center slds-m-top_large slds-p-top_medium">
+                        <lightning-button label={labels.Ok_LABEL} variant="brand"
+                                          class="primary-button slds-align_absolute-center"
+                                          onclick={closeErrorModal}></lightning-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </c-generic-modal>
+    <lightning-spinner variant="brand" if:true={showSpinner}></lightning-spinner>
+</template>

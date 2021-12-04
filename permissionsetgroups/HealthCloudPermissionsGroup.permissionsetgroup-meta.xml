@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission Set Group related to Health Cloud Permission Sets</description>
+    <label>Health Cloud Permissions Group</label>
+    <permissionSets>HealthCloudAccessPermissionSet</permissionSets>
+    <permissionSets>HealthCloudGA__HealthCloudApi</permissionSets>
+    <permissionSets>HealthCloudGA__HealthCloudLimited</permissionSets>
+    <permissionSets>HealthCloudGA__HealthCloudPermissionSetLicense</permissionSets>
+    <permissionSets>HealthCloudGA__HealthCloudStandard</permissionSets>
+    <permissionSets>force__HealthCloudFoundation</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

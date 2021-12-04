@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CryoType__c</fullName>
+    <complianceGroup>GxP</complianceGroup>
+    <description>Cryo type related to the associated cryo site.</description>
+    <externalId>false</externalId>
+    <label>Cryo Type</label>
+    <required>false</required>
+	<trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Central</fullName>
+                <default>false</default>
+                <label>Central</label>
+            </value>
+            <value>
+                <fullName>Local</fullName>
+                <default>false</default>
+                <label>Local</label>
+            </value>
+            <value>
+                <fullName>3rd Party</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>3rd Party</label>
+            </value>
+            <value>
+                <fullName>Raritan</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Raritan</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

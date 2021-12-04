@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PatientStatusOnUpdate</fullName>
+    <active>false</active>
+    <description>Validation Rule which fires when there is a change in Patient status based on certain criteria</description>
+    <errorConditionFormula>AND(NOT(ISNEW()),RecordType.DeveloperName == $Label.PatientRecordtype,ISCHANGED(Status__c) ,
+OR(AND(TEXT(PRIORVALUE(Status__c))== $Label.PatientStatusAdditionalInformationRequested,
+TEXT(Status__c) == $Label.PatientStatusPendingVerification),
+AND(TEXT(PRIORVALUE(Status__c)) == $Label.PatientStatusVerified,
+OR(TEXT(Status__c) == $Label.PatientStatusPendingVerification,TEXT(Status__c)== $Label.PatientStatusAdditionalInformationRequested))))</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>The Patient&apos;s information has already been verified or additional information is requested. Statuses cannot be reversed.</errorMessage>
+</ValidationRule>

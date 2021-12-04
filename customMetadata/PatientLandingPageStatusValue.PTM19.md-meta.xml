@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>PTM19</label>
+    <protected>false</protected>
+    <values>
+        <field>Active__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>CarePlanStatus__c</field>
+        <value xsi:type="xsd:string">Cells Delivered to Manufacturing Site</value>
+    </values>
+    <values>
+        <field>OrderStatus__c</field>
+        <value xsi:type="xsd:string">Order Cancelled</value>
+    </values>
+    <values>
+        <field>PatientJourneyStatus__c</field>
+        <value xsi:type="xsd:string">Cells Delivered to Manufacturing Site</value>
+    </values>
+    <values>
+        <field>PatientStatus__c</field>
+        <value xsi:type="xsd:string">Verified</value>
+    </values>
+    <values>
+        <field>PatientTreatmentMilestoneStatus__c</field>
+        <value xsi:type="xsd:string">Inactive</value>
+    </values>
+</CustomMetadata>

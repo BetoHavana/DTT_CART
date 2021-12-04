@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission Set Group for Integration User</description>
+    <label>Integration User Permissions Group</label>
+    <permissionSets>CareProgramManagement</permissionSets>
+    <permissionSets>CaseManager</permissionSets>
+    <permissionSets>KnowledgeReadOnly</permissionSets>
+    <permissionSets>MilestoneManagement</permissionSets>
+    <permissionSets>SiteManagement</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

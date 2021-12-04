@@ -1,0 +1,48 @@
+# Ignore OS system files that are usually auto-added to directories
+[Tt]humbs.db
+.[dD][sS]_[sS]tore
+
+# Ignore Salesforce DX config files
+.sfdx
+.salesforce
+.localdevserver
+
+# Ignore Eclipse config files
+.classpath
+.project
+.settings/
+
+# Ignore VSCode config files
+.vscode
+
+# Ignore Intellij config files
+.idea/
+*.iml
+*.iws
+IlluminatedCloud/
+
+#Sublime nature exclusions
+*.sublime-workspace
+*.sublime-project
+*.sublime-settings
+
+#MavensMate nature exclusions
+apex-scripts/log
+debug/logs
+mm.log
+
+# Node.js nature exclusions
+node_modules
+
+# Use yarn.lock file
+package-lock.json
+
+# LWC VSCode autocomplete
+jsconfig.json
+.eslintrc.json
+
+# LWC Jest coverage reports
+coverage/
+
+# SonarQube reports
+.scannerwork

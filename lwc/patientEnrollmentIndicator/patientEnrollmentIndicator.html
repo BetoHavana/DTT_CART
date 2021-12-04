@@ -1,0 +1,184 @@
+<template>
+    <div class="wrapper slds-p-horizontal_medium slds-is-relative">
+        <div class="slds-p-top_x-small">
+            <lightning-breadcrumbs>
+                <lightning-breadcrumb
+                        label={labels.PATIENTS_LABEL}>
+                </lightning-breadcrumb>
+                <lightning-breadcrumb
+                        label={labels.NEW_ENROLLMENT_LABEL}
+                        href="#">
+                </lightning-breadcrumb>
+            </lightning-breadcrumbs>
+        </div>
+        <div class="slds-p-vertical_medium progress-steps">
+            <lightning-progress-indicator type="path" current-step={selectedStep}>
+                <template for:each={progresSteps} for:item="progress">
+                    <lightning-progress-step label={progress.title} key={progress.id}
+                                             value={progress.value}>
+                    </lightning-progress-step>
+                </template>
+            </lightning-progress-indicator>
+            <div class="slds-m-top_large">
+                <div class="patientdetails-section">
+                    <div if:true={showSectionOne}>
+                        <c-patient-information readonly-child={readonly}
+                                               readonly-required={requiredonly}
+                                               onpatientinfo={handlePatientInfo}
+                                               patient={enteredPatient}></c-patient-information>
+                    </div>
+                    <div if:true={showSectionTwo}>
+                        <c-treatment-detail selected-physician={selectedPhysician}
+                                            readonly-treatment-details={treatmentReadOnly}
+                                            selected-physician-title={selectedPhysicianTitle}
+                                            consentcheck={consentCheck}></c-treatment-detail>
+                    </div>
+                    <div if:true={showSectionThree}>
+                        <div class="primary-title slds-p-vertical_small">{labels.PATIENT_SERVICE_LABEL}</div>
+                        <div class="slds-p-left_large text-default slds-p-top_xx-small slds-p-bottom_large">
+                            <lightning-input name="patientService"
+                                             label={labels.PATIENT_SERVICE_CHECK_LABEL}
+                                             type="checkbox"
+                                             checked={enablePatientService}
+                                             onchange={handlePatientServiceCheck}>
+                            </lightning-input>
+                        </div>
+                        <div class="consent-label-text slds-p-left_large">
+                            {labels.PATIENT_SERVICE_DISCLAIMER_LABEL}
+                        </div>
+                    </div>
+                    <template if:true={showSubmitBtn}>
+                        <div class="content-heading_title slds-p-vertical_medium">{labels.REVIEW_SUBMIT_LABEL}</div>
+                        <template if:true={showReviewMandatory}>
+                            <div class="slds-text-color--error slds-align_absolute-center">
+                                {labels.REVIEW_SUBMIT_ERROR_LABEL}
+                            </div>
+                        </template>
+                        <div class="primary-title slds-p-vertical_small">{labels.PATIENT_INFORMATION_LABEL}
+                            <lightning-icon alternative-text="Edit Patient Info"
+                                            name="editPatientInfo" class="slds-left_small edit-icon"
+                                            size="x-small" icon-name="utility:edit"
+                                            onclick={editDetails}
+                            ></lightning-icon>
+                        </div>
+                        <c-patient-information patient={enteredPatient}
+                                               readonly-child={readonly}></c-patient-information>
+                        <div class="primary-title">{labels.TREATMENT_LABEL}
+                            <lightning-icon alternative-text="Edit Treatment Info"
+                                            class="edit-icon" name="editTreatmentInfo"
+                                            icon-name="utility:edit"
+                                            size="x-small" onclick={editDetails}
+                            ></lightning-icon>
+                        </div>
+                        <div>
+                            <c-treatment-detail readonly-child={readonly}
+                                                selected-physician={selectedPhysician}
+                                                selected-physician-title={selectedPhysicianTitle}
+                                                consentcheck={consentCheck}></c-treatment-detail>
+                        </div>
+                        <div class="primary-title slds-p-top_small">{labels.PATIENT_SERVICE_LABEL}
+                            <lightning-icon alternative-text="Edit Patient Service Programs Info"
+                                            class="edit-icon" name="editPatientServiceProgramsInfo"
+                                            icon-name="utility:edit"
+                                            size="x-small" onclick={editDetails}
+                            ></lightning-icon>
+                        </div>
+                        <div class="slds-p-vertical_medium text-default slds-p-left_large">
+                            <lightning-input name="patientService"
+                                             label={labels.PATIENT_SERVICE_CHECK_LABEL}
+                                             type="checkbox"
+                                             checked={enablePatientService}
+                                             disabled>
+                            </lightning-input>
+                        </div>
+                        <div class="slds-p-vertical_large">
+                            <lightning-input name="testBoolean"
+                                             label={labels.REVIEW_SUBMIT_CHECK_LABEL}
+                                             type="checkbox" required checked={isAttested}
+                                             onchange={handleAgreementCheck}>
+                            </lightning-input>
+                        </div>
+                    </template>
+                    <template if:true={showApherisisBtn}>
+                        <div class="enrolled-section">
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="utility:success" size="small"
+                                                    alternative-text="Submitted"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                    <p class="secondary-title">{labels.PATIENT_DETAILS_SUBMITTED_LABEL}</p>
+                                </div>
+                            </div>
+                            <div class="slds-p-vertical_medium text-default ">
+                                <lightning-formatted-rich-text
+                                        value={successMessage}></lightning-formatted-rich-text>
+                            </div>
+                            <div class="text-default">
+                                <lightning-formatted-rich-text
+                                        value={labels.PATIENT_ENROLLMENT_HELP_LABEL}></lightning-formatted-rich-text>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <div class="button-alignment slds-m-top_large">
+                <div>
+                    <template if:true={showBackBtn}>
+                        <lightning-button label={labels.BACK_LABEL} class="secondary-button"
+                                          onclick={handlePrev}></lightning-button>
+                    </template>
+                    <template if:true={showApherisisBtn}>
+                        <lightning-button label={labels.HOME_LABEL} class="primary-button"
+                                          onclick={navigateToLandingPage}></lightning-button>
+                    </template>
+                </div>
+                <div>
+                    <template if:true={showContinueBtn}>
+                        <lightning-button label={labels.CONTINUE_LABEL} variant="brand"
+                                          class="primary-button"
+                                          onclick={handleNext}></lightning-button>
+                    </template>
+                    <template if:true={showSubmitBtn}>
+                        <lightning-button label={labels.SUBMIT_LABEL} variant="brand"
+                                          class="primary-button"
+                                          onclick={handleNext}></lightning-button>
+                    </template>
+                    <template if:true={showApherisisBtn}>
+                        <lightning-button label={labels.SCHEDULE_APHERESIS_LABEL} variant="brand"
+                                          class="primary-button"
+                                          onclick={navigateToCalendarAvailabilityPage}></lightning-button>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+    <c-generic-modal open={isPatientDuplicate} size="small">
+        <template if:true={duplicatePatient}>
+            <div class="slds-align_absolute-center slds-m-vertical_medium">
+                <h2 class="custom-text-size-large">{labels.EXISTING_PATIENT_FOUND}</h2>
+            </div>
+            <p class="slds-text-heading_small">
+                {labels.EXISTING_PATIENT_DUPLICATE_TEXT}
+            </p>
+            <div class="slds-text-heading_small text-bold">
+                {duplicatePatientName}
+            </div>
+            <div class="slds-text-heading_small text-bold">
+                <lightning-formatted-date-time value={duplicatePatientBirthDate} year="numeric" month="numeric"
+                                               day="numeric">
+                </lightning-formatted-date-time>
+            </div>
+            <div class="slds-text-heading_small">{labels.EXISTING_PATIENT_CONTACT_FOOTER}</div>
+            <div class="slds-align_absolute-center slds-m-top_large slds-p-top_medium">
+                <lightning-button class="primary-button" onclick={handleDuplicatePatientClose}
+                                  label={labels.CLOSE_LABEL} variant="brand"></lightning-button>
+            </div>
+        </template>
+    </c-generic-modal>
+    <template if:true={showSpinner}>
+        <div class="slds-align_absolute-center">
+            <lightning-spinner variant="brand" class="slds-is-fixed"></lightning-spinner>
+        </div>
+    </template>
+</template>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CaseType__c</fullName>
+    <description>This field is used to indicate type of case whether it is Order Cancellation Case, General Inquiry Case</description>
+    <externalId>false</externalId>
+    <formula>CASE(RecordType.Name,
+&apos;General Inquiry&apos;,&apos;General Inquiry Case&apos;,
+&apos;Order Cancellation Case&apos;,&apos;Order Cancellation Case&apos;,
+&apos;CarePlan&apos;,&apos;CarePlan Case&apos;,&apos;CareGap&apos;,&apos;CareGap Case&apos;,
+&apos;&apos;)</formula>
+    <label>Case Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

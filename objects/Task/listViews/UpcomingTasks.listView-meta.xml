@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UpcomingTasks</fullName>
+    <columns>SUBJECT</columns>
+    <columns>PRIORITY</columns>
+    <columns>STATUS</columns>
+    <columns>DUE_DATE</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>HealthCloudGA__TaskType__c</columns>
+    <columns>CarePlanID__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>PRIORITY</field>
+        <operation>equals</operation>
+        <value>High</value>
+    </filters>
+    <filters>
+        <field>LoggedInUser__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>DUE_DATE</field>
+        <operation>greaterThan</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>DUE_DATE</field>
+        <operation>equals</operation>
+        <value>NEXT_N_DAYS:7</value>
+    </filters>
+    <filters>
+        <field>HealthCloudGA__TaskType__c</field>
+        <operation>equals</operation>
+        <value>Manual</value>
+    </filters>
+    <filters>
+        <field>STATUS</field>
+        <operation>notEqual</operation>
+        <value>Completed</value>
+    </filters>
+    <label>Upcoming Tasks</label>
+</ListView>

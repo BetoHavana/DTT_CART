@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EligibilityCriteriaFieldsValues</fullName>
+    <active>true</active>
+    <description>Should not be able to make the Patient Services Status=&apos;Eligible&apos; when any of the eligibility criteria fields (mileage  eligibility, time eligibility, income eligibility, insurance and lodging eligibility) have value as &apos;Eligibility check not performed&apos;</description>
+    <errorConditionFormula>AND(
+     ISPICKVAL( PatientServicesStatus__c , &apos;Eligible&apos;),
+     OR(
+          ISPICKVAL( MileageEligibility__c , &apos;Eligibility check not performed&apos;),
+          ISPICKVAL( TimeEligibility__c , &apos;Eligibility check not performed&apos;), 
+          ISPICKVAL( IncomeEligibility__c , &apos;Eligibility check not performed&apos;), 
+          ISPICKVAL( InsuranceEligibility__c , &apos;Eligibility check not performed&apos;), 
+          ISPICKVAL( LodgingEligibility__c , &apos;Eligibility check not performed&apos;)
+      )
+)</errorConditionFormula>
+    <errorMessage>Please enter the values for the eligibility criteria</errorMessage>
+</ValidationRule>

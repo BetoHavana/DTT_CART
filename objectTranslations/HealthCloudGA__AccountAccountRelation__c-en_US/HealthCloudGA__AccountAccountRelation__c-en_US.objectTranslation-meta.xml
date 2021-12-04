@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Site Information</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Site Information</value>
+    </caseValues>
+    <layouts>
+        <layout>Account-Account Relationship Layout</layout>
+    </layouts>
+    <nameFieldLabel>Site Information</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- A Account-Account Relationship cannot be created as Inactive. --></errorMessage>
+        <name>HealthCloudGA__CannotCreateInactiveRecord</name>
+    </validationRules>
+</CustomObjectTranslation>

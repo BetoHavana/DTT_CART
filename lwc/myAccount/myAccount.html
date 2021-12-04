@@ -1,0 +1,50 @@
+<template>
+    <div class="slds-p-around_x-large patientdetails-section form-section wrapper">
+        <h2 class="primary-title slds-p-bottom_medium">{labels.MY_ACCOUNT_LABEL}
+            <template if:true={showEdit}>
+                <div class="slds-col slds-size_2-of-12">
+                    <lightning-icon icon-name="utility:edit" alternative-text="Edit"
+                                    class="edit-icon" size="x-small"
+                                    onclick={handleEdit} title="Edit"></lightning-icon>
+                </div>
+            </template>
+        </h2>
+        <div class="slds-p-left_medium">
+            <lightning-input type="text" class="slds-p-bottom_small" name="Name" label={labels.NAME_LABEL} value={Name}
+                             readonly></lightning-input>
+
+            <lightning-input type="text" class="slds-p-bottom_small" name="Username" label={labels.USERNAME_LABEL}
+                             value={Username} readonly></lightning-input>
+
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_3-of-12">
+                    <lightning-input type="tel" class="slds-p-bottom_small phone" name="Phone"
+                                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                     max-length="12" label={labels.PHONE_LABEL} value={Phone}
+                                     onchange={mobileHandler} onkeydown={handleMobileKeyPress} readonly={readOnly}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <lightning-input type="tel" class="slds-p-bottom_small extension" name="Extension" pattern="[0-9]{4}"
+                                     max-length="4" label={labels.EXTENSION_LABEL} value={Extension}
+                                     onchange={handleValueChange} readonly={readOnly}></lightning-input>
+                </div>
+            </div>
+
+            <lightning-input type="email" name="Email" label={labels.EMAIL_LABEL} value={Email}
+                             readonly></lightning-input>
+        </div>
+        <template if:true={isVisible}>
+            <div class="slds-align_absolute-center slds-p-top_xx-large">
+                <lightning-button label={labels.CANCEL_LABEL}
+                                  class="secondary-button slds-m-right_medium slds-size_xx-small"
+                                  onclick={handleCancel}></lightning-button>
+
+                <lightning-button label={labels.SAVE_LABEL} class="primary-button slds-size_xx-small" variant="brand"
+                                  onclick={updateContact}></lightning-button>
+            </div>
+        </template>
+        <div class="slds-p-top_medium">
+            <p class="text-default">​{labels.FOOTER_LABEL}</a></p>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,68 @@
+<template>
+    <lightning-spinner if:true={showSpinner} variant="brand" size="medium"
+                       alternative-text="Loading"></lightning-spinner>
+
+    <template if:true={showCalendar}>
+        <div class="slds-grid">
+            <div class="slds-col">
+                <h1 class="title slds-align_absolute-center slds-text-heading--medium">
+                    <strong>{labels.SCHEDULED_DRUG_PRODUCT_DELIVERY}</strong></h1>
+            </div>
+        </div>
+        <div class="slds-m-vertical_small patient-journey-wrapper">
+            <div class="slds-align_absolute-center">{scheduledDrugProductDateHelpText}</div>
+        </div>
+        <template if:true={deliveryDateError}>
+            <div class="slds-text-heading--small slds-text-color--error slds-align_absolute-center">
+                {labels.SCHEDULED_DRUG_PRODUCT_DELIVERY_ERRORTEXT}
+            </div>
+        </template>
+        <c-calendar show-weekends={showWeekend}
+                    page="patientMilestone" oneventclick={handleSelectDate}
+                    valid-range={deliveryRange}
+                    events={events}>
+        </c-calendar>
+        <div class="slds-grid slds-grid_align-spread slds-p-bottom_small slds-grid_vertical-align-center">
+            <div class="slds-col slds-size_1-of-1">
+                <div class="text-semibold">
+                    <span>
+                    {labels.SELECTED_DRUG_PRODUCT_DELIVERY_DATE} :
+                    </span>
+                    <span>
+                        <b>
+                        <lightning-formatted-date-time
+                                value={selectedDeliveryDate}
+                                time-zone="UTC"
+                                month="short"
+                                day="2-digit"
+                                year="numeric"
+                        ></lightning-formatted-date-time>
+                        </b>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid slds-grid_align-spread slds-p-bottom_small slds-grid_vertical-align-center">
+            <div class="slds-col slds-size_1-of-2">
+                <div class="display-flex text-semibold">
+                    <div class="display-inline-block aph-block slds-m-right_small"></div>
+                    <span>{labels.DATES_AVAILABLE_FOR_DRUGPRODUCTDELIVERY}</span>
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center">
+            <div class="slds-col slds-size_1-of-2">
+                <div class="display-flex text-semibold">
+                    <div class="display-inline-block today-date slds-m-right_small"></div>
+                    <span>{labels.TODAY_DATE_LABEL}</span>
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid slds-p-around_small">
+            <div class="slds-col slds-size_1-of-1 slds-align_absolute-center">
+                <lightning-button label={labels.SUBMIT_LABEL} variant="brand"
+                                  onclick={submitOrderInfo}></lightning-button>
+            </div>
+        </div>
+    </template>
+</template>

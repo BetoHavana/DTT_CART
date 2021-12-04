@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PatientServicesStatus</fullName>
+    <active>true</active>
+    <description>Validation rule to validate the the patient services status.</description>
+    <errorConditionFormula>AND
+(
+	ISCHANGED(PatientServicesStatus__c),
+	OR
+	(
+		ISPICKVAL(PatientServicesStatus__c, &quot;&quot;),
+		AND
+		(
+			NOT(ISPICKVAL(PRIORVALUE(PatientServicesStatus__c),&quot;New Patient Services request&quot;)),
+			ISPICKVAL(PatientServicesStatus__c, &quot;Request to Enroll Confirmed&quot;)
+		),
+		AND
+		(
+			NOT(ISPICKVAL(PRIORVALUE(PatientServicesStatus__c),&quot;Request to Enroll Confirmed&quot;)),
+			ISPICKVAL(PatientServicesStatus__c, &quot;Patient Enrollment Form Received&quot;)
+		),
+		AND
+		(
+			NOT(ISPICKVAL(PRIORVALUE(PatientServicesStatus__c),&quot;Patient Enrollment Form Received&quot;)),
+			ISPICKVAL(PatientServicesStatus__c, &quot;Missing Information in Form&quot;)
+		),
+		AND
+		(
+			AND
+			(
+				NOT(ISPICKVAL(PRIORVALUE(PatientServicesStatus__c),&quot;Missing Information in Form&quot;)),
+				NOT(ISPICKVAL(PRIORVALUE(PatientServicesStatus__c),&quot;Patient Enrollment Form Received&quot;))
+			),
+			ISPICKVAL(PatientServicesStatus__c, &quot;Processing Eligibility&quot;)
+		),
+		AND
+		(
+			NOT(ISPICKVAL(PRIORVALUE(PatientServicesStatus__c),&quot;Processing Eligibility&quot;)),
+			OR
+			(
+				ISPICKVAL(PatientServicesStatus__c, &quot;Eligible&quot;),
+				ISPICKVAL(PatientServicesStatus__c, &quot;Ineligible&quot;)
+			)
+		),
+		AND
+		(
+			NOT(ISPICKVAL(PRIORVALUE(PatientServicesStatus__c),&quot;Eligible&quot;)),
+			ISPICKVAL(PatientServicesStatus__c, &quot;Enrolled in Service&quot;)
+		),
+		AND
+		(
+			OR
+			(
+				ISPICKVAL(PRIORVALUE(PatientServicesStatus__c),&quot;&quot;)
+			),
+			OR
+			(
+				ISPICKVAL(PatientServicesStatus__c, &quot;Opted out of Patient Services&quot;),
+				ISPICKVAL(PatientServicesStatus__c, &quot;Request for Information Only&quot;),
+				ISPICKVAL(PatientServicesStatus__c, &quot;Patient Services Withdrawn&quot;)
+			)
+		),
+		AND
+		(
+			OR
+			(
+				ISPICKVAL(PRIORVALUE(PatientServicesStatus__c),&quot;Request to Enroll Confirmed&quot;),
+				ISPICKVAL(PRIORVALUE(PatientServicesStatus__c),&quot;Patient Enrollment Form Received&quot;),
+				ISPICKVAL(PRIORVALUE(PatientServicesStatus__c),&quot;Missing Information in Form&quot;),
+				ISPICKVAL(PRIORVALUE(PatientServicesStatus__c),&quot;Processing Eligibility&quot;),
+				ISPICKVAL(PRIORVALUE(PatientServicesStatus__c),&quot;Eligible&quot;),
+				ISPICKVAL(PRIORVALUE(PatientServicesStatus__c),&quot;Ineligible&quot;),
+				ISPICKVAL(PRIORVALUE(PatientServicesStatus__c),&quot;Enrolled in Service&quot;),
+				ISPICKVAL(PRIORVALUE(PatientServicesStatus__c),&quot;Opted out of Patient Services&quot;),
+				ISPICKVAL(PRIORVALUE(PatientServicesStatus__c),&quot;Request for Information Only&quot;),
+				ISPICKVAL(PRIORVALUE(PatientServicesStatus__c),&quot;Patient Services Withdrawn&quot;)
+			),
+			ISPICKVAL(PatientServicesStatus__c, &quot;New Patient Services request&quot;)
+		)
+	)
+)</errorConditionFormula>
+    <errorMessage>The Patient Service Status is not updated correctly.</errorMessage>
+</ValidationRule>

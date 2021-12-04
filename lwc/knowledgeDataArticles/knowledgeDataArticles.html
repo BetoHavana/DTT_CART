@@ -1,0 +1,61 @@
+<template>
+    <div class="slds-p-around_x-large patientdetails-section">
+        <div class="slds-col slds-size_1-of-1">
+            <h2 class="primary-title slds-p-bottom_medium">{pageHeader}</h2>
+        </div>
+        <div class="slds-grid form-section">
+            <div class="slds-box slds-col slds-size_6-of-12">
+                <template if:true={topics}>
+                    <ul>
+                        <template for:each={topics} for:item="topic">
+                            <li key={topic.topicId}>
+                                <div class="slds-icon_container slds-icon-utility-announcement">
+                                    <lightning-button variant="base" label={topic.name} icon-name={topic.icon}
+                                                      onclick={doGetArticles} name={topic.topicId}
+                                                      class="slds-m-left_x-small text-semibold "></lightning-button>
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
+                </template>
+                <!-- Data failed to load -->
+                <template if:true={topics.error}>
+                    <div class="slds-text-color_error">
+                        {labels.ERROR_TOPICS}
+                    </div>
+                </template>
+            </div>
+            <div class="slds-col slds-box slds-size_6-of-12 slds-p-around_xxx-small"
+                 style="overflow:auto !important;">
+
+                <div if:true={articles}>
+                    <ul>
+                        <template for:each={articles} for:item="article">
+                            <li key={article.KnowledgeArticleId}>
+                                <div class="slds-icon_container slds-icon-utility-announcement">
+                                    <lightning-button variant="base" label={article.Title}
+                                                      onclick={navigateArticleDetail} name={article.UrlName}
+                                                      class="slds-m-left_x-small text-semibold "></lightning-button>
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+                <div if:false={articles}>
+                    <p class="text-semibold">{labels.SELECT_TOPIC}</p>
+                </div>
+
+                <div if:true={noArticles}>
+                    <p class="text-semibold">{labels.ERROR_ARTICLES}</p>
+                </div>
+                <!-- Data failed to load -->
+                <template if:true={error}>
+                    <div class="slds-text-color_error text-semibold ">
+                        {labels.ERROR_TOPICS}
+                    </div>
+                </template>
+
+            </div>
+        </div>
+    </div>
+</template>

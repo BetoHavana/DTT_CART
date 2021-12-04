@@ -1,0 +1,21 @@
+<template>
+    <div class="generic-data-table slds-p-around_x-large patientdetails-section">
+        <h2 class="slds-p-around_small secondary-title">{labels.TREATMENT_CENTER_LABEL} {treatmentCenterName}</h2>
+        <c-tcp-filter onsearch={handleSearchPatient} search-placeholder={labels.SEARCH_PATIENT_LABEL}></c-tcp-filter>
+        <c-generic-data-table generickey="id"
+                              genericcolumns={columns}
+                              genericdata={data}
+                              class="mydatatable slds-table_striped"
+                              generichidecheckbox="false"
+                              genericdefaultsortdirection={defaultSortDirection}
+                              genericsorteddirection={sortedDirection}
+                              genericsortedby={sortedBy}
+                              genericerror={error}
+                              no-of-records-per-page={recordLimitPerPage}
+                              button-limit={buttonsToDisplay}
+                              sort-within-paginated-data={sortWithinPaginatedData}
+                              show-pagination={displayPagination}
+                              messagewhennodata={invalidSearchCriteriaMessage}>
+        </c-generic-data-table>
+    </div>
+</template>

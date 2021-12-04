@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PreventSalesOrderSAPUpdateSuccessToRetry</fullName>
+    <active>true</active>
+    <description>This Validation rule prevents user from Changing SalesOrderToSAPStatus__c field value from Success to Retry</description>
+    <errorConditionFormula>TEXT(PRIORVALUE(SalesOrderToSAPStatus__c )) = &apos;Success&apos; &amp;&amp; OR(TEXT(SalesOrderToSAPStatus__c ) = &apos;Retry&apos;,TEXT(SalesOrderToSAPStatus__c )=&apos;&apos;)</errorConditionFormula>
+    <errorDisplayField>SalesOrderToSAPStatus__c</errorDisplayField>
+    <errorMessage>Sales Order To SAP Status cannot be updated from Success to Retry or Blank</errorMessage>
+</ValidationRule>

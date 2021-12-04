@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <description>This is used to show the Patient Journey in TCP Community</description>
+    <isExposed>true</isExposed>
+    <masterLabel>Patient Journey</masterLabel>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightning__RecordPage</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property
+                    name="recordId"
+                    type="String"
+                    label="Record Id"
+                    description="Automatically bind the page's record id to the component variable"
+            />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PreventDisablingBeginPatientSupportCheck</fullName>
+    <active>true</active>
+    <description>This Validation rule prevents users from setting BeginPatientSupportEligibilityCheck__c to false from true on care plan</description>
+    <errorConditionFormula>AND(!ISNEW(),RecordType.DeveloperName=&apos;CarePlan&apos;,PRIORVALUE(BeginPatientSupportEligibilityCheck__c)=true,!BeginPatientSupportEligibilityCheck__c)</errorConditionFormula>
+    <errorDisplayField>BeginPatientSupportEligibilityCheck__c</errorDisplayField>
+    <errorMessage>The interest in Patient Services has already been recorded. This value cannot be changed.</errorMessage>
+</ValidationRule>

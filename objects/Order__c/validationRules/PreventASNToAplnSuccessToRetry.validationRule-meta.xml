@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PreventASNToAplnSuccessToRetry</fullName>
+    <active>true</active>
+    <description>This Validation rule prevents user from Changing ASNToAnaplanStatus__c field value from Success to Retry</description>
+    <errorConditionFormula>TEXT(PRIORVALUE( ASNToAnaplanStatus__c )) = &apos;Success&apos; &amp;&amp; OR(TEXT(ASNToAnaplanStatus__c ) = &apos;Retry&apos;,ISBLANK(TEXT(ASNToAnaplanStatus__c )))</errorConditionFormula>
+    <errorDisplayField>ASNToAnaplanStatus__c</errorDisplayField>
+    <errorMessage>ASN To Anaplan Status cannot be updated from Success to Retry or Blank</errorMessage>
+</ValidationRule>

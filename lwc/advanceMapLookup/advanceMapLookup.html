@@ -1,0 +1,78 @@
+<template>
+    <lightning-card title="Address" icon-name="standard:address">
+        <lightning-spinner variant="brand" if:true={showSpinner}></lightning-spinner>
+        <div class="slds-form slds-form_stacked slds-m-around_medium">
+            <c-lookup
+                    errors={errors}
+                    label={label.SEARCHLOCATION}
+                    onsearch={handleSearch}
+                    onselectionchange={handleSelectionChange}
+                    placeholder={label.SEARCHLOCATION}
+            >
+            </c-lookup>
+            <lightning-layout multiple-rows>
+                <lightning-layout-item size="12">
+                    <lightning-input type="text"
+                                     label={label.ADDRESSLINE1}
+                                     value={addressLine1}
+                                     readonly
+                    ></lightning-input>
+                    <lightning-input type="text"
+                                     label={label.ADDRESSLINE2}
+                                     name="addressLine2"
+                                     value={addressLine2}
+                                     onchange={handleChange}
+                    ></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="6">
+                    <lightning-input type="text"
+                                     label={label.CITY}
+                                     value={city}
+                                     readonly
+                    ></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="6">
+                    <lightning-input type="text"
+                                     label={label.STATE}
+                                     value={state}
+                                     readonly
+                    ></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="6">
+                    <lightning-input type="text"
+                                     label={label.COUNTRY}
+                                     value={country}
+                                     readonly
+                    ></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="6">
+                    <lightning-input type="text"
+                                     label={label.ZIPCODE}
+                                     value={zipcode}
+                                     readonly
+                    ></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12">
+                    <lightning-combobox label={label.ADDRESSTYPE}
+                                        value={addressType}
+                                        options={addressTypePickValues}
+                                        name="addressType"
+                                        onchange={handleChange}>
+                    </lightning-combobox>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-button
+                    variant="brand-outline"
+                    label={label.CANCELBUTTON}
+                    onclick={closeSubtabIfApplicable}
+                    class="slds-m-left_x-small"
+            ></lightning-button>
+            <lightning-button
+                    variant="brand"
+                    label={label.SAVEBUTTON}
+                    onclick={handleSubmit}
+                    class="slds-m-left_x-small"
+            ></lightning-button>
+        </div>
+    </lightning-card>
+</template>

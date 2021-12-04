@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>MfgDrugPdtWhenMfgStsMfgCmpCPStsIsMfgCen</label>
+    <protected>false</protected>
+    <values>
+        <field>APINamesOfChangedFieldsToRunLogic__c</field>
+        <value xsi:type="xsd:string">ConfirmedFPDeliveryDate__c</value>
+    </values>
+    <values>
+        <field>CarePlanConditionsInfo__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>CarePlanUpdateInfo__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>CryoType__c</field>
+        <value xsi:type="xsd:string">3rd Party</value>
+    </values>
+    <values>
+        <field>GoalsConditionsInfo__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>GoalsUpdateInfo__c</field>
+        <value xsi:type="xsd:string">[{&quot;goalName&quot;:&quot;Manufacturing Drug Product&quot;,&quot;goalStatusToSet&quot;:&quot;Completed&quot;}]</value>
+    </values>
+    <values>
+        <field>IsActive__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>OrderConditionsInfo__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>OrderUpdateInfo__c</field>
+        <value xsi:type="xsd:string">[ { &quot;fieldName&quot;:&quot;OrderStatus__c&quot;, &quot;valueToSet&quot;:&quot;Drug Product Delivery Date Scheduled&quot; } ]</value>
+    </values>
+    <values>
+        <field>RuleOrder__c</field>
+        <value xsi:type="xsd:double">14.0</value>
+    </values>
+    <values>
+        <field>TaskConditionsInfo__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TaskUpdateInfo__c</field>
+        <value xsi:type="xsd:string">[ { &quot;taskSubject&quot;:&quot;Confirm and update final product delivery date with CAR-T Coordinator; Communicate status with Vein to Vein Team&quot;, &quot;goalNameForTasksFilter&quot;:&quot;Manufacturing Drug Product&quot;, &quot;taskStatusToSet&quot;:&quot;Completed&quot; } ]</value>
+    </values>
+</CustomMetadata>

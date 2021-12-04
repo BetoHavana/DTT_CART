@@ -1,0 +1,25 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,flexipage:availableForRecordHome,force:hasRecordId"
+                access="global">
+    <ltng:require styles="{!$Resource.CCMViewAvailabilityForPlaceRescheduleOrderStyles}"/>
+    <aura:html tag="style">
+        .slds-modal__container{
+        max-width: 80rem !important;
+        width:80% !important;
+        }
+    </aura:html>
+    <div>
+        <div class="slds-grid">
+            <div class="slds-col">
+                <h1 class="title slds-align_absolute-center slds-text-heading--medium">
+                    <strong>{!$Label.c.ViewAvailabilityToRescheduleOrderQuickActionLabel}</strong></h1>
+            </div>
+        </div>
+        <div class="slds-grid">
+            <div class="slds-col">
+                <c:viewAvailabilityForReschedulingOrder orderId="{!v.recordId}"
+                                                        oncloseactionnrefresh="{!c.handleCloseNRefresh}"
+                                                        oncancelclick="{!c.handleCancelClick}"/>
+            </div>
+        </div>
+    </div>
+</aura:component>

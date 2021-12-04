@@ -1,0 +1,34 @@
+<template>
+    <div class="slds-m-vertical_small patient-card-background slds-p-around_x-small">
+        <h2 class="secondary-title patient-card-heading" slot="card-header">{patientName}</h2>
+        <div class="slds-grid slds-wrap slds-gutters_direct">
+            <div class="slds-col slds-size_1-of-1">
+                <lightning-input name="mrn" label={labels.MRN}   value={patient.memberMRN} read-only  >
+                </lightning-input>
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap slds-gutters_direct">
+            <div class="slds-col  slds-size_1-of-1">
+                <lightning-input name="patientId" label={labels.PATIENT_ID} value={patient.patientId} read-only  >
+                </lightning-input>
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap slds-gutters_direct">
+            <div class="slds-col  slds-size_1-of-1" >
+                <lightning-input name="patientId" label={labels.PATIENT_TREATING_MILESTONE_LABEL}
+                                 value={patient.patientTreatingMilestone} read-only  ></lightning-input>
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap slds-gutters_direct">
+            <div class="slds-col  slds-size_1-of-1" >
+                <template if:false={isStatusManufacturing}>
+                    <a onclick={scheduleAphresis}>{labels.SCHEDULE_APHERESIS}</a>
+                </template>
+                <template if:true={isStatusManufacturing}>
+                    <a onclick={scheduleDrug}>{labels.SCHEDULE_DRUG_PRODUCT_DELIVERY}</a>
+                </template>
+
+            </div>
+        </div>
+    </div>
+</template>

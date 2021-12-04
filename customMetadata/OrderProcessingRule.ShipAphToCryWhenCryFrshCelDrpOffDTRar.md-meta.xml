@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>ShipAphToCryWhenCryFrshCelDrpOffDTRar</label>
+    <protected>false</protected>
+    <values>
+        <field>APINamesOfChangedFieldsToRunLogic__c</field>
+        <value xsi:type="xsd:string">FreshCellDropOffDateAndTime__c</value>
+    </values>
+    <values>
+        <field>CarePlanConditionsInfo__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>CarePlanUpdateInfo__c</field>
+        <value xsi:type="xsd:string">[ { &quot;fieldName&quot;:&quot;Status&quot;, &quot;valueToSet&quot;:&quot;Shipping Cells to Manufacturing Site&quot; } ]</value>
+    </values>
+    <values>
+        <field>CryoType__c</field>
+        <value xsi:type="xsd:string">Raritan</value>
+    </values>
+    <values>
+        <field>GoalsConditionsInfo__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>GoalsUpdateInfo__c</field>
+        <value xsi:type="xsd:string">[{ &quot;goalName&quot;:&quot;Shipping (Apheresis Site to Cryo Site)&quot;,&quot;fieldName&quot;:&quot;Status__c&quot;,&quot;goalStatusToSet&quot;:&quot;Completed&quot; }]</value>
+    </values>
+    <values>
+        <field>IsActive__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>OrderConditionsInfo__c</field>
+        <value xsi:type="xsd:string">[ { &quot;fieldName&quot;:&quot;PatientStatus__c&quot;, &quot;valueToCompare&quot;:&quot;Verified&quot; } ]</value>
+    </values>
+    <values>
+        <field>OrderUpdateInfo__c</field>
+        <value xsi:type="xsd:string">[ { &quot;fieldName&quot;:&quot;ShippingStatus__c&quot;, &quot;valueToSet&quot;:&quot;Fresh Cells Delivered&quot; } ]</value>
+    </values>
+    <values>
+        <field>RuleOrder__c</field>
+        <value xsi:type="xsd:double">25.0</value>
+    </values>
+    <values>
+        <field>TaskConditionsInfo__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TaskUpdateInfo__c</field>
+        <value xsi:type="xsd:string">[ { &quot;taskSubject&quot;:&quot;Confirmation from Cryo Site about cell delivery&quot;, &quot;goalNameForTasksFilter&quot;:&quot;Shipping (Apheresis Site to Cryo Site)&quot;, &quot;taskStatusToSet&quot;:&quot;Completed&quot; } ]</value>
+    </values>
+</CustomMetadata>

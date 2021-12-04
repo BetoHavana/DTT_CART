@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Order__c.Patient__c</field>
+    </columns>
+    <columns>
+        <field>Order__c.PatientID__c</field>
+    </columns>
+    <columns>
+        <field>Order__c.CarePlanID__c</field>
+    </columns>
+    <columns>
+        <field>Order__c.PatientStatus__c</field>
+    </columns>
+    <columns>
+        <field>Order__c.OrderStatus__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Order__c.PatientStatus__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Additional Information Provided</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Additional Information Provided Patients</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Order__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

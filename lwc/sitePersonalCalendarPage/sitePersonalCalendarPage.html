@@ -1,0 +1,42 @@
+<template>
+    <div class="wrapper slds-is-relative">
+        <div class="slds-grid slds-m-top_large slds-gutters">
+            <div class="slds-col slds-size_9-of-12">
+                <c-generic-card class="card-item">
+                    <div class="slds-grid">
+                        <div class="slds-col">
+                            <c-site-personal-calendar></c-site-personal-calendar>
+                        </div>
+                    </div>
+                </c-generic-card>
+            </div>
+            <div class="slds-col slds-size_3-of-12 custom-patient-card-container scroll-bar">
+                <c-generic-card class="card-item patient-section">
+                    <h2 class="secondary-title" slot="card-header">{labels.PATIENTS}</h2>
+                    <div class="slds-p-bottom_medium form-section">
+                        <div class="slds-grid slds-gutters_direct">
+                            <div class="slds-col search-box-width">
+                                <lightning-input
+                                        name="enter-search"
+                                        label=""
+                                        type="search"
+                                        placeholder={labels.SEARCH}
+                                        class="custom-patient-search"
+                                        variant="label-hidden"
+                                        onchange= {handleKeyUp}
+                                ></lightning-input>
+                            </div>
+                        </div>
+                    </div>
+                </c-generic-card>
+                <div class="slds-grid slds-gutters_direct">
+                    <div class="slds-col search-box-width">
+                        <template for:each={patientsList} for:item="patient">
+                            <c-patient-list-card patient={patient} key={patient.memberId}></c-patient-list-card>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

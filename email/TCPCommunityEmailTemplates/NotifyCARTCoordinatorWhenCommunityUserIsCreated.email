@@ -1,0 +1,10 @@
+Hi {!Receiving_User.FirstName} {!Receiving_User.LastName},<br/><br/>
+
+
+Welcome to {!Community_Name}. To start managing your patients’ treatment, please set up your account by accessing the portal <a href ="{!Community_Url}"><u> here</u></a>. Your username is: {!Receiving_User.Username}
+<br/><br/>
+
+If you’re having issues accessing {!Community_Name}, please reach out to us via +1-XXX-XXX-XXXX.
+<br/><br/>
+Thank You,<br/>
+{!$Label.JanssenBiotechAndLegendBiotech}

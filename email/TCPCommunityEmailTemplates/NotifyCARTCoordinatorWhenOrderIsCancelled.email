@@ -1,0 +1,10 @@
+Hi {!Order__c.Coordinator__c},<br/><br/>
+
+
+The Apheresis Pick-Up Date for your patient with Patient ID: {!Order__c.PatientID__c} has been cancelled Please <a href ="{!$Label.CommunityPatientUrl}/{!Order__c.PatientIdForEmailAlerts__c}"> login </a> to the portal to access the patient’s record. 
+<br/><br/>
+
+If you did not place this request, please reach out to us via +1-XXX-XXX-XXXX.
+<br/><br/>
+Thank You,<br/>
+{!$Label.JanssenBiotechAndLegendBiotech}

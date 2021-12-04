@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OrderStatus__c</fullName>
+    <complianceGroup>GxP</complianceGroup>
+    <description>Status of the order.</description>
+    <externalId>false</externalId>
+    <label>Order Status</label>
+    <required>false</required>
+	<trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Order Submitted</fullName>
+                <default>false</default>
+                <label>Order Submitted</label>
+            </value>
+            <value>
+                <fullName>Order Verified</fullName>
+                <default>false</default>
+                <label>Order Verified</label>
+            </value>
+            <value>
+                <fullName>Order In Progress</fullName>
+                <default>false</default>
+                <label>Order In Progress</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+                <label>Withdrawn</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>true</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Order Rescheduled</fullName>
+                <default>false</default>
+                <label>Order Rescheduled</label>
+            </value>
+            <value>
+                <fullName>Order Cancellation Requested</fullName>
+                <default>false</default>
+                <label>Order Cancellation Requested</label>
+            </value>
+            <value>
+                <fullName>Order Cancelled</fullName>
+                <default>false</default>
+                <label>Order Cancelled</label>
+            </value>
+            <value>
+                <fullName>Drug Product Delivery Date Scheduled</fullName>
+                <default>false</default>
+                <label>Drug Product Delivery Date Scheduled</label>
+            </value>
+            <value>
+                <fullName>Drug Product Delivered</fullName>
+                <default>false</default>
+                <label>Drug Product Delivered</label>
+            </value>
+            <value>
+                <fullName>Infusion Complete</fullName>
+                <default>false</default>
+                <label>Infusion Complete</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

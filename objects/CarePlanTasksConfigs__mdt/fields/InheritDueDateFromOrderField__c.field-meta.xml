@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InheritDueDateFromOrderField__c</fullName>
+    <description>This Field is used to get Due Date from Order Field</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>If you need to get Due Date from one of the Order Object Field , then please specify Order Object Fields API Name</inlineHelpText>
+    <label>Inherit Due Date From Order Field</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

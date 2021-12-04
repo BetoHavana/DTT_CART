@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>JNJ4528JanssenUsersReadOnly</label>
+    <protected>false</protected>
+    <values>
+        <field>AccessLevel__c</field>
+        <value xsi:type="xsd:string">Read</value>
+    </values>
+    <values>
+        <field>GroupName__c</field>
+        <value xsi:type="xsd:string">JNJ4528JanssenReadonly</value>
+    </values>
+    <values>
+        <field>IsActive__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>ProductName__c</field>
+        <value xsi:type="xsd:string">JNJ-4528</value>
+    </values>
+</CustomMetadata>

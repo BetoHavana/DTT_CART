@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>CollectionDayCompleted</label>
+    <protected>false</protected>
+    <values>
+        <field>SourceFieldAPIName__c</field>
+        <value xsi:type="xsd:string">DIN</value>
+    </values>
+    <values>
+        <field>TargetFieldAPIName__c</field>
+        <value xsi:type="xsd:string">DIN__c</value>
+    </values>
+    <values>
+        <field>eventName__c</field>
+        <value xsi:type="xsd:string">CollectionDayCompleted</value>
+    </values>
+    <values>
+        <field>eventSource__c</field>
+        <value xsi:type="xsd:string">Vineti</value>
+    </values>
+    <values>
+        <field>eventType__c</field>
+        <value xsi:type="xsd:string">COI-COC</value>
+    </values>
+</CustomMetadata>

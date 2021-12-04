@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SalesOrderToSAPStatus__c</fullName>
+    <description>This field stores information related to Sales Order SAP Callout status</description>
+    <externalId>false</externalId>
+    <label>Sales Order to SAP Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Retry</fullName>
+                <default>false</default>
+                <label>Retry</label>
+            </value>
+            <value>
+                <fullName>Manually Created</fullName>
+                <default>false</default>
+                <label>Manually Created</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

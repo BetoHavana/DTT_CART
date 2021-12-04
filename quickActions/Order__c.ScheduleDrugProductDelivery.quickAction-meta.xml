@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Quick Action button for the Lightning Component named ScheduleDrugProductDelivery that is being used to update confirmed Drug Product Delivery Date on Order</description>
+    <height>1200</height>
+    <label>Schedule Drug Product Delivery</label>
+    <lightningComponent>ScheduleDrugProductDelivery</lightningComponent>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>LightningComponent</type>
+    <width>-100</width>
+</QuickAction>

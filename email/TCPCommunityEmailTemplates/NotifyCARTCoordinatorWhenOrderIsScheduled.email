@@ -1,0 +1,27 @@
+Hi {!Order__c.Coordinator__c},<br/><br/>
+
+ 
+
+
+The Apheresis Pick-Up Date for your patient with Patient ID: {!Order__c.PatientID__c} has been successfully scheduled for  {!CASE(MONTH(Order__c.ApheresisPickUpDate__c),
+1, "Jan",
+2, "Feb",
+3, "Mar", 
+4, "Apr", 
+5, "May", 
+6, "Jun",
+7, "Jul",
+8, "Aug",
+9, "Sep",
+10, "Oct",
+11, "Nov",
+12, "Dec",
+"")} {!DAY(Order__c.ApheresisPickUpDate__c)}{!IF(NOT(ISBLANK(Order__c.ApheresisPickUpDate__c)),", ","")}  {!YEAR(Order__c.ApheresisPickUpDate__c)}. Please <a href ="{!$Label.CommunityPatientUrl}/{!Order__c.PatientIdForEmailAlerts__c}"> login </a> to the portal to access the patient’s record and verify their order details.
+<br/><br/>
+
+ 
+
+If you have any questions, please reach out to us via +1-XXX-XXX-XXXX.
+<br/><br/>
+Thank You,<br/>
+{!$Label.JanssenBiotechAndLegendBiotech}

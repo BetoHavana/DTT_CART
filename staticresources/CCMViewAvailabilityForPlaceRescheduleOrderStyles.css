@@ -1,0 +1,160 @@
+.calendar-header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.primary-title {
+    color: var(--c-ColorPureBlack);
+    font-size: var(--c-SizeXXPageLarge);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+c-calendar .fc-bgevent {
+    opacity: 0.8;
+}
+
+
+.hoverEffect {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 100%;
+    height: 100%;
+}
+
+.hoverEffect .available-select {
+    background-color: var(--c-ColorGreenApple);
+    color: var(--c-ColorPurewhite);
+    padding: var(--c-SizeXXSmallCustom) var(--c-SizeLarge);
+    font-family: var(--c-NunitoSemiBold);
+    font-size: var(--c-FontSizeValue);
+    border-radius: 4px;
+    border: 1px solid var(--c-ColorGreenApple);
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    z-index: 3;
+}
+
+.selected button, .selected button:focus, .selected button:hover {
+    background-color: var(--c-ColorNavyBlue);
+    color: var(--c-ColorPurewhite);
+}
+
+.formatted-date-inp {
+    font-family: var(--c-NunitoLight);
+    font-size: var(--c-SizeMedium);
+    color: var(--c-ColorDarkGrey);
+}
+
+
+.secondary-title {
+    color: var(--c-ColorPureBlack);
+    font-size: var(--c-SizeMedium);
+    font-family: var(--c-NunitoSemiBold);
+}
+
+.card-item .slds-card {
+    margin-bottom: var(--c-SizeMedium);
+}
+
+.applyBorder {
+    border: #888;
+}
+
+.increaseHeight {
+    height: 220px;
+}
+
+.rectangleWithAppleColor {
+    height: 20px;
+    width: 40px;
+    background-color: #BDFFB6;
+}
+
+.showInline {
+    display: inline-block;
+}
+
+.aph-block{
+    width: var(--c-SizeXXLarge);
+    height: var(--c-SizeLarge);
+    background: var(--c-ColorGreenAppleLight);
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.drugproduct-delivery-date {
+    width: var(--c-SizeLarge);
+    height: var(--c-SizeXXSmallCustom);
+    background: var(--c-ColorOrange);
+}
+
+.form-section .slds-form-element__label {
+    color: var(--c-ColorSuvaGrey);
+    font-size: var(--c-SizeXSmall);
+    font-family: var(--c-NunitoLight);
+}
+
+.custom-event{
+    display: flex;
+    justify-content: flex-start;
+    font-family: var(--c-NunitoSemiBold);
+    font-size: var(--c-SizeMedium);
+}
+
+.custom-event-text{
+    font-size: var(--c-SizeXSmall);
+}
+
+.event-buttons {
+    display: flex;
+    width: 80%;
+    border: 1px solid #d4d4d4;
+    background: var(--c-ColorGreenAppleLight);
+    border-radius: 5px;
+}
+
+.event-button-icons {
+    width: var(--c-SizeXXLarge);
+    height: var(--c-SizeXXLarge);
+}
+
+.event-cal-icons{
+    width: var(--c-SizeSmall);
+    height: var(--c-SizeSmall);
+}
+
+.wrapword {
+    white-space: -moz-pre-wrap;
+    white-space: -webkit-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+}
+
+.fc-bgevent-skeleton {
+    pointer-events: none;
+}
+
+.fc-bgevent-skeleton .fc-bgevent {
+    pointer-events: auto;
+}
+
+.today-date {
+    width: var(--c-SizeXXLarge);
+    height: var(--c-SizeLarge);
+    background: var(--c-ColorNavyBlue);
+}
